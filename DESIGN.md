@@ -54,8 +54,10 @@ body 16px/1.8 with .02em tracking) and scale down with `clamp()`.
   booking button before the reviews. Only CSS `order` moves them, so screen
   readers and desktop keep sculpt.no's order
 - Text runs at `--text` (44rem); review rows, two-column splits and the
-  carousel widen to `--measure` (70rem); the hero photo and the carousel row
-  are full bleed
+  carousel widen to `--measure` (70rem); the carousel row is full bleed, and
+  the hero photo too until it reaches `--measure`. The hero keeps one frame,
+  every statue whole and the fade on the table under them, so the width sets
+  its height
 - Content files mark their sections with `<div class="...">` lines, turned into
   wrappers by `src/plugins/rehype-sections.mjs`, which also gives each image
   `sizes` and `srcset` widths that fit its section

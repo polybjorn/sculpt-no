@@ -273,7 +273,7 @@ p {
   max-width: var(--measure);
 }
 
-.page > :is(.hero-photo, .marquee) {
+.page > .marquee {
   max-width: none;
   margin-inline: calc(-1 * var(--gutter));
 }
@@ -299,22 +299,37 @@ p {
   margin-bottom: .6em;
 }
 
-/* Flush under the menu and short enough that the heading below it shows on the
-   first screen, which is what tells a visitor what the site is. */
+/* Edge to edge until it reaches the content width, and narrower on a low
+   screen so the heading below still shows on the first screen, which is what
+   tells a visitor what the site is. The width sets the height, since the
+   frame below is fixed. */
+.page > .hero-photo {
+  --hero-width: min(100% + 2 * var(--gutter), var(--measure), max(16rem, 100svh - 18rem) * 2000 / 970);
+  width: var(--hero-width);
+  max-width: none;
+  margin-inline: calc((100% - var(--hero-width)) / 2);
+}
+
 .page > .hero-photo:first-child {
   margin-top: -3rem;
 }
 
+/* The statues fill 27% to 88% of the photo's height, so this frame cuts only
+   wall above them and table below, and the fade starts under the bases. Any
+   crop of the statues themselves is a crop of her work. A new photo needs new
+   numbers. */
 .hero-photo img {
   width: 100%;
-  height: clamp(16rem, calc(100svh - 22rem), 46rem);
+  height: auto;
+  aspect-ratio: 2000 / 970;
   object-fit: cover;
-  object-position: center 65%;
+  object-position: center 90.7%;
+  mask-image: linear-gradient(to bottom, #000 89%, transparent);
 }
 
 .hero-title {
   text-align: center;
-  padding-top: 3rem;
+  padding-top: 1.5rem;
 }
 
 .page > .hero-title {
@@ -878,16 +893,6 @@ p {
   .split,
   .split-media-first {
     grid-template-columns: 1fr;
-  }
-
-  /* A strip rather than the desktop height: the heading has to share the first
-     phone screen with it, and the booking button follows the intro below. */
-  .hero-photo img {
-    height: 13rem;
-  }
-
-  .hero-title {
-    padding-top: 2rem;
   }
 
   .split {

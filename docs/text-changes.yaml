@@ -43,7 +43,7 @@ groups:
       - title: "Alle kundeomtalene står samlet"
         text: Dagens forside har tre kundeomtaler helt øverst, over bildet, og tre til under «Hva kundene våre sier». De tre øverste er flyttet ned, så forsiden begynner med bildet og overskriften. Under «Hva kundene våre sier» står de tre som før, og de tre andre vises med knappen «Vis flere omtaler» under dem. Når de er åpne, står knappen under alle seks og heter «Vis færre omtaler». Omtalene er ordrett som før, men står med vanlig skrift og uten anførselstegn, som de tre andre.
       - title: "Overskriften synes uten å bla"
-        text: Bildet øverst er like bredt som før, men tilpasser høyden til skjermen, så overskriften under det synes med en gang, også på en liten PC-skjerm.
+        text: Bildet øverst viser alle skulpturene hele på alle skjermer, og glir nederst over i bakgrunnen. På store skjermer er det like bredt som innholdet under, og på lave skjermer litt mindre, så overskriften under det synes med en gang, også på en liten PC-skjerm.
       - title: "Bildet og overskriften øverst på mobil"
         text: På mobil begynner dagens forside med de tre kundeomtalene, og overskriften og «Bestill din skulptur» kommer først etter halvannen skjermhøyde. På den nye siden er bildet en lavere stripe på mobil, så bildet og overskriften synes med en gang, og knappen kommer rett etter innledningen.
       - title: "Kunstneren presenteres kort på forsiden"

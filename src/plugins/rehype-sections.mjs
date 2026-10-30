@@ -18,7 +18,7 @@ const CLOSE = /^<\/div>$/;
 // What the browser should fetch for an image, by the section it sits in.
 // Without sizes Astro offers the full source width for every slot.
 const IMAGE_ROLES = {
-  'hero-photo': { sizes: '100vw', widths: [800, 1200, 1600, 2000], loading: 'eager', fetchpriority: 'high' },
+  'hero-photo': { sizes: '(max-width: 70rem) 100vw, 70rem', widths: [800, 1200, 1600, 2000], loading: 'eager', fetchpriority: 'high' },
   carousel: { sizes: '15rem', widths: [320, 480] },
   split: { sizes: '(max-width: 760px) 100vw, 34rem', widths: [480, 800, 1200] },
   feature: { sizes: '(max-width: 760px) 100vw, 34rem', widths: [480, 800, 1200] },
