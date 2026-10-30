@@ -1,0 +1,851 @@
+/* Tokens and the reasons behind them are in DESIGN.md. */
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/cormorant-garamond-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 300;
+  font-display: swap;
+  src: url("../assets/fonts/dm-sans-latin-300-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  src: url("../assets/fonts/dm-sans-latin-300-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../assets/fonts/dm-sans-latin-500-normal.woff2") format("woff2");
+}
+
+:root {
+  --ink: #36302a;
+  --paper: #fff8f5;
+  --ink-hover: #4a423a;
+  --line: #d9cfc9;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --measure: 70rem;
+  --text: 44rem;
+  --gutter: clamp(1rem, 4vw, 3rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 300 1rem/1.8 var(--font-body);
+  letter-spacing: .02em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+strong {
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, summary {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: .01em;
+  margin: 0 0 .5em;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 5.4vw, 4.85rem);
+  line-height: 1.07;
+}
+
+h2 {
+  font-size: clamp(2.1rem, 3.6vw, 3.27rem);
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+  line-height: 1.15;
+}
+
+h4 {
+  font-size: 1.65rem;
+  line-height: 1.17;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 10;
+  background: var(--ink);
+  color: var(--paper);
+  padding: .5rem 1rem;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: .7rem var(--gutter);
+}
+
+.nav-home {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  justify-self: start;
+  text-decoration: none;
+  font: 400 1.7rem/1 var(--font-display);
+}
+
+.nav-home img {
+  width: 44px;
+  height: 44px;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .2rem 1.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: .85rem;
+}
+
+.nav-links a,
+.nav-links summary {
+  text-decoration: none;
+  text-underline-offset: .35em;
+}
+
+.nav-links a:hover,
+.nav-links summary:hover,
+.nav-links [aria-current="page"],
+.menu-group.current > summary {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.menu-group {
+  position: relative;
+}
+
+.menu-group summary {
+  font: inherit;
+  letter-spacing: inherit;
+  list-style: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+.menu-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.menu-group summary::after {
+  content: "";
+  display: inline-block;
+  width: .35rem;
+  height: .35rem;
+  margin: 0 0 .2rem .5rem;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  transform: rotate(45deg);
+  transition: transform .2s ease-out, margin .2s ease-out;
+}
+
+.menu-group[open] summary::after {
+  transform: rotate(-135deg);
+  margin-bottom: -.05rem;
+}
+
+.menu-group ul {
+  position: absolute;
+  top: 1.9rem;
+  left: -1rem;
+  z-index: 6;
+  list-style: none;
+  margin: 0;
+  padding: .8rem 1rem;
+  background: var(--paper);
+  white-space: nowrap;
+  box-shadow: 0 6px 20px rgb(54 48 42 / .12);
+}
+
+.menu-group[open] ul {
+  animation: unfold .2s ease-out;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.social {
+  display: flex;
+  gap: .8rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav .social {
+  justify-self: end;
+}
+
+.social a {
+  display: block;
+  padding: .2rem;
+}
+
+.social svg {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Page body: text runs at reading width, the sections below widen it. */
+
+.page {
+  padding: 3rem var(--gutter) 5rem;
+}
+
+.page > * {
+  max-width: var(--text);
+  margin-inline: auto;
+}
+
+.page > :is(.hero-reviews, .split, .testimonials, .sculptures, .artist, .places, .gallery) {
+  max-width: var(--measure);
+}
+
+.page > :is(.hero-photo, .marquee) {
+  max-width: none;
+  margin-inline: calc(-1 * var(--gutter));
+}
+
+.page > :first-child.hero-reviews {
+  margin-top: -1rem;
+}
+
+.page > h1:first-child,
+.page:has(> .gallery) > p {
+  text-align: center;
+}
+
+.page ul,
+.page ol {
+  padding-left: 1.4rem;
+}
+
+/* Front page */
+
+.hero-reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+  max-width: 62rem;
+}
+
+.hero-reviews blockquote,
+.reviews blockquote {
+  margin: 0;
+  text-align: center;
+}
+
+.hero-reviews blockquote {
+  font-size: .8rem;
+  line-height: 1.6;
+}
+
+.hero-reviews p,
+.reviews p {
+  margin-bottom: .6em;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: min(78vh, 46rem);
+  object-fit: cover;
+  object-position: center 65%;
+}
+
+.hero-title {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.page > .hero-title {
+  max-width: var(--measure);
+}
+
+.hero-title h1 {
+  max-width: 22ch;
+  margin-inline: auto;
+}
+
+.hero-title p {
+  font-size: .8rem;
+  letter-spacing: .06em;
+  line-height: 1.7;
+}
+
+.intro {
+  text-align: center;
+  font-size: .9rem;
+  padding-block: 1rem 3rem;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.actions a {
+  display: inline-block;
+  font: 400 1rem/1.2 var(--font-body);
+  letter-spacing: .02em;
+  text-decoration: none;
+  padding: 1.1em 4.5em;
+  border-radius: .25rem;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.actions a:hover {
+  background: var(--ink-hover);
+}
+
+.sculptures .actions a {
+  background: none;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: .8em 1.3em;
+  font-size: .85rem;
+}
+
+.sculptures .actions a:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  padding-block: 3rem 5rem;
+}
+
+.split-media-first {
+  grid-template-columns: 1fr 1.1fr;
+}
+
+.split img {
+  width: 100%;
+}
+
+.split h1 {
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+}
+
+/* Contact details read as labels under the title, not as sections. */
+.split-text h1 ~ h2 {
+  font-size: 1.65rem;
+  margin: 1.5rem 0 .2rem;
+}
+
+.testimonials,
+.sculptures {
+  text-align: center;
+  padding-block: 4rem 2rem;
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+.page > .sculptures {
+  max-width: none;
+  margin-inline: calc(-1 * var(--gutter));
+}
+
+.carousel {
+  display: flex;
+  gap: 2.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1.5rem var(--gutter) 1.5rem;
+  scrollbar-color: var(--line) transparent;
+}
+
+.carousel img {
+  flex: 0 0 auto;
+  width: 15rem;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  scroll-snap-align: center;
+}
+
+.artist {
+  padding-block: 4rem 2rem;
+}
+
+.artist > h2 {
+  text-align: center;
+}
+
+.artist .split {
+  padding-block: 2rem 3rem;
+}
+
+.artist blockquote {
+  margin: 1.5rem 0 0;
+}
+
+.process {
+  padding-block: 3rem;
+}
+
+.process > h2 {
+  text-align: center;
+}
+
+.process ol {
+  list-style: none;
+  counter-reset: step;
+  padding-left: 0;
+  margin-top: 2.5rem;
+}
+
+.process li {
+  counter-increment: step;
+  margin-bottom: 2.5rem;
+}
+
+.process li > :is(h2, h3, h4)::before {
+  content: counter(step) ". ";
+}
+
+.process li > p {
+  padding-left: 1.4rem;
+}
+
+.faq {
+  padding-block: 3rem 2rem;
+}
+
+.faq > h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+:is(.faq, .places) details {
+  border-bottom: 1px solid var(--ink);
+}
+
+:is(.faq, .places) summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem 0;
+  font-size: 1.65rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+:is(.faq, .places) summary::-webkit-details-marker {
+  display: none;
+}
+
+:is(.faq, .places) summary::after {
+  content: "";
+  flex: none;
+  width: .5rem;
+  height: .5rem;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  transform: rotate(45deg);
+  margin-right: .3rem;
+  transition: transform .25s ease-out;
+}
+
+:is(.faq, .places) details[open] summary::after {
+  transform: rotate(-135deg);
+}
+
+/* The answer slides open as a grid row going from 0fr to 1fr, which Firefox
+   can animate where it cannot animate a height to auto. The plugin wraps each
+   answer in .answer so there is one row (src/plugins/rehype-sections.mjs).
+   A browser without ::details-content opens it in one step. */
+:is(.faq, .places) details::details-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .25s ease-out, content-visibility .25s allow-discrete;
+}
+
+:is(.faq, .places) details[open]::details-content {
+  grid-template-rows: 1fr;
+}
+
+:is(.faq, .places) .answer {
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* On the paragraphs, not the box: padding would keep a closed row from
+   reaching 0. */
+:is(.faq, .places) .answer > * {
+  padding-bottom: .5rem;
+}
+
+/* Other pages */
+
+.feature {
+  margin-block: 1rem 3rem;
+}
+
+.feature img {
+  width: 100%;
+  max-width: 34rem;
+  margin-inline: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: 50% 55%;
+}
+
+/* The live site scrolls these words across the screen; standing still they
+   read as one line of the page instead of motion to wait out. */
+.marquee ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .3em 1em;
+  margin: 0;
+  padding: 1.2rem var(--gutter);
+  border-block: 1px solid var(--line);
+  font: 400 clamp(1.5rem, 2.6vw, 2.3rem)/1.3 var(--font-display);
+}
+
+/* The band closes the page, so the footer's rule is its lower edge. */
+.page:has(> .marquee:last-child) {
+  padding-bottom: 0;
+}
+
+.page > .marquee:last-child ul {
+  border-bottom: 0;
+}
+
+.places {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 4rem;
+  align-items: start;
+  margin-top: 2.5rem;
+}
+
+.places summary {
+  font-size: 1.35rem;
+  padding: 1.1rem 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+/* Footer */
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 3rem var(--gutter);
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-size: .9rem;
+}
+
+.footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .3rem 1.6rem;
+  margin: 0;
+}
+
+/* Inline-block so the tap area is the full line, not just the glyphs:
+   inline links fail the 24px touch-target minimum on phones. */
+.footer-contact a {
+  display: inline-block;
+  padding-block: .15rem;
+}
+
+/* Larger than the header's, as on the live site. */
+.site-footer .social {
+  justify-content: center;
+  gap: 1rem;
+}
+
+.site-footer .social svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.footer-business {
+  width: min(100%, 44rem);
+  margin: 0;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+  font-size: .8rem;
+}
+
+.footer-source {
+  margin: -.6rem 0 0;
+  font-size: .75rem;
+}
+
+/* Motion: only where something opens, as a short fade and drop. The live
+   site has none, so it stays small enough not to change the look. */
+
+@keyframes unfold {
+  from {
+    opacity: 0;
+    transform: translateY(-.3rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Apart, since a browser that does not know it drops the whole list. */
+  ::details-content {
+    transition: none !important;
+  }
+}
+
+/* Below this width the six menu entries no longer fit between two equal side
+   columns and run into the wordmark. The header gives up its social icons,
+   which the footer also carries, as it does on phones. */
+@media (max-width: 960px) {
+  .nav {
+    grid-template-columns: auto 1fr;
+  }
+
+  .nav .social {
+    display: none;
+  }
+
+  .nav-links {
+    column-gap: .8rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav {
+    grid-template-columns: 1fr auto;
+  }
+
+  .nav .social {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    font: inherit;
+    font-size: .9rem;
+    color: inherit;
+    background: none;
+    border: 1px solid;
+    border-radius: .25rem;
+    padding: .2rem .8rem;
+    cursor: pointer;
+    justify-self: end;
+  }
+
+  .nav-links {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    font-size: 1rem;
+  }
+
+  /* Folded before the script runs; src/styles/no-script.css unfolds it when
+     there is no script to open it. */
+  .nav-links:not(.open) {
+    display: none;
+  }
+
+  .nav-links.open {
+    animation: unfold .2s ease-out;
+  }
+
+  .nav-links > li {
+    border-top: 1px solid var(--line);
+  }
+
+  .nav-links > li > a,
+  .menu-group summary {
+    display: block;
+    padding: .7rem 0;
+  }
+
+  .menu-group ul {
+    position: static;
+    box-shadow: none;
+    padding: 0 0 .6rem 1rem;
+    white-space: normal;
+  }
+
+  .menu-group li a {
+    display: block;
+    padding: .35rem 0;
+  }
+
+  .hero-reviews,
+  .reviews,
+  .split,
+  .split-media-first {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-reviews {
+    gap: 1.2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .hero-photo img {
+    height: 24rem;
+  }
+
+  /* On a phone the reviews fill the first screen and push the heading and the
+     booking button a screen and a half down, so those two come first. Only
+     the boxes move: the source keeps sculpt.no's order, which is what desktop
+     shows. */
+  .page:has(> .hero-title) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page:has(> .hero-title) > :not(.hero-photo) {
+    margin-inline: 0;
+  }
+
+  .page > .hero-title {
+    order: -2;
+    padding-top: 0;
+  }
+
+  .page > .intro {
+    order: -1;
+  }
+
+  .page > :first-child.hero-reviews {
+    margin-top: 0;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .places {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: .6rem;
+  }
+
+  .actions a {
+    padding-inline: 2.5em;
+  }
+
+  .carousel {
+    gap: 1rem;
+  }
+
+  .carousel img {
+    width: 12rem;
+  }
+}

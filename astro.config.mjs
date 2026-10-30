@@ -1,0 +1,42 @@
+// @ts-check
+import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
+import { locales, defaultLocale } from './src/i18n/locales.js';
+import { remarkPageLinks, pagesDigest } from './src/plugins/remark-page-links.mjs';
+import { rehypeSections } from './src/plugins/rehype-sections.mjs';
+
+// Preview deployment on GitHub Pages. At launch: site back to
+// 'https://sculpt.no' and drop `base`. Preview builds also skip the sitemap
+// and carry a noindex meta (Layout.astro), both keyed on this check, so the
+// preview never competes with the live Squarespace site.
+const site = 'https://polybjorn.github.io';
+const isPreview = !site.includes('sculpt.no');
+
+export default defineConfig({
+  site,
+  // A branch preview on the fleet's site-preview server lands on a subpath of
+  // its own; scripts/build-preview.mjs sets this to match.
+  base: process.env.PREVIEW_BASE ?? '/sculpt-no',
+  integrations: isPreview ? [] : [
+    sitemap({
+      i18n: {
+        defaultLocale,
+        locales: Object.fromEntries(locales.map((l) => [l.code, l.intl])),
+      },
+    }),
+  ],
+  markdown: {
+    // Page copy is Ester's own text, kept verbatim. Leave its punctuation
+    // alone rather than letting smart quotes rewrite it.
+    smartypants: false,
+    remarkPlugins: [[remarkPageLinks, { digest: pagesDigest() }]],
+    rehypePlugins: [rehypeSections],
+  },
+  compressHTML: true,
+  vite: {
+    // Astro inlines small hoisted scripts into the HTML, which the CSP in
+    // Layout.astro (script-src 'self') then blocks. Keep every script an
+    // external file.
+    build: { assetsInlineLimit: 0 },
+  },
+});

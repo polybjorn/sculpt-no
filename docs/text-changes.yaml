@@ -1,0 +1,88 @@
+# Every place the page text differs from sculpt.no as captured 2026-10-29, in
+# Norwegian for the client. Their client page renders it from the forge, so the
+# shape is client-pages' (scripts/text-changes-core.mjs); CI requires an
+# entry in the same push as a wording change (AGENTS.md, Content fidelity).
+note: Alt ble hentet fra dagens side 29. oktober 2026, og en kopi av sidene slik de så ut da er tatt vare på, så alt her kan etterprøves. Under står hvert avvik fra originalen, med begrunnelse. Ønsker du noe tilbakestilt, er det bare å si fra.
+groups:
+  - title: Alle sidene
+    points:
+      - title: "Teksten er den som vises på PC"
+        text: |-
+          Dagens side viser delvis forskjellig tekst på PC og på mobil. Den nye siden har én tekst som brukes på alle skjermer, og den er hentet fra PC-visningen, som er den nyeste. Tekst som bare vises på mobil i dag er ikke tatt med. Det gjelder forsiden, «Skulpturen» og «Sculpt i utvikling», se under hver side.
+      - title: "Menypunktene har ikke lenger «| Sculpt» bak navnet"
+        text: Flere menypunkter på dagens side har sidetittelen med seg i navnet. Selve sidetitlene (det som står i nettleserfanen og i søkeresultater) er beholdt som de er.
+        table:
+          head: [Før, Etter]
+          rows:
+            - [Kunstneren bak Sculpt | Norsk kunstner, Kunstneren bak Sculpt]
+            - [Sculpt i utvikling | Sculpt, Sculpt i utvikling]
+            - [Skulpturen | Sculpt, Skulpturen]
+            - [Oppsatte tider og steder | Sculpt, Oppsatte tider og steder]
+            - [Gravidskulptur | Sculpt, Gravidskulptur]
+            - [Andre skulpturer | Sculpt, Andre skulpturer]
+      - title: "Nye hjelpetekster i menyen"
+        text: Lenken «Hopp til innhold» (for tastatur og skjermleser) og navnet «Sculpt, til forsiden» på logoen. Ingen av dem er synlige i vanlig bruk, og dagens side har dem ikke.
+      - title: "Menyknappen på mobil heter «Meny»"
+        text: På mobil ligger menyen bak en knapp. Dagens side bruker et ikon med to streker, den nye siden skriver «Meny» på knappen.
+      - title: "Navnet ved siden av logoen"
+        text: «Sculpt» står nå med tekst ved siden av logoen øverst på hver side. Dagens side viser bare logoen.
+      - title: "«Nettside av Cazworks» er fjernet fra bunnen"
+        text: Den nye siden er ikke laget av Cazworks, så linjen er tatt ut.
+      - title: "Bunnteksten har fått e-post, telefon og firmaopplysninger"
+        text: Lenkene til «Kontakt», «Om oss», «Priser», «Galleri» og «Prosessen» er tatt ut av bunnteksten, siden menyen øverst alltid er synlig og har de samme sidene. Bunnteksten har i stedet e-postadressen og telefonnummeret fra kontaktsiden, ikonene for sosiale medier og nederst «Sculpt Svindland ENK, org.nr. 933 506 401, Flekkefjord», hentet fra Brønnøysundregistrene. Helt nederst står en liten lenke, «Kildekode», til koden bak nettsiden. Overskriften «Sosiale medier» vises ikke lenger, men skjermlesere leser den fortsatt opp ved ikonene.
+      - title: "«Oppsatte tider og steder» står for seg selv i menyen"
+        text: På dagens side ligger skannedagene under «Om oss» i menyen. Den som leter etter en dag å skanne, ser ikke etter dem der, så siden har fått sitt eget punkt i menyen, rett før «Kontakt».
+      - title: "En knapp til bestilling nederst"
+        text: «Kunstneren bak Sculpt», «Skulpturen», «Prosessen», «Gravidskulptur», «Andre skulpturer» og forsiden har fått knappen «Bestill din skulptur» nederst, med samme tekst og lenke som knappen øverst på forsiden. Den som har lest ferdig, kommer da rett til bestilling uten å lete i menyen.
+      - title: "Bilder med filnavn som beskrivelse har fått tom beskrivelse"
+        text: Bildene har en skjult beskrivelse som skjermlesere leser opp. På dagens side er den for mange av bildene bare filnavnet, for eksempel «Bjelland Foto-8638.jpg» og «20250213_093049.jpg» på forsiden, «Image 7.jpeg» på kontaktsiden og «20250814_083919.jpg» under «Andre skulpturer». Et filnavn sier ingenting om bildet, så disse har fått tom beskrivelse, og skjermleseren hopper over dem. De andre beskrivelsene er beholdt ordrett. Vil du skrive egne beskrivelser til disse bildene, legger jeg dem inn.
+  - title: Forside
+    points:
+      - title: "Påmeldingen til nyhetsbrevet er ikke med"
+        text: «Få oppdateringer fra Sculpt» og «Meld deg på for inspirasjon, nyheter og informasjon om skulpturer og kommende tilgjengelige skanninger.» står nederst på dagens forside. Skjemaet ser ikke ut til å lagre påmeldingene noe sted, så det er utelatt til det er avklart om nyhetsbrevet skal være med.
+      - title: "Overskriften og bestillingsknappen øverst på mobil"
+        text: På mobil begynner dagens forside med de tre kundeomtalene, og overskriften og «Bestill din skulptur» kommer først etter halvannen skjermhøyde. På den nye siden står overskriften, innledningen og knappen øverst på mobil, med omtalene og bildet rett under. På PC er rekkefølgen som før.
+      - title: "Lenken til Google-anmeldelsene"
+        text: Under «Andres anmeldelser» heter lenken til Google-anmeldelsene «Item description» på dagens side, en plassholdertekst fra Squarespace. Den heter nå «Les flere anmeldelser på Google».
+      - title: "Tekst som bare vises på mobil"
+        text: Mobilvisningen av dagens forside har en annen innledning, en kortere utgave av sitatet fra Ester og prosessen med litt andre formuleringer. Ingen av disse er med.
+        table:
+          head: [Del, Bare på mobil]
+          rows:
+            - [Innledning, "Hos Sculpt er vi spesialisert på å forvandle mennesker og livets viktige øyeblikk til tidløse kunstverk gjennom presis 3D-skanning og håndverksmessig finish."]
+            - [Sitatet, "Bare første avsnitt, med lenken «Les mer om meg» under."]
+            - [Prosessen, "Overskriften delt i to linjer, «En enkel og trygg prosess» og «– steg for steg», og stegene som punkter som åpnes med et trykk, fra «1. Konsultasjon og samtale» til «6. Levering», med teksten fra «Prosessen»-siden."]
+  - title: Prosessen
+    text: Siden heter «General 1» i nettleserfanen og i søkeresultater på dagens side, en plassholder fra Squarespace, og har ingen beskrivelse. Den heter nå «Prosessen» og har fått beskrivelsen «Slik foregår det å få laget en personlig skulptur hos Sculpt, fra første samtale og skanning til ferdig skulptur sendt hjem til deg.»
+  - title: Priser
+    points:
+      - title: "Prislisten står øverst"
+        text: Prislisten og «Bestill» kom etter avsnittene om positurer og design, nesten to skjermhøyder ned på mobil. Nå står de rett under innledningen, og positurer og design kommer etter. Teksten er den samme.
+      - title: "Lik skrivemåte på modellene"
+        text: «Premiummodell – 20 cm» er skrevet uten strek, som «Standardmodell 16 cm».
+      - title: "Samme setning står én gang"
+        text: «Dine egne former, foreviget i et personlig kunstverk. Et minne du kan glede deg over resten av livet, og som kan leve videre i generasjoner.» sto under begge modellene. Den står nå én gang, over dem begge.
+  - title: Skulpturen
+    text: Mobilvisningen har en eldre utgave av teksten om materialet, som ikke er med.
+    table:
+      head: [Bare på mobil, På PC og på den nye siden]
+      rows:
+        - ["Skulpturene lages i en bio-basert plast (biopolymer) som er nedbrytbar under riktige forhold. ...", "Skulpturene fra Sculpt lages med en biobasert polymer som grunnmateriale. ..."]
+        - ["På grunn av produksjonsmetoden kan det forekomme svake linjer i overflaten noen steder på skulpturen. ...", "Ettersom skulpturene fremstilles ved hjelp av 3D-printing, bygges de opp lag for lag, ..."]
+        - [overflatefinisher, overflateutførelser]
+  - title: Sculpt i utvikling
+    points:
+      - title: "Tittel og beskrivelse i søkeresultater"
+        text: «Sculpt i utvikling | Sculpt — Sculpt» i nettleserfanen er nå «Sculpt i utvikling — Sculpt». Siden hadde ingen beskrivelse i søkeresultater, og har fått «Sculpt arbeider med flere steder å skanne, spesialdesignede sokler og metallisering av skulpturene, og tilbyr samarbeid med bedrifter, kunstnere og idrett.»
+      - title: "Tekst som bare vises på mobil"
+        text: Overskriften heter «Under utvikling» på mobil og «Sculpt i utvikling» på PC. Den nye siden bruker «Sculpt i utvikling», og har med setningen «Dessuten kan vi også tilby bedrifter, kunstnere og idrett samarbeid innenfor vår kategori.», som mangler på mobil.
+      - title: "Ordene i det rullende båndet vises én gang"
+        text: Dagens side lar ordene «Nyskapende kunst ✳︎ Kreativ utvikling ✳︎ ...» rulle over skjermen, og teksten ligger der flere ganger for å få det til. Den nye siden har ordene én gang, og de står stille.
+  - title: Kontakt
+    points:
+      - title: "Påmeldingen til nyhetsbrevet er ikke med"
+        text: «Monthly Dispatch» og «Sign up to receive news and updates.» står på engelsk nederst på dagens kontaktside. Utelatt av samme grunn som på forsiden.
+      - title: "Kontaktskjemaet er ikke med ennå"
+        text: E-postadressen og telefonnummeret står som før. Et skjema på den nye siden trenger et sted å sende meldingene, og det er ikke bestemt ennå.
+      - title: "E-post og telefon er lenker"
+        text: Et trykk på e-postadressen åpner en ny e-post med emnet «Bestilling» og linjene «By:», «Tid/måned:» og «Svangerskapsuke:» ferdig utfylt, siden det er det siden ber om. Et trykk på telefonnummeret ringer det på mobil, og den nye lenken «Send SMS» under åpner en melding til samme nummer.

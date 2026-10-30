@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "about": "Kunstneren bak Sculpt",
+    "development": "Sculpt i utvikling",
+    "sculpture": "Skulpturen",
+    "schedule": "Oppsatte tider og steder",
+    "contact": "Kontakt",
+    "gallery-pregnancy": "Gravidskulptur",
+    "gallery-other": "Andre skulpturer",
+    "prices": "Priser",
+    "process": "Prosessen"
+  },
+  "chrome": {
+    "homeLabel": "Sculpt, til forsiden",
+    "skipLink": "Hopp til innhold"
+  },
+  "menu": {
+    "about": "Om oss",
+    "galleries": "Gallerier",
+    "toggle": "Meny"
+  },
+  "footer": {
+    "social": "Sosiale medier",
+    "business": "Sculpt Svindland ENK, org.nr. 933 506 401, Flekkefjord",
+    "source": "Kildekode"
+  },
+  "social": {
+    "instagram": "Instagram",
+    "facebook": "Facebook"
+  }
+}

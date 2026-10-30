@@ -1,0 +1,13 @@
+/* Linked from a <noscript> in Layout.astro. The phone menu starts folded so
+   the page does not jump when nav.js loads; without the script there is no
+   toggle to press, so the links stay listed instead. The `.nav` prefix
+   outranks global.css, which Astro links after this file. */
+@media (max-width: 760px) {
+  .nav .menu-toggle {
+    display: none;
+  }
+
+  .nav .nav-links:not(.open) {
+    display: flex;
+  }
+}

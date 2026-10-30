@@ -1,0 +1,18 @@
+# The spellchecker is English-only, and page copy is Norwegian prose. Left
+# unexcluded it flags ordinary words ("noe", "oktober") on every page.
+[files]
+extend-exclude = [
+  "src/content/**",
+  # The snapshot of her live site, and the thing copy.test.mjs measures the
+  # build against. A spelling "fix" here would not correct the page, it would
+  # move the target and make the test pass on text she never wrote.
+  "test/fixtures/**",
+  "src/i18n/ui/*.json",
+  "docs/text-changes.yaml",
+]
+
+# Norwegian words quoted in the English docs and the copy test.
+[default.extend-words]
+meny = "meny"
+leve = "leve"
+som = "som"

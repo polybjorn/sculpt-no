@@ -1,0 +1,117 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  lang?: string;
+  page?: string;
+}
+
+import '../styles/global.css';
+import { localeInfo, defaultLocale } from '../i18n/locales.js';
+import { Image } from 'astro:assets';
+import { pathFor, resolveRoute, localesWithPage } from '../i18n/routes.js';
+import { menu, contact, sourceUrl } from '../i18n/pages.js';
+import { ui } from '../i18n/ui.js';
+import SocialLinks from '../components/SocialLinks.astro';
+import logo from '../assets/images/logo.webp';
+import noScriptCss from '../styles/no-script.css?url';
+
+const { title, description, lang = defaultLocale, page = 'home' } = Astro.props;
+const t = ui(lang);
+const info = localeInfo(lang);
+const currentPath = Astro.url.pathname;
+const site = (Astro.site?.href ?? 'https://sculpt.no/').replace(/\/$/, '');
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+// Keep preview deployments out of search indexes; disappears automatically
+// once `site` is sculpt.no again.
+const isPreview = !site.includes('sculpt.no');
+const canonical = `${site}${currentPath}`;
+
+// Nav links point at the reader's language, or at the nearest translated
+// language while a translation is still missing.
+const link = (key: string, label: string) => {
+  const route = resolveRoute(key, lang);
+  return { ...route, label, current: currentPath === route.href };
+};
+const nav = menu.map((item) => typeof item === 'string'
+  ? link(item, t.nav[item])
+  : { group: item.group, label: t.menu[item.group], items: item.pages.map((key) => link(key, t.nav[key])) });
+
+const homeHref = resolveRoute('home', lang).href;
+const pageLocales = localesWithPage(page);
+---
+
+<!DOCTYPE html>
+<html lang={lang} dir={info.dir}>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  {description && <meta name="description" content={description}>}
+  <link rel="canonical" href={canonical}>
+  <link rel="icon" href={`${base}/favicon.ico`} sizes="48x48">
+  <link rel="apple-touch-icon" href={`${base}/apple-touch-icon.png`}>
+  <noscript><link rel="stylesheet" href={noScriptCss}></noscript>
+  {!isPreview && <link rel="sitemap" href={`${base}/sitemap-index.xml`}>}
+  {isPreview && <meta name="robots" content="noindex">}
+  {pageLocales.map((l) => (
+    <link rel="alternate" hreflang={l} href={`${site}${pathFor(page, l)}`} />
+  ))}
+  <link rel="alternate" hreflang="x-default" href={`${site}${pathFor(page, defaultLocale)}`} />
+  <meta property="og:site_name" content="Sculpt">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content={title}>
+  {description && <meta property="og:description" content={description}>}
+  <meta property="og:url" content={canonical}>
+  <meta property="og:locale" content={info.og}>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
+</head>
+<body>
+  <a href="#main" class="skip-link">{t.chrome.skipLink}</a>
+  <header class="site-header">
+    <nav class="nav">
+      <a href={homeHref} class="nav-home" aria-label={t.chrome.homeLabel}>
+        <Image src={logo} alt="" width={48} densities={[1, 2]} loading="eager" />
+        <span>Sculpt</span>
+      </a>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="nav-links">{t.menu.toggle}</button>
+      <ul class="nav-links" id="nav-links">
+        {nav.map((item) => (
+          <li>
+            {'items' in item ? (
+              <details class:list={['menu-group', { current: item.items.some((i) => i.current) }]}>
+                <summary>{item.label}</summary>
+                <ul>
+                  {item.items.map(({ href, label, lang: linkLang, current }) => (
+                    <li><a href={href} hreflang={linkLang === lang ? undefined : linkLang} aria-current={current ? 'page' : undefined}>{label}</a></li>
+                  ))}
+                </ul>
+              </details>
+            ) : (
+              <a href={item.href} hreflang={item.lang === lang ? undefined : item.lang} aria-current={item.current ? 'page' : undefined}>{item.label}</a>
+            )}
+          </li>
+        ))}
+      </ul>
+      <SocialLinks labels={t.social} />
+    </nav>
+  </header>
+
+  <main id="main">
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-contact">
+      <a href={`mailto:${contact.email}`}>{contact.email}</a>
+      <a href={contact.phone.href}>{contact.phone.label}</a>
+    </p>
+    <SocialLinks labels={t.social} label={t.footer.social} />
+    <p class="footer-business">{t.footer.business}</p>
+    <p class="footer-source"><a href={sourceUrl}>{t.footer.source}</a></p>
+  </footer>
+
+  <script src="../scripts/nav.js"></script>
+</body>
+</html>

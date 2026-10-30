@@ -1,0 +1,26 @@
+---
+import { social } from '../i18n/pages.js';
+
+interface Props {
+  labels: Record<string, string>;
+  label?: string;
+}
+
+const { labels, label } = Astro.props;
+
+// Lucide's instagram and facebook glyphs, inline so they take the text colour.
+const glyphs: Record<string, string> = {
+  instagram: '<rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>',
+  facebook: '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>',
+};
+---
+
+<ul class="social" aria-label={label}>
+  {social.map(({ key, url }) => (
+    <li>
+      <a href={url} aria-label={labels[key]} rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true" set:html={glyphs[key]} />
+      </a>
+    </li>
+  ))}
+</ul>
