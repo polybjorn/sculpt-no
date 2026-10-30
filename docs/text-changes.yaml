@@ -40,8 +40,12 @@ groups:
     points:
       - title: "Påmeldingen til nyhetsbrevet er ikke med"
         text: «Få oppdateringer fra Sculpt» og «Meld deg på for inspirasjon, nyheter og informasjon om skulpturer og kommende tilgjengelige skanninger.» står nederst på dagens forside. Skjemaet ser ikke ut til å lagre påmeldingene noe sted, så det er utelatt til det er avklart om nyhetsbrevet skal være med.
-      - title: "Overskriften og bestillingsknappen øverst på mobil"
-        text: På mobil begynner dagens forside med de tre kundeomtalene, og overskriften og «Bestill din skulptur» kommer først etter halvannen skjermhøyde. På den nye siden står overskriften, innledningen og knappen øverst på mobil, med omtalene og bildet rett under. På PC er rekkefølgen som før.
+      - title: "Alle kundeomtalene står samlet"
+        text: Dagens forside har tre kundeomtaler helt øverst, over bildet, og tre til under «Hva kundene våre sier». De tre øverste er flyttet ned, så forsiden begynner med bildet og overskriften. Under «Hva kundene våre sier» står de tre som før, og de tre andre vises med knappen «Vis flere omtaler» under dem. Når de er åpne, står knappen under alle seks og heter «Vis færre omtaler». Omtalene er ordrett som før, men står med vanlig skrift som de andre i stedet for fet.
+      - title: "Overskriften synes uten å bla"
+        text: Bildet øverst er like bredt som før, men tilpasser høyden til skjermen, så overskriften under det synes med en gang, også på en liten PC-skjerm.
+      - title: "Bildet og overskriften øverst på mobil"
+        text: På mobil begynner dagens forside med de tre kundeomtalene, og overskriften og «Bestill din skulptur» kommer først etter halvannen skjermhøyde. På den nye siden er bildet en lavere stripe på mobil, så bildet og overskriften synes med en gang, og knappen kommer rett etter innledningen.
       - title: "Lenken til Google-anmeldelsene"
         text: Under «Andres anmeldelser» heter lenken til Google-anmeldelsene «Item description» på dagens side, en plassholdertekst fra Squarespace. Den heter nå «Les flere anmeldelser på Google».
       - title: "Tekst som bare vises på mobil"

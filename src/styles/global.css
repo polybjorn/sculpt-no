@@ -269,17 +269,13 @@ p {
   margin-inline: auto;
 }
 
-.page > :is(.hero-reviews, .split, .testimonials, .sculptures, .artist, .places, .gallery) {
+.page > :is(.split, .testimonials, .sculptures, .artist, .places, .gallery) {
   max-width: var(--measure);
 }
 
 .page > :is(.hero-photo, .marquee) {
   max-width: none;
   margin-inline: calc(-1 * var(--gutter));
-}
-
-.page > :first-child.hero-reviews {
-  margin-top: -1rem;
 }
 
 .page > h1:first-child,
@@ -294,33 +290,24 @@ p {
 
 /* Front page */
 
-.hero-reviews {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding-bottom: 2.5rem;
-  max-width: 62rem;
-}
-
-.hero-reviews blockquote,
 .reviews blockquote {
   margin: 0;
   text-align: center;
 }
 
-.hero-reviews blockquote {
-  font-size: .8rem;
-  line-height: 1.6;
-}
-
-.hero-reviews p,
 .reviews p {
   margin-bottom: .6em;
 }
 
+/* Flush under the menu and short enough that the heading below it shows on the
+   first screen, which is what tells a visitor what the site is. */
+.page > .hero-photo:first-child {
+  margin-top: -3rem;
+}
+
 .hero-photo img {
   width: 100%;
-  height: min(78vh, 46rem);
+  height: clamp(16rem, calc(100svh - 22rem), 46rem);
   object-fit: cover;
   object-position: center 65%;
 }
@@ -423,6 +410,59 @@ p {
   margin-top: 2.5rem;
   font-size: .9rem;
   line-height: 1.6;
+}
+
+/* Three reviews show, as in sculpt.no's section; the three that sat above
+   the photo there open under them, so the section stays one row tall. */
+/* The button follows what it opens, so the reviews never sit on both sides of
+   it. A browser that cannot lay out details as flex keeps it above them. */
+.testimonials details {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonials summary {
+  order: 1;
+  align-self: center;
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  margin-top: 2.5rem;
+  padding: .8em 2em;
+  border: 1px solid var(--ink);
+  border-radius: .25rem;
+  font: 400 .95rem/1.2 var(--font-body);
+  letter-spacing: .02em;
+}
+
+.testimonials details:not([open]) .open,
+.testimonials details[open] .closed {
+  display: none;
+}
+
+.testimonials summary:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.testimonials summary::-webkit-details-marker {
+  display: none;
+}
+
+.testimonials summary::after {
+  content: "";
+  width: .4rem;
+  height: .4rem;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  transform: translateY(-.15rem) rotate(45deg);
+  transition: transform .25s ease-out;
+}
+
+.testimonials details[open] summary::after {
+  transform: translateY(.1rem) rotate(-135deg);
 }
 
 .page > .sculptures {
@@ -541,17 +581,17 @@ p {
    can animate where it cannot animate a height to auto. The plugin wraps each
    answer in .answer so there is one row (src/plugins/rehype-sections.mjs).
    A browser without ::details-content opens it in one step. */
-:is(.faq, .places) details::details-content {
+:is(.faq, .places, .testimonials) details::details-content {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows .25s ease-out, content-visibility .25s allow-discrete;
 }
 
-:is(.faq, .places) details[open]::details-content {
+:is(.faq, .places, .testimonials) details[open]::details-content {
   grid-template-rows: 1fr;
 }
 
-:is(.faq, .places) .answer {
+:is(.faq, .places, .testimonials) .answer {
   min-height: 0;
   overflow: hidden;
 }
@@ -781,46 +821,20 @@ p {
     padding: .35rem 0;
   }
 
-  .hero-reviews,
   .reviews,
   .split,
   .split-media-first {
     grid-template-columns: 1fr;
   }
 
-  .hero-reviews {
-    gap: 1.2rem;
-    padding-bottom: 1.5rem;
-  }
-
+  /* A strip rather than the desktop height: the heading has to share the first
+     phone screen with it, and the booking button follows the intro below. */
   .hero-photo img {
-    height: 24rem;
+    height: 13rem;
   }
 
-  /* On a phone the reviews fill the first screen and push the heading and the
-     booking button a screen and a half down, so those two come first. Only
-     the boxes move: the source keeps sculpt.no's order, which is what desktop
-     shows. */
-  .page:has(> .hero-title) {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .page:has(> .hero-title) > :not(.hero-photo) {
-    margin-inline: 0;
-  }
-
-  .page > .hero-title {
-    order: -2;
-    padding-top: 0;
-  }
-
-  .page > .intro {
-    order: -1;
-  }
-
-  .page > :first-child.hero-reviews {
-    margin-top: 0;
+  .hero-title {
+    padding-top: 2rem;
   }
 
   .split {

@@ -3,28 +3,6 @@ title: "Gravidskulpturer og personlige 3D-skulpturer | Sculpt"
 description: "Gravidskulpturer og personlige 3D-skulpturer av ekte mennesker. Unike kunstverk ferdigstilt for hånd av norsk kunstner. Bevar minnene i en skulptur."
 ---
 
-<div class="hero-reviews">
-
-> **⭐️⭐️⭐️⭐️⭐️**
->
-> **"Jeg får ikke anbefalt dette nok.<br>Gravidkroppen er midlertidig og magisk!!"**
->
-> **Ida Kristine Brumoen**
-
-> **⭐️⭐️⭐️⭐️⭐️**
->
-> **“Kjempefornøyd med skulpturen og hele prosessen!”**
->
-> **Tuva Haviken Fjeldsa**
-
-> **⭐️⭐️⭐️⭐️⭐️**
->
-> **“Utrolig glad jeg oppdaget dette mens jeg gikk gravid, et fint minne om en koselig tid. Kjempefornøyd med skulpturen! “**
->
-> **Kristine**
-
-</div>
-
 <div class="hero-photo">
 
 ![](../../../assets/images/home-01.webp)
@@ -104,6 +82,33 @@ En personlig skulptur erstatter ikke fotografiene dine, men gir deg en annen må
 > Elise Bekkevold
 
 </div>
+
+<details>
+<summary><span class="closed">Vis flere omtaler</span><span class="open">Vis færre omtaler</span></summary>
+
+<div class="reviews">
+
+> ⭐️⭐️⭐️⭐️⭐️
+>
+> "Jeg får ikke anbefalt dette nok.<br>Gravidkroppen er midlertidig og magisk!!"
+>
+> Ida Kristine Brumoen
+
+> ⭐️⭐️⭐️⭐️⭐️
+>
+> “Kjempefornøyd med skulpturen og hele prosessen!”
+>
+> Tuva Haviken Fjeldsa
+
+> ⭐️⭐️⭐️⭐️⭐️
+>
+> “Utrolig glad jeg oppdaget dette mens jeg gikk gravid, et fint minne om en koselig tid. Kjempefornøyd med skulpturen! “
+>
+> Kristine
+
+</div>
+
+</details>
 
 </div>
 

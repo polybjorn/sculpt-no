@@ -50,12 +50,15 @@ const CHANGED = {
 };
 
 const MOVED = {
+  // The three reviews above the hero photo, now after the other three.
+  index: { first: '⭐️⭐️⭐️⭐️⭐️', last: 'Kristine', before: 'Våre skulpturer' },
   priser: { first: 'Priser', last: 'Bestill', before: 'Ulike positurer' },
 };
 
 const BOOK = 'Bestill din skulptur';
 const ADDED = {
-  index: [[BOOK, null]],
+  // Both labels of the reviews button, one hidden by CSS, read as one line.
+  index: [[BOOK, null], ['Vis flere omtalerVis færre omtaler', 'Elise Bekkevold']],
   'om-oss': [[BOOK, null]],
   omskulpturen: [[BOOK, null]],
   prosessen: [[BOOK, null]],
