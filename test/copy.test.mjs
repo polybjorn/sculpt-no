@@ -45,7 +45,15 @@ const REMOVED = {
 // replaced, a run of lines moved, and lines added after an anchor line (or at
 // the end, when `after` is null). Every anchor must be in the snapshot.
 const CHANGED = {
-  index: [['Item description', 'Les flere anmeldelser på Google']],
+  index: [
+    ['Item description', 'Les flere anmeldelser på Google'],
+    // Quote marks the other reviews never had.
+    ['"Jeg får ikke anbefalt dette nok.', 'Jeg får ikke anbefalt dette nok.'],
+    ['Gravidkroppen er midlertidig og magisk!!"', 'Gravidkroppen er midlertidig og magisk!!'],
+    ['“Kjempefornøyd med skulpturen og hele prosessen!”', 'Kjempefornøyd med skulpturen og hele prosessen!'],
+    ['“Utrolig glad jeg oppdaget dette mens jeg gikk gravid, et fint minne om en koselig tid. Kjempefornøyd med skulpturen! “',
+      'Utrolig glad jeg oppdaget dette mens jeg gikk gravid, et fint minne om en koselig tid. Kjempefornøyd med skulpturen!'],
+  ],
   priser: [['Premiummodell – 20 cm', 'Premiummodell 20 cm']],
 };
 

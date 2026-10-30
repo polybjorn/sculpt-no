@@ -90,19 +90,19 @@ En personlig skulptur erstatter ikke fotografiene dine, men gir deg en annen må
 
 > ⭐️⭐️⭐️⭐️⭐️
 >
-> "Jeg får ikke anbefalt dette nok.<br>Gravidkroppen er midlertidig og magisk!!"
+> Jeg får ikke anbefalt dette nok.<br>Gravidkroppen er midlertidig og magisk!!
 >
 > Ida Kristine Brumoen
 
 > ⭐️⭐️⭐️⭐️⭐️
 >
-> “Kjempefornøyd med skulpturen og hele prosessen!”
+> Kjempefornøyd med skulpturen og hele prosessen!
 >
 > Tuva Haviken Fjeldsa
 
 > ⭐️⭐️⭐️⭐️⭐️
 >
-> “Utrolig glad jeg oppdaget dette mens jeg gikk gravid, et fint minne om en koselig tid. Kjempefornøyd med skulpturen! “
+> Utrolig glad jeg oppdaget dette mens jeg gikk gravid, et fint minne om en koselig tid. Kjempefornøyd med skulpturen!
 >
 > Kristine
 
