@@ -11,7 +11,9 @@
   },
   "chrome": {
     "homeLabel": "Sculpt, til forsiden",
-    "skipLink": "Hopp til innhold"
+    "skipLink": "Hopp til innhold",
+    "carouselPrev": "Forrige bilder",
+    "carouselNext": "Neste bilder"
   },
   "menu": {
     "galleries": "Gallerier",

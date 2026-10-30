@@ -48,6 +48,8 @@ groups:
         text: På mobil begynner dagens forside med de tre kundeomtalene, og overskriften og «Bestill din skulptur» kommer først etter halvannen skjermhøyde. På den nye siden er bildet en lavere stripe på mobil, så bildet og overskriften synes med en gang, og knappen kommer rett etter innledningen.
       - title: "Kunstneren presenteres kort på forsiden"
         text: Under «Møt kunstneren bak Sculpt» sto hele historien om hvordan Sculpt startet, den samme teksten som på «Kunstneren bak Sculpt». Forsiden har nå bare første avsnitt, med lenken «Les mer om meg» til den siden under, slik mobilvisningen av dagens forside allerede gjør. Linjen «— Kunstner og daglig leder» er tatt bort, siden overskriften allerede sier at det er kunstneren.
+      - title: "Piler ved bildene av skulpturene"
+        text: På PC har bildestripen under «Våre skulpturer» fått en pil i hver ende, siden en mus eller styreplate ikke alltid kan bla sidelengs. Pilene heter «Forrige bilder» og «Neste bilder» for skjermlesere. På mobil blar man med fingeren som før, uten piler.
       - title: "Lenken til Google-anmeldelsene"
         text: Under «Andres anmeldelser» heter lenken til Google-anmeldelsene «Item description» på dagens side, en plassholdertekst fra Squarespace. Den heter nå «Les flere anmeldelser på Google».
       - title: "Tekst som bare vises på mobil"

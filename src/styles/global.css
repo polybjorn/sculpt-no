@@ -525,6 +525,59 @@ p {
   scrollbar-color: var(--line) transparent;
 }
 
+.carousel-frame {
+  position: relative;
+}
+
+.carousel-step {
+  display: none;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 3rem;
+  height: 3rem;
+  translate: 0 -50%;
+  place-items: center;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  transition: opacity .2s;
+}
+
+.carousel-step.prev { left: var(--gutter); }
+.carousel-step.next { right: var(--gutter); }
+
+.carousel-step::after {
+  content: "";
+  width: .55rem;
+  height: .55rem;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  rotate: -45deg;
+  translate: -.15rem 0;
+}
+
+.carousel-step.prev::after {
+  rotate: 135deg;
+  translate: .15rem 0;
+}
+
+.carousel-step:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.carousel-step:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .carousel-step { display: grid; }
+}
+
 .carousel img {
   flex: 0 0 auto;
   width: 15rem;
