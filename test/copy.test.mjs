@@ -23,6 +23,10 @@ const PRICE_BLURB = 'Dine egne former, foreviget i et personlig kunstverk. Et mi
 const REMOVED = {
   // Newsletter signup, left out until Ester decides whether to keep it.
   index: [
+    // The artist's full story is on om-oss; the front page keeps its opening.
+    '— Kunstner og daglig leder',
+    'For meg ble skulpturen en måte å bevare et øyeblikk som ellers bare eksisterer i minner og bilder. Den minner meg fortsatt om en helt unik periode.',
+    'Denne opplevelsen inspirerte meg til å starte Sculpt. Jeg ønsket å gi flere gravide i Norge muligheten til å bevare denne tiden på en vakker og personlig måte, som et kunstverk de kan ha med seg resten av livet.”',
     'Få oppdateringer fra Sculpt',
     'Meld deg på for inspirasjon, nyheter og informasjon om skulpturer og kommende tilgjengelige skanninger.',
   ],
@@ -47,6 +51,7 @@ const REMOVED = {
 const CHANGED = {
   index: [
     ['Item description', 'Les flere anmeldelser på Google'],
+    ['“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.', '“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.”'],
     // Quote marks the other reviews never had.
     ['"Jeg får ikke anbefalt dette nok.', 'Jeg får ikke anbefalt dette nok.'],
     ['Gravidkroppen er midlertidig og magisk!!"', 'Gravidkroppen er midlertidig og magisk!!'],
@@ -66,7 +71,7 @@ const MOVED = {
 const BOOK = 'Bestill din skulptur';
 const ADDED = {
   // Both labels of the reviews button, one hidden by CSS, read as one line.
-  index: [[BOOK, null], ['Vis flere omtalerVis færre omtaler', 'Elise Bekkevold']],
+  index: [[BOOK, null], ['Vis flere omtalerVis færre omtaler', 'Elise Bekkevold'], ['Les mer om meg', '“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.”']],
   'om-oss': [[BOOK, null]],
   omskulpturen: [[BOOK, null]],
   prosessen: [[BOOK, null]],

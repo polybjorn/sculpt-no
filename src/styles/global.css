@@ -326,6 +326,11 @@ p {
   margin-inline: auto;
 }
 
+/* One sentence per line, so a word of the second never hangs off the first. */
+.hero-title h1 span {
+  display: inline-block;
+}
+
 .hero-title p {
   font-size: .8rem;
   letter-spacing: .06em;
@@ -385,6 +390,21 @@ p {
 
 .split img {
   width: 100%;
+}
+
+/* Text far taller than any photo of a sensible size, at every width: the text
+   runs on under the photo instead of leaving a column of blank page beside it.
+   The float needs the photo first in the source. */
+.split-fill {
+  display: flow-root;
+}
+
+.split-fill img {
+  float: right;
+  width: 45%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  margin: 0 0 1.5rem 4rem;
 }
 
 .split h1 {
@@ -668,12 +688,15 @@ p {
 
 /* Footer */
 
+/* One row where it fits, its ends on the content's edges and equal gaps
+   between: the contact first, as when stacked, the company line quiet in the
+   middle, the links last. Below that it stacks, in the narrow block. */
 .site-footer {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 1.4rem;
-  padding: 3rem var(--gutter);
+  gap: 1rem 2rem;
+  padding: 2rem max(var(--gutter), calc((100% - var(--measure)) / 2));
   border-top: 1px solid var(--line);
   text-align: center;
   font-size: .9rem;
@@ -694,27 +717,31 @@ p {
   padding-block: .15rem;
 }
 
-/* Larger than the header's, as on the live site. */
+.footer-links {
+  display: flex;
+  order: 2;
+  align-items: center;
+  gap: 2rem;
+}
+
 .site-footer .social {
-  justify-content: center;
   gap: 1rem;
 }
 
+/* Larger than the header's, as on the live site. */
 .site-footer .social svg {
   width: 1.6rem;
   height: 1.6rem;
 }
 
 .footer-business {
-  width: min(100%, 44rem);
+  order: 1;
   margin: 0;
-  padding-top: 1.2rem;
-  border-top: 1px solid var(--line);
   font-size: .8rem;
 }
 
 .footer-source {
-  margin: -.6rem 0 0;
+  margin: 0;
   font-size: .75rem;
 }
 
@@ -748,6 +775,32 @@ p {
 @media (max-width: 960px) {
   .nav {
     grid-template-columns: auto 1fr;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 1.4rem;
+    padding-block: 3rem;
+  }
+
+  .footer-links {
+    display: contents;
+  }
+
+  .site-footer .social {
+    order: 1;
+  }
+
+  .footer-source {
+    order: 3;
+    margin-top: -.6rem;
+  }
+
+  .footer-business {
+    order: 2;
+    width: min(100%, 44rem);
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--line);
   }
 
   .nav .social {
@@ -840,6 +893,23 @@ p {
   .split {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  /* The photo after the text, as in the other sections. */
+  .split-fill {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .split-fill img {
+    order: 1;
+    float: none;
+    width: 100%;
+    /* Not auto: that drops the ratio taken from the width and height
+       attributes, and a photo not yet loaded collapses to nothing. */
+    aspect-ratio: 1;
+    margin: 0;
   }
 
   .places {

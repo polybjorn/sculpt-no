@@ -29,7 +29,7 @@ groups:
       - title: "«Nettside av Cazworks» er fjernet fra bunnen"
         text: Den nye siden er ikke laget av Cazworks, så linjen er tatt ut.
       - title: "Bunnteksten har fått e-post, telefon og firmaopplysninger"
-        text: Lenkene til «Kontakt», «Om oss», «Priser», «Galleri» og «Prosessen» er tatt ut av bunnteksten, siden menyen øverst alltid er synlig og har de samme sidene. Bunnteksten har i stedet e-postadressen og telefonnummeret fra kontaktsiden, ikonene for sosiale medier og nederst «Sculpt Svindland ENK, org.nr. 933 506 401, Flekkefjord», hentet fra Brønnøysundregistrene. Helt nederst står en liten lenke, «Kildekode», til koden bak nettsiden. Overskriften «Sosiale medier» vises ikke lenger, men skjermlesere leser den fortsatt opp ved ikonene.
+        text: Lenkene til «Kontakt», «Om oss», «Priser», «Galleri» og «Prosessen» er tatt ut av bunnteksten, siden menyen øverst alltid er synlig og har de samme sidene. Bunnteksten har i stedet e-postadressen og telefonnummeret fra kontaktsiden, ikonene for sosiale medier, «Sculpt Svindland ENK, org.nr. 933 506 401, Flekkefjord», hentet fra Brønnøysundregistrene, og en liten lenke, «Kildekode», til koden bak nettsiden. På PC står alt på én linje, på mobil under hverandre. Overskriften «Sosiale medier» vises ikke lenger, men skjermlesere leser den fortsatt opp ved ikonene.
       - title: "«Oppsatte tider og steder» står for seg selv i menyen"
         text: På dagens side ligger skannedagene under «Om oss» i menyen. Den som leter etter en dag å skanne, ser ikke etter dem der, så siden har fått sitt eget punkt i menyen, rett før «Kontakt».
       - title: "En knapp til bestilling nederst"
@@ -46,15 +46,16 @@ groups:
         text: Bildet øverst er like bredt som før, men tilpasser høyden til skjermen, så overskriften under det synes med en gang, også på en liten PC-skjerm.
       - title: "Bildet og overskriften øverst på mobil"
         text: På mobil begynner dagens forside med de tre kundeomtalene, og overskriften og «Bestill din skulptur» kommer først etter halvannen skjermhøyde. På den nye siden er bildet en lavere stripe på mobil, så bildet og overskriften synes med en gang, og knappen kommer rett etter innledningen.
+      - title: "Kunstneren presenteres kort på forsiden"
+        text: Under «Møt kunstneren bak Sculpt» sto hele historien om hvordan Sculpt startet, den samme teksten som på «Kunstneren bak Sculpt». Forsiden har nå bare første avsnitt, med lenken «Les mer om meg» til den siden under, slik mobilvisningen av dagens forside allerede gjør. Linjen «— Kunstner og daglig leder» er tatt bort, siden overskriften allerede sier at det er kunstneren.
       - title: "Lenken til Google-anmeldelsene"
         text: Under «Andres anmeldelser» heter lenken til Google-anmeldelsene «Item description» på dagens side, en plassholdertekst fra Squarespace. Den heter nå «Les flere anmeldelser på Google».
       - title: "Tekst som bare vises på mobil"
-        text: Mobilvisningen av dagens forside har en annen innledning, en kortere utgave av sitatet fra Ester og prosessen med litt andre formuleringer. Ingen av disse er med.
+        text: Mobilvisningen av dagens forside har en annen innledning og prosessen med litt andre formuleringer. Ingen av disse er med. Den kortere utgaven av sitatet fra Ester er tatt i bruk, se over.
         table:
           head: [Del, Bare på mobil]
           rows:
             - [Innledning, "Hos Sculpt er vi spesialisert på å forvandle mennesker og livets viktige øyeblikk til tidløse kunstverk gjennom presis 3D-skanning og håndverksmessig finish."]
-            - [Sitatet, "Bare første avsnitt, med lenken «Les mer om meg» under."]
             - [Prosessen, "Overskriften delt i to linjer, «En enkel og trygg prosess» og «– steg for steg», og stegene som punkter som åpnes med et trykk, fra «1. Konsultasjon og samtale» til «6. Levering», med teksten fra «Prosessen»-siden."]
   - title: Prosessen
     text: Siden heter «General 1» i nettleserfanen og i søkeresultater på dagens side, en plassholder fra Squarespace, og har ingen beskrivelse. Den heter nå «Prosessen» og har fått beskrivelsen «Slik foregår det å få laget en personlig skulptur hos Sculpt, fra første samtale og skanning til ferdig skulptur sendt hjem til deg.»

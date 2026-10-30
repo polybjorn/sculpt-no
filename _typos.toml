@@ -16,3 +16,5 @@ extend-exclude = [
 meny = "meny"
 leve = "leve"
 som = "som"
+periode = "periode"
+selv = "selv"

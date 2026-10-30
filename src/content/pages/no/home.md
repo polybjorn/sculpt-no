@@ -11,7 +11,7 @@ description: "Gravidskulpturer og personlige 3D-skulpturer av ekte mennesker. Un
 
 <div class="hero-title">
 
-# En skulptur av deg. Mer enn et bilde.
+# <span>En skulptur av deg.</span> <span>Mer enn et bilde.</span>
 
 **GRAVIDSKULPTURER OG ANDRE PERSONLIGE SKULPTURER AV EKTE MENNESKER**
 
@@ -33,7 +33,9 @@ Jeg tilbyr 3D-skanning i Flekkefjord, Kristiansand, Stavanger, Oslo og Fredrikst
 
 </div>
 
-<div class="split">
+<div class="split split-fill">
+
+![Kvinne med langt, krøllete blondt hår bærer en lys genser og holder en skulptur av en menneskeflate, smilende med øynene lukket.](../../../assets/images/home-02.webp)
 
 <div class="split-text">
 
@@ -52,8 +54,6 @@ En gravidskulptur gir deg et nytt perspektiv på deg selv, kroppen din og minnen
 En personlig skulptur erstatter ikke fotografiene dine, men gir deg en annen måte å bevare det som betyr noe for deg.
 
 </div>
-
-![Kvinne med langt, krøllete blondt hår bærer en lys genser og holder en skulptur av en menneskeflate, smilende med øynene lukket.](../../../assets/images/home-02.webp)
 
 </div>
 
@@ -175,13 +175,9 @@ En personlig skulptur erstatter ikke fotografiene dine, men gir deg en annen må
 
 ### Ester Svindland
 
-*— Kunstner og daglig leder*
+> *“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.”*
 
-> *“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.*
->
-> *For meg ble skulpturen en måte å bevare et øyeblikk som ellers bare eksisterer i minner og bilder. Den minner meg fortsatt om en helt unik periode.*
->
-> *Denne opplevelsen inspirerte meg til å starte Sculpt. Jeg ønsket å gi flere gravide i Norge muligheten til å bevare denne tiden på en vakker og personlig måte, som et kunstverk de kan ha med seg resten av livet.”*
+[Les mer om meg]({{aboutPage}})
 
 </div>
 

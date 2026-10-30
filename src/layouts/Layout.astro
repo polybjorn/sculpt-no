@@ -107,9 +107,11 @@ const pageLocales = localesWithPage(page);
       <a href={`mailto:${contact.email}`}>{contact.email}</a>
       <a href={contact.phone.href}>{contact.phone.label}</a>
     </p>
-    <SocialLinks labels={t.social} label={t.footer.social} />
+    <div class="footer-links">
+      <SocialLinks labels={t.social} label={t.footer.social} />
+      <p class="footer-source"><a href={sourceUrl}>{t.footer.source}</a></p>
+    </div>
     <p class="footer-business">{t.footer.business}</p>
-    <p class="footer-source"><a href={sourceUrl}>{t.footer.source}</a></p>
   </footer>
 
   <script src="../scripts/nav.js"></script>
