@@ -19,6 +19,10 @@ const builtPages = () => {
   return out;
 };
 
+// Astro's redirect stubs (astro.config.mjs) are a bare meta refresh, outside
+// the layout, so the page invariants hold only for the rest.
+const isRedirect = (html) => /<meta http-equiv="refresh"/.test(html);
+
 const idsIn = (html) => new Set([...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]));
 
 test('every fragment link lands on an element that exists', () => {
@@ -51,9 +55,23 @@ test('every internal link lands on a page that was built', () => {
   }
 });
 
+test('every redirect lands on a built page and an element there', () => {
+  const base = (process.env.npm_package_config_base ?? '/sculpt-no').replace(/\/$/, '');
+  for (const page of builtPages()) {
+    const html = readFileSync(page, 'utf8');
+    if (!isRedirect(html)) continue;
+    const [, path, id] = html.match(/content="0;url=([^"#]*)#?([^"]*)"/) ?? [];
+    assert.ok(path?.startsWith(`${base}/`), `${page}: redirects outside the site`);
+    const target = join('dist', path.slice(base.length + 1), 'index.html');
+    assert.ok(existsSync(target), `${page}: redirects to ${path}, but ${target} was not built`);
+    if (id) assert.ok(idsIn(readFileSync(target, 'utf8')).has(id), `${page}: ${target} has no #${id}`);
+  }
+});
+
 test('the skip link lands on the main landmark', () => {
   for (const page of builtPages()) {
     const html = readFileSync(page, 'utf8');
+    if (isRedirect(html)) continue;
     const skip = html.match(/<a[^>]*class="skip-link"[^>]*href="#([^"]+)"|<a[^>]*href="#([^"]+)"[^>]*class="skip-link"/);
     assert.ok(skip, `${page}: no skip link`);
     const target = skip[1] ?? skip[2];
@@ -69,6 +87,7 @@ test('the preview flags and the base path agree with the domain', () => {
   // live site as noindex or point the preview at sculpt.no.
   for (const page of builtPages()) {
     const html = readFileSync(page, 'utf8');
+    if (isRedirect(html)) continue;
     const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
     assert.ok(canonical, `${page}: no canonical URL`);
     const live = canonical.includes('sculpt.no');

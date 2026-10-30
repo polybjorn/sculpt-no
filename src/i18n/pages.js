@@ -5,7 +5,6 @@ export const pages = [
   { key: 'home', slug: '', slugs: {} },
   { key: 'about', slug: 'about', slugs: { no: 'om-oss' } },
   { key: 'development', slug: 'development', slugs: { no: 'under-utvikling' } },
-  { key: 'sculpture', slug: 'sculpture', slugs: { no: 'omskulpturen' } },
   { key: 'schedule', slug: 'schedule', slugs: { no: 'tid-og-sted' } },
   { key: 'contact', slug: 'contact', slugs: { no: 'kontakt' } },
   { key: 'gallery-pregnancy', slug: 'gallery-pregnancy', slugs: { no: 'gallerigravidskulpturer' } },
@@ -14,17 +13,26 @@ export const pages = [
   { key: 'process', slug: 'process', slugs: { no: 'prosessen' } },
 ];
 
-// sculpt.no's menu, except that the scan dates stand on their own instead of
-// in the "Om oss" folder, where nobody looking for a date would open it.
-// A folder's label is `menu.<group>` in the UI catalog.
+// In the order a buyer goes: see the work, how it is made, the price, a date
+// to scan, then the person and the contact. sculpt.no hid the scan dates in an
+// "Om oss" folder, where nobody looking for one would open it. A folder's
+// label is `menu.<group>` in the UI catalog.
 export const menu = [
-  { group: 'about', pages: ['about', 'development', 'sculpture'] },
-  'schedule',
-  'contact',
   { group: 'galleries', pages: ['gallery-pregnancy', 'gallery-other'] },
-  'prices',
   'process',
+  'prices',
+  'schedule',
+  'about',
+  'contact',
 ];
+
+// Plans and collaborations rather than anything a buyer needs, so the page is
+// linked from the footer instead of taking a place in the menu.
+export const footerPages = ['development'];
+
+// sculpt.no's /omskulpturen, now the "Om skulpturen" part of /prosessen, so a
+// link or bookmark to the old page still lands on its text.
+export const redirects = { omskulpturen: 'prosessen/#om-skulpturen' };
 
 // As the contact page writes them (src/content/pages/no/contact.md).
 export const contact = {

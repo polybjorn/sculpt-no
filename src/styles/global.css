@@ -45,6 +45,12 @@
   box-sizing: border-box;
 }
 
+/* A heading reached by its anchor, as /omskulpturen lands on one, would
+   otherwise sit under the sticky header. */
+html {
+  scroll-padding-top: 6rem;
+}
+
 body {
   margin: 0;
   background: var(--paper);
@@ -286,6 +292,11 @@ p {
 .page ul,
 .page ol {
   padding-left: 1.4rem;
+}
+
+/* A heading after the steps opens a new part of the page, not a seventh step. */
+.page > ol + h2 {
+  margin-top: 2em;
 }
 
 /* Front page */
@@ -755,6 +766,10 @@ p {
   font-size: .8rem;
 }
 
+.footer-pages {
+  margin: 0;
+}
+
 .footer-source {
   margin: 0;
   font-size: .75rem;
@@ -784,7 +799,7 @@ p {
   }
 }
 
-/* Below this width the six menu entries no longer fit between two equal side
+/* Below this width the seven menu entries no longer fit between two equal side
    columns and run into the wordmark. The header gives up its social icons,
    which the footer also carries, as it does on phones. */
 @media (max-width: 960px) {

@@ -68,12 +68,16 @@ const MOVED = {
   priser: { first: 'Priser', last: 'Bestill', before: 'Ulike positurer' },
 };
 
+// Pages whose whole text now follows another's, ahead of that page's added
+// lines, in this order. The folded page is no longer built, so its snapshot is
+// held here instead.
+const FOLDED = { prosessen: ['omskulpturen'] };
+
 const BOOK = 'Bestill din skulptur';
 const ADDED = {
   // Both labels of the reviews button, one hidden by CSS, read as one line.
   index: [[BOOK, null], ['Vis flere omtalerVis færre omtaler', 'Elise Bekkevold'], ['Les mer om meg', '“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.”']],
   'om-oss': [[BOOK, null]],
-  omskulpturen: [[BOOK, null]],
   prosessen: [[BOOK, null]],
   gallerigravidskulpturer: [[BOOK, null]],
   galleriskulpturer: [[BOOK, null]],
@@ -109,6 +113,7 @@ const expected = (name, lines) => {
     const run = out.splice(first, at(out, move.last, name) - first + 1);
     out.splice(at(out, move.before, name), 0, ...run);
   }
+  for (const other of FOLDED[name] ?? []) out.push(...fixtureLines(other));
   for (const [line, after] of ADDED[name] ?? []) {
     if (after === null) out.push(line);
     else out.splice(at(out, after, name) + 1, 0, line);

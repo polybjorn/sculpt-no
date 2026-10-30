@@ -1,9 +1,8 @@
 {
   "nav": {
-    "about": "Kunstneren bak Sculpt",
+    "about": "Om oss",
     "development": "Sculpt i utvikling",
-    "sculpture": "Skulpturen",
-    "schedule": "Oppsatte tider og steder",
+    "schedule": "Tider og steder",
     "contact": "Kontakt",
     "gallery-pregnancy": "Gravidskulptur",
     "gallery-other": "Andre skulpturer",
@@ -15,7 +14,6 @@
     "skipLink": "Hopp til innhold"
   },
   "menu": {
-    "about": "Om oss",
     "galleries": "Gallerier",
     "toggle": "Meny"
   },

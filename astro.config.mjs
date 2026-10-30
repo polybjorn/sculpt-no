@@ -4,6 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import { locales, defaultLocale } from './src/i18n/locales.js';
 import { remarkPageLinks, pagesDigest } from './src/plugins/remark-page-links.mjs';
 import { rehypeSections } from './src/plugins/rehype-sections.mjs';
+import { redirects } from './src/i18n/pages.js';
 
 // Preview deployment on GitHub Pages. At launch: site back to
 // 'https://sculpt.no' and drop `base`. Preview builds also skip the sitemap
@@ -11,12 +12,15 @@ import { rehypeSections } from './src/plugins/rehype-sections.mjs';
 // preview never competes with the live Squarespace site.
 const site = 'https://polybjorn.github.io';
 const isPreview = !site.includes('sculpt.no');
+const base = process.env.PREVIEW_BASE ?? '/sculpt-no';
 
 export default defineConfig({
   site,
   // A branch preview on the fleet's site-preview server lands on a subpath of
   // its own; scripts/build-preview.mjs sets this to match.
-  base: process.env.PREVIEW_BASE ?? '/sculpt-no',
+  base,
+  redirects: Object.fromEntries(Object.entries(redirects)
+    .map(([from, to]) => [`/${from}`, `${base.replace(/\/$/, '')}/${to}`])),
   integrations: isPreview ? [] : [
     sitemap({
       i18n: {

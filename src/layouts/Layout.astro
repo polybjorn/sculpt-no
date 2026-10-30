@@ -10,7 +10,7 @@ import '../styles/global.css';
 import { localeInfo, defaultLocale } from '../i18n/locales.js';
 import { Image } from 'astro:assets';
 import { pathFor, resolveRoute, localesWithPage } from '../i18n/routes.js';
-import { menu, contact, sourceUrl } from '../i18n/pages.js';
+import { menu, footerPages, contact, sourceUrl } from '../i18n/pages.js';
 import { ui } from '../i18n/ui.js';
 import SocialLinks from '../components/SocialLinks.astro';
 import logo from '../assets/images/logo.webp';
@@ -36,6 +36,8 @@ const link = (key: string, label: string) => {
 const nav = menu.map((item) => typeof item === 'string'
   ? link(item, t.nav[item])
   : { group: item.group, label: t.menu[item.group], items: item.pages.map((key) => link(key, t.nav[key])) });
+
+const footerNav = footerPages.map((key) => link(key, t.nav[key]));
 
 const homeHref = resolveRoute('home', lang).href;
 const pageLocales = localesWithPage(page);
@@ -108,6 +110,11 @@ const pageLocales = localesWithPage(page);
       <a href={contact.phone.href}>{contact.phone.label}</a>
     </p>
     <div class="footer-links">
+      <p class="footer-pages">
+        {footerNav.map(({ href, label, lang: linkLang, current }) => (
+          <a href={href} hreflang={linkLang === lang ? undefined : linkLang} aria-current={current ? 'page' : undefined}>{label}</a>
+        ))}
+      </p>
       <SocialLinks labels={t.social} label={t.footer.social} />
       <p class="footer-source"><a href={sourceUrl}>{t.footer.source}</a></p>
     </div>
