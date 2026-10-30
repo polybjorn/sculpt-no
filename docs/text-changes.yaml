@@ -39,7 +39,7 @@ groups:
   - title: Forside
     points:
       - title: "Påmeldingen til nyhetsbrevet er ikke med"
-        text: «Få oppdateringer fra Sculpt» og «Meld deg på for inspirasjon, nyheter og informasjon om skulpturer og kommende tilgjengelige skanninger.» står nederst på dagens forside. Skjemaet ser ikke ut til å lagre påmeldingene noe sted, så det er utelatt til det er avklart om nyhetsbrevet skal være med.
+        text: «Få oppdateringer fra Sculpt» og «Meld deg på for inspirasjon, nyheter og informasjon om skulpturer og kommende tilgjengelige skanninger.» står nederst på dagens forside. Om skjemaet lagrer påmeldingene noe sted, kan ikke sjekkes utenfra, så det er utelatt til det er avklart om nyhetsbrevet skal være med.
       - title: "Alle kundeomtalene står samlet"
         text: Dagens forside har tre kundeomtaler helt øverst, over bildet, og tre til under «Hva kundene våre sier». De tre øverste er flyttet ned, så forsiden begynner med bildet og overskriften. Under «Hva kundene våre sier» står de tre som før, og de tre andre vises med knappen «Vis flere omtaler» under dem. Når de er åpne, står knappen under alle seks og heter «Vis færre omtaler». Omtalene er ordrett som før, men står med vanlig skrift og uten anførselstegn, som de tre andre.
       - title: "Overskriften synes uten å bla"
