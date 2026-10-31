@@ -3,17 +3,11 @@ title: "Hvordan lages en personlig 3D-skulptur?"
 description: "Slik foregår det å få laget en personlig skulptur hos Sculpt, fra første samtale og skanning til ferdig skulptur sendt hjem til deg."
 ---
 
-<div class="split split-steps">
-
-<div class="split-text">
-
 # En enkel og trygg prosess – steg for steg
 
 Å få laget en personlig skulptur er en helt unik opplevelse, og mange lurer på hvordan det faktisk foregår. Derfor har jeg gjort prosessen så trygg, enkel og forutsigbar som mulig. Hos Sculpt blir du fulgt opp gjennom hvert steg – fra første samtale til ferdig skulptur – slik at du alltid vet hva som skjer, og kan føle deg komfortabel hele veien.
 
 Under finner du en oversikt over hele prosessen, og hva du kan forvente fra første møte til skulpturen står klar i hendene dine.
-
-</div>
 
 <div class="steps">
 
@@ -40,8 +34,6 @@ Under finner du en oversikt over hele prosessen, og hva du kan forvente fra før
 5. ## Levering
 
    Når skulpturen er ferdig, pakkes den trygt og sendes til deg. Hver skulptur behandles med stor omtanke, slik at du mottar et varig minne med høy kvalitet og personlig preg.
-
-</div>
 
 </div>
 

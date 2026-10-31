@@ -180,8 +180,7 @@ p {
 /* sculpt.no sets its running text in its large size; the intro, reviews and
    FAQ answers stay at body size. */
 .page > p,
-.page > :is(ul, ol) li,
-.steps li,
+.page > :is(ul, ol, .steps) li,
 .split-text p {
   font-size: var(--fs-large);
   line-height: var(--lh-large);
@@ -571,24 +570,6 @@ p {
 
 .split-media-first {
   grid-template-columns: 1fr 1.1fr;
-}
-
-/* Prosessen's title and intro beside its steps, held in view while they
-   scroll past. Under the title, the steps ran down a reading-width column
-   with the page's sides left empty. */
-.split-steps {
-  grid-template-columns: 1fr 1.25fr;
-}
-
-.split-steps > .split-text {
-  position: sticky;
-  top: var(--below-header);
-}
-
-/* The first step level with the title beside it, and stacked, the intro's
-   paragraph margin is the only space above it. */
-.split-steps ol {
-  margin-top: 0;
 }
 
 .split img {
@@ -1405,16 +1386,6 @@ html:has(.lightbox[open]) {
     gap: var(--space-l);
     max-width: var(--text);
     margin-inline: auto;
-  }
-
-  /* Stacked, Prosessen opens as before: the title centred, as on the other
-     pages, and the steps straight after the intro. */
-  .page .split-steps {
-    row-gap: 0;
-  }
-
-  .split-steps h1 {
-    text-align: center;
   }
 
   /* At the phone's size h3 and h4 nearly meet, so the parts of Prosessen
