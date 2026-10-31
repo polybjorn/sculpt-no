@@ -26,9 +26,3 @@ Nå lager jeg også skulpturer av par, barn og familier, og jeg vil fortsette å
 </div>
 
 </div>
-
-<div class="actions">
-
-[Bestill din skulptur]({{contactPage}})
-
-</div>
