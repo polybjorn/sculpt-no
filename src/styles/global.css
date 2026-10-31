@@ -610,24 +610,29 @@ p {
   text-align: center;
 }
 
+/* Only the step names: each step's text is on the process page, and the same
+   text on two pages reads as duplicate content to a search engine. */
 .process ol {
   list-style: none;
   counter-reset: step;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem 2rem;
   padding-left: 0;
   margin-top: 2.5rem;
 }
 
 .process li {
   counter-increment: step;
-  margin-bottom: 2.5rem;
+}
+
+.process li > :is(h2, h3, h4) {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 .process li > :is(h2, h3, h4)::before {
   content: counter(step) ". ";
-}
-
-.process li > p {
-  padding-left: 1.4rem;
 }
 
 .faq {
@@ -819,10 +824,6 @@ p {
   font-size: .8rem;
 }
 
-.footer-pages {
-  margin: 0;
-}
-
 .footer-source {
   margin: 0;
   font-size: .75rem;
@@ -896,6 +897,15 @@ p {
 }
 
 @media (max-width: 760px) {
+  .process ol {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Small enough that "3D-modellering" stays on one line in a half column. */
+  .process li > :is(h2, h3, h4) {
+    font-size: 1.3rem;
+  }
+
   .nav {
     grid-template-columns: 1fr auto;
   }

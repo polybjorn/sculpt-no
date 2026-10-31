@@ -27,6 +27,14 @@ const REMOVED = {
     '— Kunstner og daglig leder',
     'For meg ble skulpturen en måte å bevare et øyeblikk som ellers bare eksisterer i minner og bilder. Den minner meg fortsatt om en helt unik periode.',
     'Denne opplevelsen inspirerte meg til å starte Sculpt. Jeg ønsket å gi flere gravide i Norge muligheten til å bevare denne tiden på en vakker og personlig måte, som et kunstverk de kan ha med seg resten av livet.”',
+    // Each step's text is on prosessen; the front page keeps the step names.
+    'Her er en oversikt over hele prosessen, og hva du kan forvente fra første møte til skulpturen står klar i hendene dine.',
+    'Vi starter med en personlig samtale om dine ønsker og hva du ser for deg med skulpturen. Sammen går vi gjennom prosessen og planlegger selve skanningen, samt eventuelle justeringer som kan gjøres digitalt i etterkant.',
+    'Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen. Du skannes naken eller med sømløs truse for best mulig detaljbevaring.',
+    'Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Noen justeringer gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.',
+    'Basert på skanningen lages en nøyaktig 3D-modell av kroppen din. Her finjusteres form og detaljer slik at skulpturen gjengir uttrykket på en naturlig og vakker måte.',
+    'Skulpturen 3D-printes. Deretter fylles den og bearbeides for hånd før overflate og utførelse tilpasses nøye etter dine ønsker.',
+    'Når skulpturen er ferdig, pakkes den trygt og sendes til deg. Hver skulptur behandles med stor omtanke, slik at du mottar et varig minne med høy kvalitet og personlig preg.',
     'Få oppdateringer fra Sculpt',
     'Meld deg på for inspirasjon, nyheter og informasjon om skulpturer og kommende tilgjengelige skanninger.',
   ],
@@ -36,10 +44,19 @@ const REMOVED = {
   ],
   // The same blurb under both price models, now once above them (ADDED).
   priser: [PRICE_BLURB],
-  // The scrolling banner repeats its words as one run-together line and as a
-  // spaced one besides the list; the rebuild shows the list once.
+  // The scrolling banner, whose words were each a top-level heading on
+  // sculpt.no; its text moved to om-oss without it.
   'under-utvikling': [
     'Nyskapende kunst✳︎Kreativ utvikling✳︎Tidløs form✳︎Unike uttrykk✳︎Håndlaget presisjon✳︎Personlig kunst✳︎Innovativt håndverk✳︎Autentisk uttrykk✳︎Nyskapende kunst✳︎Kreativ utvikling✳︎Tidløs form✳︎Unike uttrykk✳︎Håndlaget presisjon✳︎Personlig kunst✳︎Innovativt håndverk✳︎Autentisk uttrykk✳︎',
+    'Nyskapende kunst',
+    '✳︎',
+    'Kreativ utvikling',
+    'Tidløs form',
+    'Unike uttrykk',
+    'Håndlaget presisjon',
+    'Personlig kunst',
+    'Innovativt håndverk',
+    'Autentisk uttrykk',
     'Nyskapende kunst ✳︎ Kreativ utvikling ✳︎ Tidløs form ✳︎ Unike uttrykk ✳︎ Håndlaget presisjon ✳︎ Personlig kunst ✳︎ Innovativt håndverk ✳︎ Autentisk uttrykk ✳︎',
   ],
 };
@@ -60,6 +77,8 @@ const CHANGED = {
       'Utrolig glad jeg oppdaget dette mens jeg gikk gravid, et fint minne om en koselig tid. Kjempefornøyd med skulpturen!'],
   ],
   priser: [['Premiummodell – 20 cm', 'Premiummodell 20 cm']],
+  // The front page's step 2 ends with this sentence; that text is now here.
+  prosessen: [['Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen.', 'Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen. Du skannes naken eller med sømløs truse for best mulig detaljbevaring.']],
 };
 
 const MOVED = {
@@ -68,15 +87,15 @@ const MOVED = {
   priser: { first: 'Priser', last: 'Bestill', before: 'Ulike positurer' },
 };
 
-// Pages whose whole text now follows another's, ahead of that page's added
-// lines, in this order. The folded page is no longer built, so its snapshot is
-// held here instead.
-const FOLDED = { prosessen: ['omskulpturen'] };
+// Pages whose whole text, less its REMOVED lines, now follows another's, ahead
+// of that page's added lines, in this order. The folded page is no longer
+// built, so its snapshot is held here instead.
+const FOLDED = { prosessen: ['omskulpturen'], 'om-oss': ['under-utvikling'] };
 
 const BOOK = 'Bestill din skulptur';
 const ADDED = {
   // Both labels of the reviews button, one hidden by CSS, read as one line.
-  index: [[BOOK, null], ['Vis flere omtalerVis færre omtaler', 'Elise Bekkevold'], ['Les mer om meg', '“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.”']],
+  index: [[BOOK, null], ['Les mer om prosessen', 'Levering'], ['Vis flere omtalerVis færre omtaler', 'Elise Bekkevold'], ['Les mer om meg', '“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.”']],
   'om-oss': [[BOOK, null]],
   prosessen: [[BOOK, null]],
   gallerigravidskulpturer: [[BOOK, null]],
@@ -91,10 +110,6 @@ const META = {
   prosessen: {
     title: 'Prosessen — Sculpt',
     description: 'Slik foregår det å få laget en personlig skulptur hos Sculpt, fra første samtale og skanning til ferdig skulptur sendt hjem til deg.',
-  },
-  'under-utvikling': {
-    title: 'Sculpt i utvikling — Sculpt',
-    description: 'Sculpt arbeider med flere steder å skanne, spesialdesignede sokler og metallisering av skulpturene, og tilbyr samarbeid med bedrifter, kunstnere og idrett.',
   },
 };
 
@@ -113,7 +128,10 @@ const expected = (name, lines) => {
     const run = out.splice(first, at(out, move.last, name) - first + 1);
     out.splice(at(out, move.before, name), 0, ...run);
   }
-  for (const other of FOLDED[name] ?? []) out.push(...fixtureLines(other));
+  for (const other of FOLDED[name] ?? []) {
+    const dropped = new Set(REMOVED[other] ?? []);
+    out.push(...fixtureLines(other).filter((l) => !dropped.has(l)));
+  }
   for (const [line, after] of ADDED[name] ?? []) {
     if (after === null) out.push(line);
     else out.splice(at(out, after, name) + 1, 0, line);

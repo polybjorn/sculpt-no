@@ -15,7 +15,7 @@ groups:
           head: [Før, Etter]
           rows:
             - [Kunstneren bak Sculpt | Norsk kunstner, Om oss]
-            - [Sculpt i utvikling | Sculpt, Sculpt i utvikling (nederst på siden)]
+            - [Sculpt i utvikling | Sculpt, En del av «Om oss»]
             - [Skulpturen | Sculpt, En del av «Prosessen»]
             - [Oppsatte tider og steder | Sculpt, Tider og steder]
             - [Gravidskulptur | Sculpt, Gravidskulptur]
@@ -29,9 +29,9 @@ groups:
       - title: "«Nettside av Cazworks» er fjernet fra bunnen"
         text: Den nye siden er ikke laget av Cazworks, så linjen er tatt ut.
       - title: "Bunnteksten har fått e-post, telefon og firmaopplysninger"
-        text: Lenkene til «Kontakt», «Om oss», «Priser», «Galleri» og «Prosessen» er tatt ut av bunnteksten, siden menyen øverst alltid er synlig og har de samme sidene. Bunnteksten har i stedet e-postadressen og telefonnummeret fra kontaktsiden, en lenke til «Sculpt i utvikling», ikonene for sosiale medier, «Sculpt Svindland ENK, org.nr. 933 506 401, Flekkefjord», hentet fra Brønnøysundregistrene, og en liten lenke, «Kildekode», til koden bak nettsiden. På PC står alt på én linje, på mobil under hverandre. Overskriften «Sosiale medier» vises ikke lenger, men skjermlesere leser den fortsatt opp ved ikonene.
+        text: Lenkene til «Kontakt», «Om oss», «Priser», «Galleri» og «Prosessen» er tatt ut av bunnteksten, siden menyen øverst alltid er synlig og har de samme sidene. Bunnteksten har i stedet e-postadressen og telefonnummeret fra kontaktsiden, ikonene for sosiale medier, «Sculpt Svindland ENK, org.nr. 933 506 401, Flekkefjord», hentet fra Brønnøysundregistrene, og en liten lenke, «Kildekode», til koden bak nettsiden. På PC står alt på én linje, på mobil under hverandre. Overskriften «Sosiale medier» vises ikke lenger, men skjermlesere leser den fortsatt opp ved ikonene.
       - title: "Menyen følger veien til en bestilling"
-        text: Dagens meny har «Om oss» med fire sider under, så «Kontakt», «Gallerier», «Priser» og «Prosessen». Den nye menyen har sidene i den rekkefølgen en kunde trenger dem, «Gallerier», «Prosessen», «Priser», «Tider og steder», «Om oss» og «Kontakt», og bare «Gallerier» har sider under seg. Skannedagene lå under «Om oss», der den som leter etter en dag å skanne ikke ser etter dem, så de har fått sitt eget punkt. «Om oss» går rett til «Kunstneren bak Sculpt», og «Sculpt i utvikling» har en lenke nederst på hver side i stedet for en plass i menyen.
+        text: Dagens meny har «Om oss» med fire sider under, så «Kontakt», «Gallerier», «Priser» og «Prosessen». Den nye menyen har sidene i den rekkefølgen en kunde trenger dem, «Gallerier», «Prosessen», «Priser», «Tider og steder», «Om oss» og «Kontakt», og bare «Gallerier» har sider under seg. Skannedagene lå under «Om oss», der den som leter etter en dag å skanne ikke ser etter dem, så de har fått sitt eget punkt. «Om oss» går rett til «Kunstneren bak Sculpt», og teksten fra «Sculpt i utvikling» står nederst på «Om oss».
       - title: "En knapp til bestilling nederst"
         text: «Kunstneren bak Sculpt», «Prosessen», «Gravidskulptur», «Andre skulpturer» og forsiden har fått knappen «Bestill din skulptur» nederst, med samme tekst og lenke som knappen øverst på forsiden. Den som har lest ferdig, kommer da rett til bestilling uten å lete i menyen.
       - title: "Bilder med filnavn som beskrivelse har fått tom beskrivelse"
@@ -50,6 +50,8 @@ groups:
         text: Under «Møt kunstneren bak Sculpt» sto hele historien om hvordan Sculpt startet, den samme teksten som på «Kunstneren bak Sculpt». Forsiden har nå bare første avsnitt, med lenken «Les mer om meg» til den siden under, slik mobilvisningen av dagens forside allerede gjør. Linjen «— Kunstner og daglig leder» er tatt bort, siden overskriften allerede sier at det er kunstneren.
       - title: "Piler ved bildene av skulpturene"
         text: På PC har bildestripen under «Våre skulpturer» fått en pil i hver ende, siden en mus eller styreplate ikke alltid kan bla sidelengs. Pilene heter «Forrige bilder» og «Neste bilder» for skjermlesere. På mobil blar man med fingeren som før, uten piler.
+      - title: "Prosessen vises kort på forsiden"
+        text: Under «En enkel og trygg prosess – steg for steg» sto hele teksten til hvert av de seks stegene, nesten ordrett den samme som på «Prosessen». Søkemotorer ser samme tekst på to sider som en kopi, og forsiden blir kortere uten den. Forsiden har nå innledningen og navnene på de seks stegene, med knappen «Les mer om prosessen» under. Linjen «Her er en oversikt over hele prosessen, og hva du kan forvente fra første møte til skulpturen står klar i hendene dine.» er tatt ut, siden oversikten står på «Prosessen». Setningen «Du skannes naken eller med sømløs truse for best mulig detaljbevaring.» sto bare på forsiden og er flyttet til steg 2 på «Prosessen». Steg 3 og 5 var formulert litt annerledes på forsiden («Noen justeringer gjøres mens du er til stede», «Deretter fylles den og bearbeides for hånd før overflate og utførelse tilpasses»), og det er utgaven fra «Prosessen» som står igjen.
       - title: "Lenken til Google-anmeldelsene"
         text: Under «Andres anmeldelser» heter lenken til Google-anmeldelsene «Item description» på dagens side, en plassholdertekst fra Squarespace. Den heter nå «Les flere anmeldelser på Google».
       - title: "Tekst som bare vises på mobil"
@@ -63,6 +65,8 @@ groups:
     points:
       - title: "«Om skulpturen» står nederst på siden"
         text: Dagens side har «Om skulpturen» som egen side, og den forteller mye av det samme som «Prosessen» om skanningen, bearbeidingen og materialet. Teksten og bildet står nå ordrett nederst på «Prosessen», under overskriften «Om skulpturen», så alt om hvordan skulpturen blir til er samlet ett sted, med én knapp til bestilling under. Den gamle adressen, sculpt.no/omskulpturen, sender videre dit. Sidetittelen «Hvordan lages en personlig 3D-skulptur?» og beskrivelsen hørte til den gamle siden og brukes ikke lenger.
+      - title: "Setning fra forsiden i steg 2"
+        text: «Du skannes naken eller med sømløs truse for best mulig detaljbevaring.» sto bare i steg 2 på forsiden, og står nå sist i steg 2 her, se under «Forside».
       - title: "Navn og beskrivelse i søkeresultater"
         text: Siden heter «General 1» i nettleserfanen og i søkeresultater på dagens side, en plassholder fra Squarespace, og har ingen beskrivelse. Den heter nå «Prosessen» og har fått beskrivelsen «Slik foregår det å få laget en personlig skulptur hos Sculpt, fra første samtale og skanning til ferdig skulptur sendt hjem til deg.»
   - title: Priser
@@ -81,14 +85,14 @@ groups:
         - ["Skulpturene lages i en bio-basert plast (biopolymer) som er nedbrytbar under riktige forhold. ...", "Skulpturene fra Sculpt lages med en biobasert polymer som grunnmateriale. ..."]
         - ["På grunn av produksjonsmetoden kan det forekomme svake linjer i overflaten noen steder på skulpturen. ...", "Ettersom skulpturene fremstilles ved hjelp av 3D-printing, bygges de opp lag for lag, ..."]
         - [overflatefinisher, overflateutførelser]
-  - title: Sculpt i utvikling
+  - title: Sculpt i utvikling (nå på «Om oss»)
     points:
-      - title: "Tittel og beskrivelse i søkeresultater"
-        text: «Sculpt i utvikling | Sculpt — Sculpt» i nettleserfanen er nå «Sculpt i utvikling — Sculpt». Siden hadde ingen beskrivelse i søkeresultater, og har fått «Sculpt arbeider med flere steder å skanne, spesialdesignede sokler og metallisering av skulpturene, og tilbyr samarbeid med bedrifter, kunstnere og idrett.»
+      - title: "Teksten står nederst på «Om oss»"
+        text: «Sculpt i utvikling» handler om planene for bedriften og samarbeid, ikke om noe en kunde trenger før en bestilling. Teksten og bildet står nå ordrett nederst på «Om oss», under overskriften «Sculpt i utvikling». Den gamle adressen, sculpt.no/under-utvikling, sender videre dit, så lenker og søkeresultater fortsatt finner teksten. Sidetittelen «Sculpt i utvikling | Sculpt — Sculpt» hørte til den gamle siden og brukes ikke lenger.
       - title: "Tekst som bare vises på mobil"
         text: Overskriften heter «Under utvikling» på mobil og «Sculpt i utvikling» på PC. Den nye siden bruker «Sculpt i utvikling», og har med setningen «Dessuten kan vi også tilby bedrifter, kunstnere og idrett samarbeid innenfor vår kategori.», som mangler på mobil.
-      - title: "Ordene i det rullende båndet vises én gang"
-        text: Dagens side lar ordene «Nyskapende kunst ✳︎ Kreativ utvikling ✳︎ ...» rulle over skjermen, og teksten ligger der flere ganger for å få det til. Den nye siden har ordene én gang, og de står stille.
+      - title: "Det rullende båndet med ord er ikke med"
+        text: Dagens side lar ordene «Nyskapende kunst ✳︎ Kreativ utvikling ✳︎ Tidløs form ✳︎ Unike uttrykk ✳︎ Håndlaget presisjon ✳︎ Personlig kunst ✳︎ Innovativt håndverk ✳︎ Autentisk uttrykk ✳︎» rulle over skjermen. Hvert ord og hver stjerne i båndet er merket som en hovedoverskrift, 17 i alt, mens den egentlige overskriften «Sculpt i utvikling» ikke er det. Det gjør det uklart for søkemotorer hva siden handler om. Båndet er derfor ikke tatt med til «Om oss».
   - title: Kontakt
     points:
       - title: "Påmeldingen til nyhetsbrevet er ikke med"

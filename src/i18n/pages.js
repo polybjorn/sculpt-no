@@ -4,7 +4,6 @@
 export const pages = [
   { key: 'home', slug: '', slugs: {} },
   { key: 'about', slug: 'about', slugs: { no: 'om-oss' } },
-  { key: 'development', slug: 'development', slugs: { no: 'under-utvikling' } },
   { key: 'schedule', slug: 'schedule', slugs: { no: 'tid-og-sted' } },
   { key: 'contact', slug: 'contact', slugs: { no: 'kontakt' } },
   { key: 'gallery-pregnancy', slug: 'gallery-pregnancy', slugs: { no: 'gallerigravidskulpturer' } },
@@ -26,13 +25,14 @@ export const menu = [
   'contact',
 ];
 
-// Plans and collaborations rather than anything a buyer needs, so the page is
-// linked from the footer instead of taking a place in the menu.
-export const footerPages = ['development'];
-
-// sculpt.no's /omskulpturen, now the "Om skulpturen" part of /prosessen, so a
-// link or bookmark to the old page still lands on its text.
-export const redirects = { omskulpturen: 'prosessen/#om-skulpturen' };
+// sculpt.no's pages folded into another, so a link, bookmark or search result
+// for the old address still lands on its text. /home-1-1 was a copy of the
+// front page in sculpt.no's sitemap. Each goes once nothing reaches it (#26).
+export const redirects = {
+  omskulpturen: 'prosessen/#om-skulpturen',
+  'under-utvikling': 'om-oss/#sculpt-i-utvikling',
+  'home-1-1': '',
+};
 
 // As the contact page writes them (src/content/pages/no/contact.md).
 export const contact = {
