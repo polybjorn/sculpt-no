@@ -368,11 +368,6 @@ p {
   max-width: var(--measure);
 }
 
-.page > .marquee {
-  max-width: none;
-  margin-inline: calc(-1 * var(--gutter));
-}
-
 .page > h1:first-child,
 .page:has(> .gallery) > p {
   text-align: center;
@@ -1009,30 +1004,6 @@ p {
 
 .price-other p {
   margin: 0;
-}
-
-/* The live site scrolls these words across the screen; standing still they
-   read as one line of the page instead of motion to wait out. */
-.marquee ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: .3em 1em;
-  margin: 0;
-  padding: var(--space-s) var(--gutter);
-  border-block: 1px solid var(--line);
-  font: 400 var(--fs-h3)/var(--lh-h3) var(--font-display);
-  letter-spacing: var(--ls-display);
-}
-
-/* The band closes the page, so the footer's rule is its lower edge. */
-.page:has(> .marquee:last-child) {
-  padding-bottom: 0;
-}
-
-.page > .marquee:last-child ul {
-  border-bottom: 0;
 }
 
 /* Tid og sted: the next scan days as boxes in one row at photo width, then a
