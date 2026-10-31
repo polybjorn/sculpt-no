@@ -3,7 +3,7 @@ title: "Om oss: Få et minne, bestill skulptur i dag"
 description: "Oppdag unike 3D-skulpturer som bevarer livets spesielle øyeblikk. Kontakt oss for skanning i Flekkefjord, Kristiansand og Oslo."
 ---
 
-<div class="split split-media-first">
+<div class="split split-media-first split-portrait">
 
 ![Et portrett av en smilende kvinne med skulderlangt, krøllete, blond hår, iført en hvit, mønstret genser, mot en enkel lys bakgrunn.](../../../assets/images/home-37.webp)
 

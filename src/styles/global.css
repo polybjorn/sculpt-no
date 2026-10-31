@@ -509,6 +509,15 @@ p {
   width: 100%;
 }
 
+/* A landscape portrait beside a long text: cropped upright to about the
+   text's height, the sides being backdrop. Whole once the columns stack. */
+@media (width > 960px) {
+  .split-portrait img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+}
+
 /* Text far taller than any photo of a sensible size, at every width: the text
    runs on under the photo instead of leaving a column of blank page beside it.
    The float needs the photo first in the source. */
@@ -1224,6 +1233,15 @@ p {
     column-gap: .8rem;
   }
 
+  /* Side by side here, the text falls under 40 characters a line and the photo
+     to a thumbnail. */
+  .page .split:not(.split-fill) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: var(--text);
+    margin-inline: auto;
+  }
+
   /* Five names in a row would wrap word by word, so the path turns downward. */
   .process ol {
     flex-direction: column;
@@ -1358,11 +1376,6 @@ p {
   .split,
   .split-media-first {
     grid-template-columns: 1fr;
-  }
-
-  .split {
-    grid-template-columns: 1fr;
-    gap: 2rem;
   }
 
   /* The photo after the text, as in the other sections. */

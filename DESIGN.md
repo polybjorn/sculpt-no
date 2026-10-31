@@ -95,6 +95,11 @@ over left-aligned text reads as detached from it.
   every statue whole and the fade on the table under them, so the width sets
   its height. A photo inside a text section fills that column, so its edges
   line up with the heading above and the text below
+- A two-column split stacks into one `--text` column below 961px, where side
+  by side the text would fall under 40 characters a line. `split-portrait`
+  crops a landscape portrait upright (4:5) beside a long text, so the photo
+  is about the text's height rather than a strip above blank page; stacked,
+  it shows whole
 - Content files mark their sections with `<div class="...">` lines, turned into
   wrappers by `src/plugins/rehype-sections.mjs`, which also gives each image
   `sizes` and `srcset` widths that fit its section
