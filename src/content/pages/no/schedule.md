@@ -19,21 +19,15 @@ Ser du ikke en dag som passer for deg, [ta gjerne kontakt]({{contactPage}}). Noe
 
 <div class="place">
 
-### Oslo
+### Flekkefjord
 
-Skanning i “Studio metro” i [Herslebs gate 14 b, 0561 Oslo](https://www.google.com/maps/search/?api=1&query=Herslebs+gate+14+b%2C+0561+Oslo)
+I Flekkefjord har jeg både hjemmestudio og verksted. Det betyr bl.a. at det er veldig fleksibelt og gode muligheter for skanning når du ønsker.
 
-<!-- scan-days Oslo -->
+Jeg tilstreber å få til skanning av deg innenfor en uke av ønsket tidspunkt.
 
-</div>
+[Ta kontakt]({{contactPage}}) så finner vi en tid.
 
-<div class="place">
-
-### Stavanger
-
-Skanning i “Stavanger tinfabrik”: [Ryfylkegata 45, 4014 Stavanger](https://www.google.com/maps/search/?api=1&query=Ryfylkegata+45%2C+4014+Stavanger)
-
-<!-- scan-days Stavanger -->
+<!-- scan-days Flekkefjord -->
 
 </div>
 
@@ -49,15 +43,21 @@ Skanning foregår på [Huset i Markens](https://husetimarkens.no/om-oss/). [Mark
 
 <div class="place">
 
-### Flekkefjord
+### Stavanger
 
-I Flekkefjord har jeg både hjemmestudio og verksted. Det betyr bl.a. at det er veldig fleksibelt og gode muligheter for skanning når du ønsker.
+Skanning i “Stavanger tinfabrik”: [Ryfylkegata 45, 4014 Stavanger](https://www.google.com/maps/search/?api=1&query=Ryfylkegata+45%2C+4014+Stavanger)
 
-Jeg tilstreber å få til skanning av deg innenfor en uke av ønsket tidspunkt.
+<!-- scan-days Stavanger -->
 
-[Ta kontakt]({{contactPage}}) så finner vi en tid.
+</div>
 
-<!-- scan-days Flekkefjord -->
+<div class="place">
+
+### Oslo
+
+Skanning i “Studio metro” i [Herslebs gate 14 b, 0561 Oslo](https://www.google.com/maps/search/?api=1&query=Herslebs+gate+14+b%2C+0561+Oslo)
+
+<!-- scan-days Oslo -->
 
 </div>
 

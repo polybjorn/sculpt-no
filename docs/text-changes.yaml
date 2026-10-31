@@ -124,6 +124,8 @@ groups:
         text: Datoene sto skrevet inn på siden og måtte endres der hver gang en dag kom til eller var over. Nå henter siden dem fra kalenderen din hver natt. De fem neste dagene står øverst, under den nye overskriften «Neste skannedager», hver i sin boks med dag, by, sted og klokkeslett når det står i kalenderen. Hver by har i tillegg sine egne datoer ved siden av teksten. En dag som er passert, forsvinner av seg selv. Inntil kalenderen er koblet til, står det ingen datoer på siden.
       - title: "Byene står åpne under «Steder»"
         text: På dagens side er byene punkter som åpnes med et trykk. Nå står alle åpne, hver i sin rad med navnet til venstre og teksten ved siden av, under den nye overskriften «Steder». Teksten er den samme.
+      - title: "Flekkefjord står først under «Steder»"
+        text: Dagens side har byene i rekkefølgen Oslo, Stavanger, Kristiansand, Flekkefjord, Fredrikstad og Bergen. Nå står Flekkefjord først, der du har hjemmestudio og verksted, så Kristiansand og Stavanger, som ligger nærmest, deretter Oslo og Fredrikstad, og Bergen sist. Teksten under hver by er den samme.
   - title: Om skulpturen (nå på «Prosessen»)
     text: Mobilvisningen har en eldre utgave av teksten om materialet, som ikke er med.
     table:

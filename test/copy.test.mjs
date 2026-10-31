@@ -98,6 +98,12 @@ const MOVED = {
     last: 'Basert på skanningen lages en nøyaktig 3D-modell av kroppen din. Her finjusteres form og detaljer slik at skulpturen gjengir uttrykket på en naturlig og vakker måte.',
     before: 'Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Justeringene gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.',
   },
+  // Her home studio first, then the cities nearest it; moves apply in order.
+  'tid-og-sted': [
+    { first: 'Flekkefjord', last: 'Ta kontakt så finner vi en tid.', before: 'Oslo' },
+    { first: 'Kristiansand', last: 'Skanning foregår på Huset i Markens. Markensgate 4A, 4610 Kristiansand', before: 'Oslo' },
+    { first: 'Stavanger', last: 'Skanning i “Stavanger tinfabrik”: Ryfylkegata 45, 4014 Stavanger', before: 'Oslo' },
+  ],
 };
 
 // Pages whose whole text, less its REMOVED lines, now follows another's, ahead
@@ -143,8 +149,7 @@ const at = (lines, line, name) => {
 const expected = (name, lines) => {
   let out = [...lines];
   for (const [from, to] of CHANGED[name] ?? []) out[at(out, from, name)] = to;
-  const move = MOVED[name];
-  if (move) {
+  for (const move of [MOVED[name] ?? []].flat()) {
     const first = at(out, move.first, name);
     const run = out.splice(first, at(out, move.last, name) - first + 1);
     out.splice(at(out, move.before, name), 0, ...run);
