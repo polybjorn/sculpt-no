@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
+import { glue } from '../src/plugins/rehype-nbsp.mjs';
 
 // Invariants of the built output, as opposed to the copy. Each one answers a
 // mutation the build passes: a nav link to a page that was never built, <main>
@@ -106,4 +107,26 @@ test('every FAQ answer sits in one box after its question', () => {
         `${page}: a <details> without its .answer box, so its CSS cannot slide it open`);
     }
   }
+});
+
+test('the no-break rules glue a dash, a price, a phone number and a size', () => {
+  assert.equal(glue('cellulitter – og kan dere'), 'cellulitter\u00a0– og kan dere');
+  assert.equal(glue('7 800 kr'), '7\u00a0800\u00a0kr');
+  assert.equal(glue('480 05 508'), '480\u00a005\u00a0508');
+  assert.equal(glue('opptil 25 cm høy, ca 1 måned'), 'opptil 25\u00a0cm høy, ca\u00a01\u00a0måned');
+  for (const text of ['Markensgate 4A, 4610 Kristiansand', '2026 kroner', '4 årstider']) assert.equal(glue(text), text);
+});
+
+// The rehype pass reaches markdown only; text from a component or a UI string
+// reaches the page around it, so the built page is what this reads.
+test('no line on a built page can start with a dash or split a number', () => {
+  const off = [];
+  for (const page of builtPages()) {
+    const body = readFileSync(page, 'utf8').match(/<body[^>]*>([\s\S]*)<\/body>/)?.[1] ?? '';
+    const text = body.replace(/<(script|style)\b[\s\S]*?<\/\1>/g, '').replace(/&nbsp;|&#160;/g, '\u00a0');
+    for (const run of text.split(/<[^>]*>/)) {
+      if (glue(run) !== run) off.push(`${page}: "${run.trim()}"`);
+    }
+  }
+  assert.deepEqual(off, []);
 });

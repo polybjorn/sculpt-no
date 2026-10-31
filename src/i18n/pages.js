@@ -44,7 +44,7 @@ export const titleSuffix = ` | ${siteName}`;
 // As the contact page writes them (src/content/pages/no/contact.md).
 export const contact = {
   email: 'sculptnorge@outlook.com',
-  phone: { label: '480 05 508', href: 'tel:+4748005508' },
+  phone: { label: '480\u00a005\u00a0508', href: 'tel:+4748005508' },
 };
 
 // From Brønnøysundregistrene, as the footer (ui `business`) shows them.

@@ -64,7 +64,10 @@ Sans, one length at every size, which the live site's .02em at 16px and
 .016em at 19.5px both come to.
 
 Body text wraps with `text-wrap: pretty`, so a paragraph does not end on a
-word alone where the browser can avoid it; headings balance instead. Text at
+word alone where the browser can avoid it; headings balance instead. No line
+starts with a dash or splits a price, a size or a phone number: the build puts
+a no-break space there (`src/plugins/rehype-nbsp.mjs`), a UI string carries
+` ` itself, and `test/build.test.mjs` reads every built page. Text at
 body size runs at `--text-body` (38em), the same 70-odd characters a line that
 `--text` gives the large running text.
 

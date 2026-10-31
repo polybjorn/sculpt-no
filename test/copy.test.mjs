@@ -255,7 +255,7 @@ const mainText = (html) => {
     .split('\n')
     // The browser collapses runs of spaces when it renders, and the capture
     // took what it rendered. A no-break space is layout the build adds
-    // (rehype-heading-dashes.mjs), not a change to the words.
+    // (rehype-nbsp.mjs), not a change to the words.
     .map((l) => l.replace(/[ \t\r\u00a0]+/g, ' ').trim())
     .filter(Boolean);
 };
