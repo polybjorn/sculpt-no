@@ -28,8 +28,8 @@ edge (the FAQ rules, the ghost button, the menu button) uses `--ink`.
 
 | Token | Face | Role |
 |---|---|---|
-| `--font-display` | Cormorant Garamond 400 | Headings, FAQ questions, the "Sculpt" wordmark |
-| `--font-body` | DM Sans 300, 300 italic, 500 | Body, navigation, buttons. 500 is `<strong>` |
+| `--font-display` | Cormorant Garamond 400, 700 | Headings, FAQ questions, the "Sculpt" wordmark. 700 is the front page title only |
+| `--font-body` | DM Sans 300, 300 italic, 500, 700 | Body, navigation, buttons. 500 is buttons, 700 is `<strong>` |
 
 Both are self-hosted from `src/assets/fonts/` (latin subset, Fontsource builds,
 OFL licences beside them), never from a font CDN: the CSP allows only
@@ -39,8 +39,22 @@ The live site sets its buttons in Almarai. The rebuild uses DM Sans for them
 instead: one face fewer to load, and at button size the two are hard to tell
 apart.
 
-Sizes follow the live site at 1440px wide (h1 about 78px, h2 52px, h3 37px,
-body 16px/1.8 with .02em tracking) and scale down with `clamp()`.
+Sizes are the live site's scale, measured at 1440px wide, as `--fs-*` tokens
+on `:root`; `test/type-scale.test.mjs` fails any font size that names none.
+
+| Token | Size | Used for |
+|---|---|---|
+| `--fs-h1` | 78px, down to 42px | Page titles, on every page |
+| `--fs-h2` | 52px, down to 34px | Section headings |
+| `--fs-h3` | 37px, down to 27px | Sub-headings, the Om oss word band |
+| `--fs-h4` | 26.4px | FAQ questions, cities on Tid og sted, contact labels, the wordmark |
+| `--fs-h5` | 19.2px | The front page step names in their row; not on the live site, one x1.4 step below h4 |
+| `--fs-large` | 19.5px, .016em tracking | Running text, as the live site's "large" paragraphs |
+| `--fs-body` | 16px/1.8, .02em tracking | Intro, FAQ answers, menu, buttons |
+| `--fs-small` | 14.4px | Reviews, the kicker under the front page title, the footer |
+
+The first port read the live site's 16px intro paragraph as the body size and
+missed that its running text is the large size; the scale corrects that.
 
 ## Layout
 
@@ -74,5 +88,8 @@ scroll-in effects: they need a script and hold back the first paint.
 
 ## Logo
 
-`src/assets/images/logo.webp` is the 466px raster from the live site; there is
+`src/assets/images/logo.webp` is the 466px raster from the live site with the
+word "Sculpt" taken out of the coin, since the wordmark beside it says the
+same; `public/favicon.ico` and `public/apple-touch-icon.png` are cut from it.
+The source PNG is `media-original/logo-new.png` in the client folder. There is
 no vector. Ask Ester for the original before it is used larger than the header.

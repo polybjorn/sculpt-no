@@ -38,7 +38,7 @@ groups:
       - title: "Menyknappen på mobil heter «Meny»"
         text: På mobil ligger menyen bak en knapp. Dagens side bruker et ikon med to streker, den nye siden skriver «Meny» på knappen.
       - title: "Navnet ved siden av logoen"
-        text: «Sculpt» står nå med tekst ved siden av logoen øverst på hver side. Dagens side viser bare logoen.
+        text: «Sculpt» står nå med tekst ved siden av logoen øverst på hver side, og ordet er tatt bort fra selve logoen, så navnet ikke står to ganger. Det gjelder også det lille ikonet i nettleserfanen og på hjemskjermen. Dagens side viser bare logoen, med «Sculpt» inne i den.
       - title: "«Nettside av Cazworks» er fjernet fra bunnen"
         text: Den nye siden er ikke laget av Cazworks, så linjen er tatt ut.
       - title: "Bunnteksten har fått e-post, telefon og firmaopplysninger"

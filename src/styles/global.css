@@ -7,6 +7,14 @@
   src: url("../assets/fonts/cormorant-garamond-latin-400-normal.woff2") format("woff2");
 }
 
+/* Only the front page title, bold as on the live site. */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/cormorant-garamond-latin-700-normal.woff2") format("woff2");
+}
+
 @font-face {
   font-family: "DM Sans";
   font-weight: 300;
@@ -29,6 +37,13 @@
   src: url("../assets/fonts/dm-sans-latin-500-normal.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/dm-sans-latin-700-normal.woff2") format("woff2");
+}
+
 :root {
   --ink: #36302a;
   --paper: #fff8f5;
@@ -36,6 +51,17 @@
   --line: #d9cfc9;
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "DM Sans", system-ui, sans-serif;
+  /* The live site's sizes, about x1.4 a step from h4 up; h5 goes one step
+     below for the front page's step names. Every font size names one of
+     these, and test/type-scale.test.mjs refuses any other. */
+  --fs-h1: clamp(2.6rem, 5.4vw, 4.85rem);
+  --fs-h2: clamp(2.1rem, 3.6vw, 3.27rem);
+  --fs-h3: clamp(1.7rem, 2.6vw, 2.3rem);
+  --fs-h4: 1.65rem;
+  --fs-h5: 1.2rem;
+  --fs-large: 1.22rem;
+  --fs-body: 1rem;
+  --fs-small: .9rem;
   --measure: 70rem;
   --text: 44rem;
   --gutter: clamp(1rem, 4vw, 3rem);
@@ -55,7 +81,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font: 300 1rem/1.8 var(--font-body);
+  font: 300 var(--fs-body)/1.8 var(--font-body);
   letter-spacing: .02em;
 }
 
@@ -70,7 +96,7 @@ a {
 }
 
 strong {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 h1, h2, h3, h4, summary {
@@ -84,27 +110,36 @@ h1, h2, h3, h4, summary {
 }
 
 h1 {
-  font-size: clamp(2.6rem, 5.4vw, 4.85rem);
+  font-size: var(--fs-h1);
   line-height: 1.07;
 }
 
 h2 {
-  font-size: clamp(2.1rem, 3.6vw, 3.27rem);
+  font-size: var(--fs-h2);
   line-height: 1.1;
 }
 
 h3 {
-  font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+  font-size: var(--fs-h3);
   line-height: 1.15;
 }
 
 h4 {
-  font-size: 1.65rem;
+  font-size: var(--fs-h4);
   line-height: 1.17;
 }
 
 p {
   margin: 0 0 1em;
+}
+
+/* sculpt.no sets its running text in its large size; the intro, reviews and
+   FAQ answers stay at body size. */
+.page > p,
+.page > :is(ul, ol) li,
+.split-text p {
+  font-size: var(--fs-large);
+  letter-spacing: .016em;
 }
 
 :focus-visible {
@@ -152,7 +187,7 @@ p {
   gap: .6rem;
   justify-self: start;
   text-decoration: none;
-  font: 400 1.7rem/1 var(--font-display);
+  font: 400 var(--fs-h4)/1 var(--font-display);
 }
 
 .nav-home img {
@@ -168,7 +203,7 @@ p {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: .85rem;
+  font-size: var(--fs-body);
 }
 
 .nav-links a,
@@ -352,6 +387,7 @@ p {
 
 .hero-title h1 {
   max-width: 22ch;
+  font-weight: 700;
   margin-inline: auto;
 }
 
@@ -361,14 +397,14 @@ p {
 }
 
 .hero-title p {
-  font-size: .8rem;
+  font-size: var(--fs-small);
   letter-spacing: .06em;
   line-height: 1.7;
 }
 
 .intro {
   text-align: center;
-  font-size: .9rem;
+  font-size: var(--fs-body);
   padding-block: 1rem 3rem;
 }
 
@@ -379,7 +415,7 @@ p {
 
 .actions a {
   display: inline-block;
-  font: 400 1rem/1.2 var(--font-body);
+  font: 500 var(--fs-body)/1.2 var(--font-body);
   letter-spacing: .02em;
   text-decoration: none;
   padding: 1.1em 4.5em;
@@ -397,7 +433,6 @@ p {
   color: var(--ink);
   border: 1px solid var(--ink);
   padding: .8em 1.3em;
-  font-size: .85rem;
 }
 
 .sculptures .actions a:hover {
@@ -436,13 +471,9 @@ p {
   margin: 0 0 1.5rem 4rem;
 }
 
-.split h1 {
-  font-size: clamp(2.4rem, 4vw, 3.6rem);
-}
-
 /* Contact details read as labels under the title, not as sections. */
 .split-text h1 ~ h2 {
-  font-size: 1.65rem;
+  font-size: var(--fs-h4);
   margin: 1.5rem 0 .2rem;
 }
 
@@ -457,7 +488,7 @@ p {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 2.5rem;
-  font-size: .9rem;
+  font-size: var(--fs-small);
   line-height: 1.6;
 }
 
@@ -482,7 +513,7 @@ p {
   padding: .8em 2em;
   border: 1px solid var(--ink);
   border-radius: .25rem;
-  font: 400 .95rem/1.2 var(--font-body);
+  font: 500 var(--fs-body)/1.2 var(--font-body);
   letter-spacing: .02em;
 }
 
@@ -646,7 +677,7 @@ p {
 /* Small enough that "3D-modellering" fits its sixth unbroken. */
 .process li > :is(h2, h3, h4) {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: var(--fs-h5);
   line-height: 1.2;
 }
 
@@ -663,7 +694,7 @@ p {
   border: 1px solid var(--ink);
   border-radius: 50%;
   background: var(--paper);
-  font: 400 1.15rem/1 var(--font-display);
+  font: 400 var(--fs-h5)/1 var(--font-display);
   font-variant-numeric: lining-nums;
 }
 
@@ -688,7 +719,7 @@ p {
   align-items: center;
   gap: 1rem;
   padding: 1.4rem 0;
-  font-size: 1.65rem;
+  font-size: var(--fs-h4);
   line-height: 1.2;
   margin: 0;
 }
@@ -764,7 +795,7 @@ p {
   margin: 0;
   padding: 1.2rem var(--gutter);
   border-block: 1px solid var(--line);
-  font: 400 clamp(1.5rem, 2.6vw, 2.3rem)/1.3 var(--font-display);
+  font: 400 var(--fs-h3)/1.3 var(--font-display);
 }
 
 /* The band closes the page, so the footer's rule is its lower edge. */
@@ -785,7 +816,6 @@ p {
 }
 
 .places summary {
-  font-size: 1.35rem;
   padding: 1.1rem 0;
 }
 
@@ -815,7 +845,7 @@ p {
   padding: 2rem max(var(--gutter), calc((100% - var(--measure)) / 2));
   border-top: 1px solid var(--line);
   text-align: center;
-  font-size: .9rem;
+  font-size: var(--fs-small);
 }
 
 .footer-contact {
@@ -853,12 +883,10 @@ p {
 .footer-business {
   order: 1;
   margin: 0;
-  font-size: .8rem;
 }
 
 .footer-source {
   margin: 0;
-  font-size: .75rem;
 }
 
 /* Motion: only where something opens, as a short fade and drop. The live
@@ -949,7 +977,7 @@ p {
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: 1.4rem;
+    font-size: var(--fs-h4);
   }
 
   .process li > :is(h2, h3, h4)::before {
@@ -970,7 +998,7 @@ p {
   .menu-toggle {
     display: block;
     font: inherit;
-    font-size: .9rem;
+    letter-spacing: inherit;
     color: inherit;
     background: none;
     border: 1px solid;
@@ -985,7 +1013,6 @@ p {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    font-size: 1rem;
   }
 
   /* Folded before the script runs; src/styles/no-script.css unfolds it when
