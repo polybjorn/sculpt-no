@@ -69,7 +69,11 @@ Pris oppgis etter avtale.
 
 *Alle priser er inkludert frakt.*
 
-[Bestill]({{contactPage}})
+<div class="actions">
+
+[Bestill din skulptur]({{contactPage}})
+
+</div>
 
 ## Ulike positurer
 

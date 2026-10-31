@@ -80,6 +80,7 @@ const REMOVED = {
 // docs/text-changes.yaml, applied to the snapshot in this order: lines
 // replaced, a run of lines moved, and lines added after an anchor line (or at
 // the end, when `after` is null). Every anchor must be in the snapshot.
+const BOOK = 'Bestill din skulptur';
 const CHANGED = {
   index: [
     ['Item description', 'Les flere anmeldelser på Google'],
@@ -91,7 +92,7 @@ const CHANGED = {
     ['“Utrolig glad jeg oppdaget dette mens jeg gikk gravid, et fint minne om en koselig tid. Kjempefornøyd med skulpturen! “',
       'Utrolig glad jeg oppdaget dette mens jeg gikk gravid, et fint minne om en koselig tid. Kjempefornøyd med skulpturen!'],
   ],
-  priser: [['Premiummodell – 20 cm', 'Premiummodell 20 cm']],
+  priser: [['Premiummodell – 20 cm', 'Premiummodell 20 cm'], ['Bestill', BOOK]],
   gallerigravidskulpturer: [['Graviditetskulpturer', 'Graviditetsskulpturer']],
   // The front page's step 2 ends with this sentence; that text is now here.
   prosessen: [['Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen.', 'Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen. Du skannes naken eller med sømløs truse for best mulig detaljbevaring.']],
@@ -100,7 +101,7 @@ const CHANGED = {
 const MOVED = {
   // The three reviews above the hero photo, now after the other three.
   index: { first: '⭐️⭐️⭐️⭐️⭐️', last: 'Kristine', before: 'Våre skulpturer' },
-  priser: { first: 'Priser', last: 'Bestill', before: 'Ulike positurer' },
+  priser: { first: 'Priser', last: BOOK, before: 'Ulike positurer' },
   // The model is made before it is adjusted, so its paragraph comes first.
   prosessen: {
     first: 'Basert på skanningen lages en nøyaktig 3D-modell av kroppen din. Her finjusteres form og detaljer slik at skulpturen gjengir uttrykket på en naturlig og vakker måte.',
@@ -120,7 +121,6 @@ const MOVED = {
 // built, so its snapshot is held here instead.
 const FOLDED = { prosessen: ['omskulpturen'] };
 
-const BOOK = 'Bestill din skulptur';
 const ADDED = {
   // Both labels of the reviews button, one hidden by CSS, read as one line.
   index: [[BOOK, null], ['Les mer om prosessen', 'Levering'], ['Vis flere omtalerVis færre omtaler', 'Elise Bekkevold'], ['Les mer om meg', '“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.”']],
@@ -131,7 +131,7 @@ const ADDED = {
   galleriskulpturer: [[BOOK, null]],
   priser: [[PRICE_BLURB, 'Priser']],
   kontakt: [['Dessuten kan vi også tilby bedrifter, kunstnere og idrett samarbeid innenfor vår kategori.', 'Har du spørsmål om skulpturene, prosessen eller booking? Jeg hjelper deg gjerne. Send meg en melding eller en e-post, så svarer jeg så fort jeg kan.'], ['Send SMS', '480 05 508']],
-  'tid-og-sted': [['Steder', 'Ser du ikke en dag som passer for deg, ta gjerne kontakt. Noen steder kan det være mulighet for fleksibilitet.']],
+  'tid-og-sted': [['Steder', 'Ser du ikke en dag som passer for deg, ta gjerne kontakt. Noen steder kan det være mulighet for fleksibilitet.'], [BOOK, null]],
 };
 
 // Search titles and descriptions that differ from sculpt.no, merged over the

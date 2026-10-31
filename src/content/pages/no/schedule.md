@@ -88,3 +88,9 @@ Er du i Bergensområdet og vurderer en skulptur, ta kontakt! Jeg forsøker å ve
 </div>
 
 </div>
+
+<div class="actions">
+
+[Bestill din skulptur]({{contactPage}})
+
+</div>
