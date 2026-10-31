@@ -1,0 +1,52 @@
+---
+// The scan days read from Ester's calendar (#15). Without a city, the next
+// few across all cities, under their own heading; with one, that city's
+// coming days, in its row. Nothing renders when there are none, so the page
+// never states an empty list in words she has not written.
+//
+// data-feed marks text that comes from the calendar rather than the content
+// file, which the copy test leaves out of its comparison.
+import { readScanDays, type ScanDay } from '../lib/scan-days-data.mjs';
+import { osloToday, upcoming, inCity, longDate, shortDate, venue } from '../lib/scan-days.mjs';
+import { ui } from '../i18n/ui.js';
+
+interface Props {
+  locale: string;
+  city?: string;
+}
+const { locale, city } = Astro.props;
+
+// Five fill one row of boxes at photo width and reach about two months out at
+// one day a month in three cities.
+const NEXT = 5;
+
+const coming = upcoming(readScanDays().events, osloToday());
+const days: ScanDay[] = city ? inCity(coming, city) : coming.slice(0, NEXT);
+---
+{days.length > 0 && (city ? (
+  <ul class="place-days" data-feed>
+    {days.map((e) => {
+      const d = shortDate(e);
+      return <li>{d.date}{d.time && <>, <span class="time">{d.time}</span></>}</li>;
+    })}
+  </ul>
+) : (
+  <>
+    <h2 data-feed>{ui(locale).schedule.upcoming}</h2>
+    <ol class="upcoming" data-feed>
+      {days.map((e) => {
+        const v = venue(e);
+        const d = longDate(e);
+        return (
+          <li>
+            <span class="weekday">{d.weekday}</span>
+            <span class="day">{d.date}</span>
+            {d.time && <span class="time">{d.time}</span>}
+            <strong>{e.title}</strong>
+            {v && <a href={v.map}>{v.name}</a>}
+          </li>
+        );
+      })}
+    </ol>
+  </>
+))}

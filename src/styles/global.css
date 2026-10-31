@@ -313,7 +313,8 @@ p {
   margin-inline: auto;
 }
 
-.page > :is(.split, .testimonials, .sculptures, .artist, .places, .gallery) {
+/* The next scan days' heading goes out with its boxes, so it heads them. */
+.page > :is(.split, .testimonials, .sculptures, .artist, .gallery, .upcoming, h2:has(+ .upcoming)) {
   max-width: var(--measure);
 }
 
@@ -777,11 +778,11 @@ p {
   margin-bottom: 1.5rem;
 }
 
-:is(.faq, .places) details {
+.faq details {
   border-bottom: 1px solid var(--ink);
 }
 
-:is(.faq, .places) summary {
+.faq summary {
   list-style: none;
   cursor: pointer;
   display: flex;
@@ -794,11 +795,11 @@ p {
   margin: 0;
 }
 
-:is(.faq, .places) summary::-webkit-details-marker {
+.faq summary::-webkit-details-marker {
   display: none;
 }
 
-:is(.faq, .places) summary::after {
+.faq summary::after {
   content: "";
   flex: none;
   width: .5rem;
@@ -810,7 +811,7 @@ p {
   transition: transform .25s ease-out;
 }
 
-:is(.faq, .places) details[open] summary::after {
+.faq details[open] summary::after {
   transform: rotate(-135deg);
 }
 
@@ -818,24 +819,24 @@ p {
    can animate where it cannot animate a height to auto. The plugin wraps each
    answer in .answer so there is one row (src/plugins/rehype-sections.mjs).
    A browser without ::details-content opens it in one step. */
-:is(.faq, .places, .testimonials) details::details-content {
+:is(.faq, .testimonials) details::details-content {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows .25s ease-out, content-visibility .25s allow-discrete;
 }
 
-:is(.faq, .places, .testimonials) details[open]::details-content {
+:is(.faq, .testimonials) details[open]::details-content {
   grid-template-rows: 1fr;
 }
 
-:is(.faq, .places, .testimonials) .answer {
+:is(.faq, .testimonials) .answer {
   min-height: 0;
   overflow: hidden;
 }
 
 /* On the paragraphs, not the box: padding would keep a closed row from
    reaching 0. */
-:is(.faq, .places) .answer > * {
+.faq .answer > * {
   padding-bottom: .5rem;
 }
 
@@ -947,16 +948,91 @@ p {
   border-bottom: 0;
 }
 
-.places {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 4rem;
-  align-items: start;
-  margin-top: 2.5rem;
+/* Tid og sted: the next scan days as boxes in one row at photo width, then a
+   ruled row per city with its name, her text and its own coming days side by
+   side. A box takes the buttons' ink border, a list the --line rules
+   (DESIGN.md, Layout). */
+.upcoming,
+.place-days {
+  list-style: none;
 }
 
-.places summary {
-  padding: 1.1rem 0;
+.page .upcoming {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 0;
+  font-size: var(--fs-small);
+}
+
+.page > h2:has(+ :is(.upcoming, .places)) {
+  margin-top: 3rem;
+}
+
+.page > .upcoming li {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--ink);
+  font-size: var(--fs-small);
+  line-height: 1.6;
+}
+
+.upcoming .day {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  line-height: 1.1;
+  font-variant-numeric: lining-nums;
+}
+
+.upcoming strong {
+  font-weight: 500;
+  margin-top: .6rem;
+}
+
+/* A time stays whole when the date beside it wraps. */
+.place-days .time {
+  white-space: nowrap;
+}
+
+.place:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.place {
+  display: grid;
+  grid-template-columns: 9rem 1fr 9rem;
+  gap: 0 2rem;
+  align-items: baseline;
+  padding: 1.3rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.place > h3 {
+  grid-row: 1 / span 9;
+  font-size: var(--fs-h4);
+  margin: 0;
+}
+
+.place > p {
+  grid-column: 2;
+  margin: 0 0 .6rem;
+}
+
+.place > p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* A city without coming days gives its text the dates' column too. */
+.place:not(:has(.place-days)) > p {
+  grid-column: 2 / 4;
+}
+
+.page .place-days {
+  grid-column: 3;
+  grid-row: 1 / span 9;
+  padding: 0;
+  margin: 0;
 }
 
 .gallery {
@@ -1236,8 +1312,28 @@ p {
     margin: 0;
   }
 
-  .places {
+  /* One row still, scrolled sideways like the front page strip. */
+  .page .upcoming {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 11rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .upcoming li {
+    scroll-snap-align: start;
+  }
+
+  .place {
     grid-template-columns: 1fr;
+    gap: .4rem;
+  }
+
+  .place > :is(h3, p, .place-days),
+  .place:not(:has(.place-days)) > p {
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .gallery {

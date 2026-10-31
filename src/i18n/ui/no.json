@@ -26,5 +26,8 @@
   "social": {
     "instagram": "Instagram",
     "facebook": "Facebook"
+  },
+  "schedule": {
+    "upcoming": "Neste skannedager"
   }
 }

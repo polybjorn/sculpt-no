@@ -49,6 +49,8 @@ const REMOVED = {
   ],
   // The same blurb under both price models, now once above them (ADDED).
   priser: [PRICE_BLURB],
+  // Typed dates, now read from Ester's calendar (data-feed below).
+  'tid-og-sted': ['25 Oktober', '29 November', '20 Desember', '3 November', '8 Desember', '4 November', '9 Desember'],
   // The scrolling banner, whose words were each a top-level heading on
   // sculpt.no; its text moved to om-oss without it.
   'under-utvikling': [
@@ -113,6 +115,7 @@ const ADDED = {
   galleriskulpturer: [[BOOK, null]],
   priser: [[PRICE_BLURB, 'Priser']],
   kontakt: [['Send SMS', '480 05 508']],
+  'tid-og-sted': [['Steder', 'Ser du ikke en dag som passer for deg, ta gjerne kontakt. Noen steder kan det være mulighet for fleksibilitet.']],
 };
 
 // Search titles and descriptions that differ from sculpt.no, merged over the
@@ -170,6 +173,9 @@ const decode = (s) => s.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, e) => {
 const mainText = (html) => {
   const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1] ?? '';
   return decode(main
+    // Scan days come from Ester's calendar and change daily, so they are
+    // tested against the feed (scan-days.test.mjs), not the snapshot.
+    .replace(/<(h2|ol|ul)\b[^>]*\bdata-feed\b[^>]*>[\s\S]*?<\/\1>/g, '')
     // A block boundary or a <br> is a line in the capture; inline tags are not.
     .replace(/<\/?(h[1-6]|p|li|ul|ol|div|section|blockquote|details|summary)\b[^>]*>|<br\s*\/?>/g, '\n')
     .replace(/<[^>]+>/g, ''))

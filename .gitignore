@@ -3,3 +3,5 @@ dist/
 .astro/
 .claude/
 .DS_Store
+# Written by the Pages deploy from the calendar feed (scripts/scan-days-fetch.mjs).
+src/data/

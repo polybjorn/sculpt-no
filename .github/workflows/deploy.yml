@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # A scan day that has passed drops off the page by the next morning, and a
+  # day added to the calendar shows up, with no commit (scripts/scan-days-fetch.mjs).
+  schedule:
+    - cron: '0 2 * * *'
 
 permissions:
   contents: read
@@ -19,6 +23,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      degraded: ${{ steps.scan-days.outputs.degraded }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -26,6 +32,10 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
+      - id: scan-days
+        run: node scripts/scan-days-fetch.mjs
+        env:
+          SCAN_DAYS_ICS: ${{ secrets.SCAN_DAYS_ICS }}
       # `pretest` builds, so this produces dist/ as well as testing it.
       - run: npm test
       - uses: actions/upload-pages-artifact@v5
@@ -41,3 +51,29 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v5
+
+  # The page still deploys when the calendar could not be read as it stands,
+  # so a passed day drops off; failing the run afterwards is what mails it.
+  report:
+    needs: [build, deploy]
+    if: needs.build.outputs.degraded != ''
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "::error::$DEGRADED"
+          exit 1
+        env:
+          DEGRADED: ${{ needs.build.outputs.degraded }}
+
+  # GitHub turns off a public repo's schedule after 60 days without a commit,
+  # and after launch the repo may go quiet for longer. Enabling the workflow
+  # again is how gautamkrishnar/keepalive-workflow resets that, without a commit.
+  keepalive:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - run: gh api -X PUT "repos/$GITHUB_REPOSITORY/actions/workflows/deploy.yml/enable"
+        env:
+          GH_TOKEN: ${{ github.token }}

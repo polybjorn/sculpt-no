@@ -116,6 +116,14 @@ groups:
         text: «Dine egne former, foreviget i et personlig kunstverk. Et minne du kan glede deg over resten av livet, og som kan leve videre i generasjoner.» sto under begge modellene. Den står nå én gang, over dem begge.
       - title: "Prislisten er satt opp som en oversikt"
         text: Prislisten var 15 linjer i fet skrift etter hverandre. Nå står de to modellene i hver sin boks med prisen stort, og «Tilvalg:» og «Utførelse:» står ved siden av hverandre som små overskrifter, med hvert valg på sin linje. Bare prisene er i fet skrift. «Andre størrelser» er også en liten overskrift. Ordene og prisene er de samme.
+  - title: Oppsatte tider og steder
+    points:
+      - title: "Alle adressene åpner et kart"
+        text: Bare adressen i Oslo var en lenke til kart. Nå er adressene i Stavanger, Kristiansand og Fredrikstad det også, så alle byene med et fast sted er satt opp likt. Lenken til Huset i Markens er beholdt.
+      - title: "Skannedagene hentes fra kalenderen din"
+        text: Datoene sto skrevet inn på siden og måtte endres der hver gang en dag kom til eller var over. Nå henter siden dem fra kalenderen din hver natt. De fem neste dagene står øverst, under den nye overskriften «Neste skannedager», hver i sin boks med dag, by, sted og klokkeslett når det står i kalenderen. Hver by har i tillegg sine egne datoer ved siden av teksten. En dag som er passert, forsvinner av seg selv. Inntil kalenderen er koblet til, står det ingen datoer på siden.
+      - title: "Byene står åpne under «Steder»"
+        text: På dagens side er byene punkter som åpnes med et trykk. Nå står alle åpne, hver i sin rad med navnet til venstre og teksten ved siden av, under den nye overskriften «Steder». Teksten er den samme.
   - title: Om skulpturen (nå på «Prosessen»)
     text: Mobilvisningen har en eldre utgave av teksten om materialet, som ikke er med.
     table:

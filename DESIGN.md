@@ -46,7 +46,7 @@ on `:root`; `test/type-scale.test.mjs` fails any font size that names none.
 |---|---|---|
 | `--fs-h1` | 78px, down to 42px | The front page title only |
 | `--fs-h2` | 52px, down to 34px | Front page section headings, and the title of every other page |
-| `--fs-h3` | 37px, down to 27px | A part of an inner page, like «Om skulpturen» or «Priser», the Om oss word band |
+| `--fs-h3` | 37px, down to 27px | A part of an inner page, like «Om skulpturen» or «Priser», the Om oss word band, the date in a scan day box |
 | `--fs-h4` | 26.4px | Step names on Prosessen, FAQ questions, cities on Tid og sted, contact labels, the wordmark |
 | `--fs-h5` | 19.2px | The front page step names in their row; not on the live site, one x1.4 step below h4 |
 | `--fs-large` | 19.5px, .016em tracking | Running text, as the live site's "large" paragraphs |
@@ -74,8 +74,8 @@ over left-aligned text reads as detached from it.
 - Below 760px the front page shows the heading, the introduction and the
   booking button before the reviews. Only CSS `order` moves them, so screen
   readers and desktop keep sculpt.no's order
-- Text runs at `--text` (44rem); review rows, two-column splits and the
-  carousel widen to `--measure` (70rem); the carousel row is full bleed, and
+- Text runs at `--text` (44rem); review rows, two-column splits, the
+  carousel and the next scan days widen to `--measure` (70rem); the carousel row is full bleed, and
   the hero photo too until it reaches `--measure`. The hero keeps one frame,
   every statue whole and the fade on the table under them, so the width sets
   its height. A photo inside a text section fills that column, so its edges
@@ -86,6 +86,10 @@ over left-aligned text reads as detached from it.
 - A box, like the price models, takes the buttons' 1px ink border on paper
   rather than a tinted fill, so it needs no colour outside the palette. A list
   inside a section, like the price add-ons, is ruled with `--line`
+- Tid og sted puts the next five scan days in boxes on one row, which scrolls
+  sideways on a phone rather than wrapping, then a `--line` ruled row per city:
+  its name, her text, and its own coming days in a third column when it has
+  any
 - Steps are numbered circles on one `--line` path, the same on every page:
   across the front page at desktop width, where only the names show, and
   downward wherever the steps carry text or the row would wrap. A step name is

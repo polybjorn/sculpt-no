@@ -1,6 +1,7 @@
 ---
 import { getEntry, render } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import ScanDays from '../components/ScanDays.astro';
 import { allRoutes } from '../i18n/routes.js';
 
 // Every page in every language comes from here. Adding a page means one entry
@@ -18,10 +19,22 @@ const entry = await getEntry('pages', `${locale}/${key}`);
 if (!entry) throw new Error(`no content entry for ${locale}/${key}`);
 const { title, description } = entry.data;
 const { Content } = await render(entry);
+
+// A content file places the calendar's scan days with a comment line:
+// `<!-- scan-days -->` for the next few, `<!-- scan-days Oslo -->` for one
+// city's. Markdown cannot hold a component, so such a page is rendered in
+// parts around the markers. rendered.html is what <Content /> renders less
+// its image handling, so a page with images cannot carry a marker.
+const SCAN_DAYS = /<!--\s*scan-days(?:\s+(.*?))?\s*-->/g;
+const html = entry.rendered?.html ?? '';
+const parts = SCAN_DAYS.test(html) ? html.split(SCAN_DAYS) : null;
+if (parts && entry.rendered?.metadata?.imagePaths?.length) throw new Error(`${locale}/${key}: a page with scan days cannot hold images`);
 ---
 
 <Layout title={title} description={description} lang={locale} page={key}>
   <div class="page">
-    <Content />
+    {parts
+      ? parts.map((part, i) => (i % 2 ? <ScanDays locale={locale} city={part} /> : <Fragment set:html={part} />))
+      : <Content />}
   </div>
 </Layout>

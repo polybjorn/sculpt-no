@@ -11,51 +11,45 @@ Noen steder er vi fleksible og kan skanne utenom oppsatte skannedager. Se Flekke
 
 Ser du ikke en dag som passer for deg, [ta gjerne kontakt]({{contactPage}}). Noen steder kan det være mulighet for fleksibilitet.
 
+<!-- scan-days -->
+
+## Steder
+
 <div class="places">
 
-<div class="places-column">
+<div class="place">
 
-<details>
-<summary>Oslo</summary>
+### Oslo
 
-Skanning i “Studio metro” i [Herslebs gate 14 b, 0561 Oslo](https://maps.google.com/maps?daddr=Herslebs+gate+14+b%2C+0561+Oslo%2C+Norway%2C+Norway)
+Skanning i “Studio metro” i [Herslebs gate 14 b, 0561 Oslo](https://www.google.com/maps/search/?api=1&query=Herslebs+gate+14+b%2C+0561+Oslo)
 
-25 Oktober
-
-29 November
-
-20 Desember
-
-</details>
-
-<details>
-<summary>Stavanger</summary>
-
-Skanning i “Stavanger tinfabrik”: Ryfylkegata 45, 4014 Stavanger
-
-3 November
-
-8 Desember
-
-</details>
-
-<details>
-<summary>Kristiansand</summary>
-
-Skanning foregår på [Huset i Markens](https://husetimarkens.no/om-oss/). Markensgate 4A, 4610 Kristiansand
-
-4 November
-
-9 Desember
-
-</details>
+<!-- scan-days Oslo -->
 
 </div>
 
-<div class="places-column">
+<div class="place">
 
-<details>
-<summary>Flekkefjord</summary>
+### Stavanger
+
+Skanning i “Stavanger tinfabrik”: [Ryfylkegata 45, 4014 Stavanger](https://www.google.com/maps/search/?api=1&query=Ryfylkegata+45%2C+4014+Stavanger)
+
+<!-- scan-days Stavanger -->
+
+</div>
+
+<div class="place">
+
+### Kristiansand
+
+Skanning foregår på [Huset i Markens](https://husetimarkens.no/om-oss/). [Markensgate 4A, 4610 Kristiansand](https://www.google.com/maps/search/?api=1&query=Markensgate+4A%2C+4610+Kristiansand)
+
+<!-- scan-days Kristiansand -->
+
+</div>
+
+<div class="place">
+
+### Flekkefjord
 
 I Flekkefjord har jeg både hjemmestudio og verksted. Det betyr bl.a. at det er veldig fleksibelt og gode muligheter for skanning når du ønsker.
 
@@ -63,19 +57,25 @@ Jeg tilstreber å få til skanning av deg innenfor en uke av ønsket tidspunkt.
 
 [Ta kontakt]({{contactPage}}) så finner vi en tid.
 
-</details>
+<!-- scan-days Flekkefjord -->
 
-<details>
-<summary>Fredrikstad</summary>
+</div>
 
-Skanning i “Nailovers Majka”: Glemmengata 2, 1608 Fredrikstad
+<div class="place">
+
+### Fredrikstad
+
+Skanning i “Nailovers Majka”: [Glemmengata 2, 1608 Fredrikstad](https://www.google.com/maps/search/?api=1&query=Glemmengata+2%2C+1608+Fredrikstad)
 
 Her er ingen tider oppsatt enda, men det kan være mulig med fleksibilitet også her siden Berit, som skanner for Sculpt bor her, så ta kontakt for dialog om mulig tidspunkt.
 
-</details>
+<!-- scan-days Fredrikstad -->
 
-<details>
-<summary>Bergen</summary>
+</div>
+
+<div class="place">
+
+### Bergen
 
 Bergen er Sculpts nye satsingområde og vi ønsker å komme jevnlig ( en dag i måneden) til Bergen for å skanne.
 
@@ -83,7 +83,7 @@ Det er ikke oppsatt en dag enda, men Sculpts ønske er en dag tidlig/ i midten a
 
 Er du i Bergensområdet og vurderer en skulptur, ta kontakt! Jeg forsøker å velge en dag der flest mulig kan
 
-</details>
+<!-- scan-days Bergen -->
 
 </div>
 
