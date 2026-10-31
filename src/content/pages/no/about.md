@@ -19,7 +19,9 @@ For meg ble skulpturen en måte å bevare et øyeblikk som ellers bare eksistere
 
 Denne opplevelsen inspirerte meg til å starte Sculpt. Jeg ønsket å gi flere gravide i Norge muligheten til å bevare denne tiden på en vakker og personlig måte, som et kunstverk de kan ha med seg resten av livet.
 
-Jeg tilbyr skanning i Flekkefjord, Kristiansand og Oslo.
+Nå lager jeg også skulpturer av par, barn og familier, og jeg vil fortsette å utvikle Sculpt med nye typer skulpturer.
+
+[Se andre skulpturer]({{galleryOtherPage}})
 
 </div>
 

@@ -41,6 +41,8 @@ const REMOVED = {
     'Få oppdateringer fra Sculpt',
     'Meld deg på for inspirasjon, nyheter og informasjon om skulpturer og kommende tilgjengelige skanninger.',
   ],
+  // The places are on tid-og-sted, and named only three of five here.
+  'om-oss': ['Jeg tilbyr skanning i Flekkefjord, Kristiansand og Oslo.'],
   // Its text is now the first half of the Digital behandling step.
   prosessen: ['3D-modellering'],
   kontakt: [
@@ -122,7 +124,8 @@ const BOOK = 'Bestill din skulptur';
 const ADDED = {
   // Both labels of the reviews button, one hidden by CSS, read as one line.
   index: [[BOOK, null], ['Les mer om prosessen', 'Levering'], ['Vis flere omtalerVis færre omtaler', 'Elise Bekkevold'], ['Les mer om meg', '“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.”']],
-  'om-oss': [[BOOK, null]],
+  // Not Ester's words: a draft of where Sculpt is going, for her to approve (#33).
+  'om-oss': [['Nå lager jeg også skulpturer av par, barn og familier, og jeg vil fortsette å utvikle Sculpt med nye typer skulpturer.', 'Denne opplevelsen inspirerte meg til å starte Sculpt. Jeg ønsket å gi flere gravide i Norge muligheten til å bevare denne tiden på en vakker og personlig måte, som et kunstverk de kan ha med seg resten av livet.'], ['Se andre skulpturer', 'Nå lager jeg også skulpturer av par, barn og familier, og jeg vil fortsette å utvikle Sculpt med nye typer skulpturer.'], [BOOK, null]],
   prosessen: [['Se tider og steder', CHANGED.prosessen[0][1]], [BOOK, null]],
   gallerigravidskulpturer: [[BOOK, null]],
   galleriskulpturer: [[BOOK, null]],
