@@ -59,6 +59,9 @@
   --fs-h3: clamp(1.7rem, 2.6vw, 2.3rem);
   --fs-h4: 1.65rem;
   --fs-h5: 1.2rem;
+  /* h4 until 7vw is smaller: a step name beside its number, where at 320
+     «Produksjon av skulpturen» would wrap at h4. */
+  --fs-step: min(var(--fs-h4), 7vw);
   --fs-large: 1.22rem;
   --fs-body: 1rem;
   --fs-small: .9rem;
@@ -69,6 +72,7 @@
   --lh-h3: 1.15;
   --lh-h4: 1.2;
   --lh-h5: 1.2;
+  --lh-step: 1.2;
   --lh-large: 1.8;
   --lh-body: 1.8;
   --lh-small: 1.7;
@@ -788,29 +792,39 @@ p {
   display: flex;
   position: relative;
   padding-left: 0;
-  /* Past the text column, so "Konsultasjon" fits its share unbroken. */
+  /* Past the text column, for room between the five names on one line. */
   margin-inline: calc(-1 * var(--space-l));
 }
 
 .process li {
   counter-increment: step;
   position: relative;
-  flex: 1;
+  /* Shares sized to the names, not equal fifths, which broke the two long
+     names over two lines; the numbers sit unevenly as a result. */
+  flex: auto;
   text-align: center;
 }
 
-/* One segment from each number's centre to the next's, so the line fits any
-   number of steps. */
-.process li:not(:last-child)::after {
+/* The line runs across every share, which the shares touch end to end, and
+   stops at the first and last number's centre. */
+.process li::after {
   content: "";
   position: absolute;
   top: calc(var(--step) / 2);
-  left: 50%;
-  width: 100%;
+  left: 0;
+  right: 0;
   border-top: 1px solid var(--line);
 }
 
-/* Small enough that "Konsultasjon" fits its share unbroken. */
+.process li:first-child::after {
+  left: 50%;
+}
+
+.process li:last-child::after {
+  right: 50%;
+}
+
+/* Small enough that the five names fit one row unbroken. */
 .process li > :is(h2, h3, h4) {
   margin: 0;
   font-size: var(--fs-h5);
@@ -869,8 +883,8 @@ p {
   align-items: center;
   min-height: var(--step);
   margin: 0 0 var(--space-2xs);
-  font-size: var(--fs-h4);
-  line-height: var(--lh-h4);
+  font-size: var(--fs-step);
+  line-height: var(--lh-step);
 }
 
 .steps li > h2::before {
@@ -1406,7 +1420,9 @@ html:has(.lightbox[open]) {
   .process ol {
     flex-direction: column;
     gap: var(--space-s);
-    max-width: 18rem;
+    /* As wide as the longest name, so none wraps while the screen has room. */
+    width: fit-content;
+    max-width: 100%;
     margin-inline: auto;
   }
 
@@ -1417,7 +1433,7 @@ html:has(.lightbox[open]) {
     border-left: 1px solid var(--line);
   }
 
-  .process li:not(:last-child)::after {
+  .process li::after {
     content: none;
   }
 
@@ -1429,8 +1445,8 @@ html:has(.lightbox[open]) {
     display: flex;
     align-items: center;
     gap: var(--space-s);
-    font-size: var(--fs-h4);
-    line-height: var(--lh-h4);
+    font-size: var(--fs-step);
+    line-height: var(--lh-step);
   }
 
   .process li > :is(h2, h3, h4)::before {
