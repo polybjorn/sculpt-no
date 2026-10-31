@@ -35,7 +35,7 @@ Jeg tilstreber å få til skanning av deg innenfor en uke av ønsket tidspunkt.
 
 ### Kristiansand
 
-Skanning foregår på [Huset i Markens](https://husetimarkens.no/om-oss/). [Markensgate 4A, 4610 Kristiansand](https://www.google.com/maps/search/?api=1&query=Markensgate+4A%2C+4610+Kristiansand)
+Skanning foregår på [Huset i Markens](https://husetimarkens.no/sculpt/). [Markensgate 4A, 4610 Kristiansand](https://www.google.com/maps/search/?api=1&query=Huset+i+Markens%2C+Markensgate+4A%2C+4610+Kristiansand)
 
 <!-- scan-days Kristiansand -->
 
@@ -45,7 +45,7 @@ Skanning foregår på [Huset i Markens](https://husetimarkens.no/om-oss/). [Mark
 
 ### Stavanger
 
-Skanning i “Stavanger tinfabrik”: [Ryfylkegata 45, 4014 Stavanger](https://www.google.com/maps/search/?api=1&query=Ryfylkegata+45%2C+4014+Stavanger)
+Skanning i “Stavanger tinfabrik”: [Ryfylkegata 45, 4014 Stavanger](https://www.google.com/maps/search/?api=1&query=Stavanger+Tinfabrik%2C+Ryfylkegata+45%2C+4014+Stavanger)
 
 <!-- scan-days Stavanger -->
 
@@ -55,7 +55,7 @@ Skanning i “Stavanger tinfabrik”: [Ryfylkegata 45, 4014 Stavanger](https://w
 
 ### Oslo
 
-Skanning i “Studio metro” i [Herslebs gate 14 b, 0561 Oslo](https://www.google.com/maps/search/?api=1&query=Herslebs+gate+14+b%2C+0561+Oslo)
+Skanning i “Studio metro” i [Herslebs gate 14 b, 0561 Oslo](https://www.google.com/maps/search/?api=1&query=Studio+Metro%2C+Herslebs+gate+14B%2C+0561+Oslo)
 
 <!-- scan-days Oslo -->
 
