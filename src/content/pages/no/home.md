@@ -195,11 +195,9 @@ En personlig skulptur erstatter ikke fotografiene dine, men gir deg en annen må
 
 3. ### Digital behandling
 
-4. ### 3D-modellering
+4. ### Produksjon av skulpturen
 
-5. ### Produksjon av skulpturen
-
-6. ### Levering
+5. ### Levering
 
 <div class="actions">
 

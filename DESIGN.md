@@ -78,6 +78,11 @@ missed that its running text is the large size; the scale corrects that.
 - A box, like the price models, takes the buttons' 1px ink border on paper
   rather than a tinted fill, so it needs no colour outside the palette. A list
   inside a section, like the price add-ons, is ruled with `--line`
+- Steps are numbered circles on one `--line` path, the same on every page:
+  across the front page at desktop width, where only the names show, and
+  downward wherever the steps carry text or the row would wrap. A step name is
+  one size below the page's section headings, so the heading after the last
+  step reads as a new part rather than one more step
 
 ## Motion
 

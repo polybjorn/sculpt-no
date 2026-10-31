@@ -9,6 +9,8 @@ description: "Slik foregår det å få laget en personlig skulptur hos Sculpt, f
 
 Under finner du en oversikt over hele prosessen, og hva du kan forvente fra første møte til skulpturen står klar i hendene dine.
 
+<div class="steps">
+
 1. ## Konsultasjon og samtale
 
    Vi starter med en personlig samtale om dine ønsker og hva du ser for deg med skulpturen. Sammen går vi gjennom prosessen og planlegger selve skanningen, samt eventuelle justeringer som kan gjøres digitalt i etterkant.
@@ -17,21 +19,23 @@ Under finner du en oversikt over hele prosessen, og hva du kan forvente fra før
 
    Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen. Du skannes naken eller med sømløs truse for best mulig detaljbevaring.
 
+   [Se tider og steder]({{schedulePage}})
+
 3. ## Digital behandling
-
-   Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Justeringene gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.
-
-4. ## 3D-modellering
 
    Basert på skanningen lages en nøyaktig 3D-modell av kroppen din. Her finjusteres form og detaljer slik at skulpturen gjengir uttrykket på en naturlig og vakker måte.
 
-5. ## Produksjon av skulpturen
+   Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Justeringene gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.
+
+4. ## Produksjon av skulpturen
 
    Skulpturen 3D-printes i PLA – et biobasert og miljøvennlig materiale. Deretter bearbeides den for hånd før overflate og finish tilpasses nøye etter dine ønsker.
 
-6. ## Levering
+5. ## Levering
 
    Når skulpturen er ferdig, pakkes den trygt og sendes til deg. Hver skulptur behandles med stor omtanke, slik at du mottar et varig minne med høy kvalitet og personlig preg.
+
+</div>
 
 ## Om skulpturen
 

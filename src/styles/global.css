@@ -136,7 +136,7 @@ p {
 /* sculpt.no sets its running text in its large size; the intro, reviews and
    FAQ answers stay at body size. */
 .page > p,
-.page > :is(ul, ol) li,
+.page > :is(ul, ol, .steps) li,
 .split-text p {
   font-size: var(--fs-large);
   letter-spacing: .016em;
@@ -332,8 +332,8 @@ p {
   padding-left: 1.4rem;
 }
 
-/* A heading after the steps opens a new part of the page, not a seventh step. */
-.page > ol + h2 {
+/* A heading after the steps opens a new part of the page, not a sixth step. */
+.page > .steps + h2 {
   margin-top: 2em;
 }
 
@@ -655,39 +655,44 @@ p {
   position: relative;
   padding-left: 0;
   margin-top: 2.5rem;
-  /* Past the text column, so "3D-modellering" fits its sixth unbroken. */
+  /* Past the text column, so "Konsultasjon" fits its share unbroken. */
   margin-inline: -2rem;
-}
-
-/* From the first number's centre to the last's, each step being a sixth. */
-.process ol::before {
-  content: "";
-  position: absolute;
-  top: 1.1rem;
-  inset-inline: calc(100% / 12);
-  border-top: 1px solid var(--line);
 }
 
 .process li {
   counter-increment: step;
+  position: relative;
   flex: 1;
   text-align: center;
 }
 
-/* Small enough that "3D-modellering" fits its sixth unbroken. */
+/* One segment from each number's centre to the next's, so the line fits any
+   number of steps. */
+.process li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 1.1rem;
+  left: 50%;
+  width: 100%;
+  border-top: 1px solid var(--line);
+}
+
+/* Small enough that "Konsultasjon" fits its share unbroken. */
 .process li > :is(h2, h3, h4) {
   margin: 0;
   font-size: var(--fs-h5);
   line-height: 1.2;
 }
 
-/* The paper fill hides the line behind each number. Cormorant's default
-   old-style figures sit at different heights, off the circle's centre. */
-.process li > :is(h2, h3, h4)::before {
+/* The paper fill and z-index hide the line behind each number. Cormorant's
+   default old-style figures sit at different heights, off the circle's
+   centre. */
+:is(.process, .steps) li > :is(h2, h3, h4)::before {
   content: counter(step);
   display: grid;
   place-items: center;
   position: relative;
+  z-index: 1;
   width: 2.2rem;
   height: 2.2rem;
   margin: 0 auto .8rem;
@@ -696,6 +701,57 @@ p {
   background: var(--paper);
   font: 400 var(--fs-h5)/1 var(--font-display);
   font-variant-numeric: lining-nums;
+}
+
+/* The front page's path turned downward, as on its phone layout, at every
+   width: here each step carries its text, too long for a row. The line is drawn
+   per step rather than on the list, so it stops at the last number however far
+   the last step's text runs. */
+.steps ol {
+  list-style: none;
+  counter-reset: step;
+  padding-left: 0;
+}
+
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 0 0 1.6rem 3.4rem;
+}
+
+.steps li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 2.2rem;
+  bottom: 0;
+  left: 1.1rem;
+  border-left: 1px solid var(--line);
+}
+
+/* Smaller than the page's own parts, which are h2 too, so a step does not
+   read as a new section. */
+.steps li > h2 {
+  display: flex;
+  align-items: center;
+  min-height: 2.2rem;
+  margin: 0 0 .5rem;
+  font-size: var(--fs-h3);
+  line-height: 1.2;
+}
+
+.steps li > h2::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.steps li > p {
+  margin: 0;
+}
+
+.steps li > p + p {
+  margin-top: 1em;
 }
 
 .faq {
@@ -1025,7 +1081,7 @@ p {
     column-gap: .8rem;
   }
 
-  /* Six names in a row would wrap word by word, so the path turns downward. */
+  /* Five names in a row would wrap word by word, so the path turns downward. */
   .process ol {
     flex-direction: column;
     gap: 1.1rem;
@@ -1034,9 +1090,14 @@ p {
   }
 
   .process ol::before {
+    content: "";
+    position: absolute;
     inset: 1rem auto 1rem 1.1rem;
-    border-top: 0;
     border-left: 1px solid var(--line);
+  }
+
+  .process li:not(:last-child)::after {
+    content: none;
   }
 
   .process li {

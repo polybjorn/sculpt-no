@@ -36,9 +36,13 @@ const REMOVED = {
     'Basert på skanningen lages en nøyaktig 3D-modell av kroppen din. Her finjusteres form og detaljer slik at skulpturen gjengir uttrykket på en naturlig og vakker måte.',
     'Skulpturen 3D-printes. Deretter fylles den og bearbeides for hånd før overflate og utførelse tilpasses nøye etter dine ønsker.',
     'Når skulpturen er ferdig, pakkes den trygt og sendes til deg. Hver skulptur behandles med stor omtanke, slik at du mottar et varig minne med høy kvalitet og personlig preg.',
+    // One step with Digital behandling, as on prosessen.
+    '3D-modellering',
     'Få oppdateringer fra Sculpt',
     'Meld deg på for inspirasjon, nyheter og informasjon om skulpturer og kommende tilgjengelige skanninger.',
   ],
+  // Its text is now the first half of the Digital behandling step.
+  prosessen: ['3D-modellering'],
   kontakt: [
     'Monthly Dispatch',
     'Sign up to receive news and updates.',
@@ -86,6 +90,12 @@ const MOVED = {
   // The three reviews above the hero photo, now after the other three.
   index: { first: '⭐️⭐️⭐️⭐️⭐️', last: 'Kristine', before: 'Våre skulpturer' },
   priser: { first: 'Priser', last: 'Bestill', before: 'Ulike positurer' },
+  // The model is made before it is adjusted, so its paragraph comes first.
+  prosessen: {
+    first: 'Basert på skanningen lages en nøyaktig 3D-modell av kroppen din. Her finjusteres form og detaljer slik at skulpturen gjengir uttrykket på en naturlig og vakker måte.',
+    last: 'Basert på skanningen lages en nøyaktig 3D-modell av kroppen din. Her finjusteres form og detaljer slik at skulpturen gjengir uttrykket på en naturlig og vakker måte.',
+    before: 'Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Justeringene gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.',
+  },
 };
 
 // Pages whose whole text, less its REMOVED lines, now follows another's, ahead
@@ -98,7 +108,7 @@ const ADDED = {
   // Both labels of the reviews button, one hidden by CSS, read as one line.
   index: [[BOOK, null], ['Les mer om prosessen', 'Levering'], ['Vis flere omtalerVis færre omtaler', 'Elise Bekkevold'], ['Les mer om meg', '“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.”']],
   'om-oss': [[BOOK, null]],
-  prosessen: [[BOOK, null]],
+  prosessen: [['Se tider og steder', CHANGED.prosessen[0][1]], [BOOK, null]],
   gallerigravidskulpturer: [[BOOK, null]],
   galleriskulpturer: [[BOOK, null]],
   priser: [[PRICE_BLURB, 'Priser']],
