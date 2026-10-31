@@ -105,6 +105,8 @@ const CHANGED = {
     ['“Kjempefornøyd med skulpturen og hele prosessen!”', 'Kjempefornøyd med skulpturen og hele prosessen!'],
     ['“Utrolig glad jeg oppdaget dette mens jeg gikk gravid, et fint minne om en koselig tid. Kjempefornøyd med skulpturen! “',
       'Utrolig glad jeg oppdaget dette mens jeg gikk gravid, et fint minne om en koselig tid. Kjempefornøyd med skulpturen!'],
+    // The salon's name in the business register, as «Tider og steder» has it.
+    ['Fredrikstad: Nails by Majika', 'Fredrikstad: Nailovers Majka'],
   ],
   priser: [['Premiummodell – 20 cm', 'Premiummodell 20 cm'], ['Bestill', BOOK]],
   gallerigravidskulpturer: [['Graviditetskulpturer', 'Graviditetsskulpturer']],

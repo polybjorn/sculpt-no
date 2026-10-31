@@ -142,7 +142,7 @@ Vi skanner på Sør-Vestlandet mellom **Kristiansand** og **Stavanger**, med egn
 
 [Kristiansand]({{schedulePage}}): Huset i Markens
 
-[Fredrikstad]({{schedulePage}}): Nails by Majika
+[Fredrikstad]({{schedulePage}}): Nailovers Majka
 
 [Flekkefjord]({{schedulePage}}): Hjemmestudio hos kunstneren selv
 
