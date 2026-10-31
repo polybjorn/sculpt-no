@@ -563,8 +563,16 @@ p {
   top: var(--below-header);
 }
 
-/* Contact details read as labels under the title, not as sections. */
-.split-text h1 ~ h2 {
+/* «Om skulpturen» opened on its photo before it became a split, so the photo
+   stays first there, and above the text once stacked. */
+.split-fill.split-media-first img {
+  order: 0;
+}
+
+/* Contact details read as labels under the title, not as sections, and the
+   parts of «Om skulpturen» as parts of it rather than new sections. */
+.split-text h1 ~ h2,
+.split-text h3 {
   font-size: var(--fs-h4);
   line-height: var(--lh-h4);
   margin: var(--space-m) 0 var(--space-3xs);

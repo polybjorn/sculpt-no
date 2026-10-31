@@ -134,7 +134,8 @@ Where things sit follows a few rules rather than per-section values:
   it shows whole. `split-fill` is for a text far taller than any photo, like
   the front page's «Et øyeblikk»: the photo stays in view beside it while the
   text scrolls past. The float it replaced ran the text on under the photo at
-  over 110 characters a line
+  over 110 characters a line. With `split-media-first`, as on «Om skulpturen»,
+  the photo leads beside the text and above it once stacked
 - Content files mark their sections with `<div class="...">` lines, turned into
   wrappers by `src/plugins/rehype-sections.mjs`, which also gives each image
   `sizes` and `srcset` widths that fit its section

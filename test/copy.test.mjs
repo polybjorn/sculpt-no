@@ -21,6 +21,17 @@ const FIXTURES = 'test/fixtures/original-2026-10-29';
 const PRICE_BLURB = 'Dine egne former, foreviget i et personlig kunstverk. Et minne du kan glede deg over resten av livet, og som kan leve videre i generasjoner.';
 
 const REMOVED = {
+  // Repeats of the steps above them or of each other, cut with her review asked
+  // (text-changes.yaml, Prosessen). The scan paragraph returns without one
+  // sentence (ADDED).
+  omskulpturen: [
+    'Skulpturene lages gjennom en kombinasjon av en rask 3D-skanning av kroppen, digital bearbeiding, 3D-printing og håndarbeid i etterbehandlingen.',
+    'Hver skulptur starter med en personlig skanning av kroppen med en håndholdt 3D-skanner. Skanningen kan sammenlignes med at det tas tusenvis av “bilder” av kroppen din fra alle vinkler, som i løpet av kort tid settes sammen til en nøyaktig 3D-modell. Prosessen er helt ufarlig og ikke-invasiv, og du utsettes ikke for stråling eller andre belastninger. Denne modellen bearbeides deretter digitalt for å sikre form, uttrykk og balanse før den printes i 3D og videre ferdigstilles for hånd. Det er i håndarbeidet skulpturen virkelig får sitt unike uttrykk utover de personlige kroppslige detaljene i printen. Her kombineres kundens ønsker med en forståelse og kjennskap til personen gjennom skanneavtalen, slik at kunstneren kan bruke dette i den videre kunstneriske utformingen av skulpturen.',
+    'Gjennom digital bearbeiding, håndarbeid og individuelt tilpasset finish forvandles grunnmaterialet til et personlig kunstverk med sitt eget særpreg.',
+    'Hver skulptur bearbeides derfor individuelt, med stor omtanke for både detaljene og det ferdige kunstneriske uttrykket.',
+    'Skulpturene kan lages i ulike positurer, uttrykk og overflateutførelser, avhengig av kundens valg og ønsket estetikk.',
+    'Alle skulpturer er custom made og unike.',
+  ],
   // Newsletter signup, left out until Ester decides whether to keep it.
   index: [
     // The artist's full story is on om-oss; the front page keeps its opening.
@@ -126,7 +137,13 @@ const ADDED = {
   index: [[BOOK, null], ['Les mer om prosessen', 'Levering'], ['Vis flere omtalerVis færre omtaler', 'Elise Bekkevold'], ['Les mer om meg', '“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.”']],
   // Not Ester's words: a draft of where Sculpt is going, for her to approve (#33).
   'om-oss': [['Nå lager jeg også skulpturer av par, barn og familier, og jeg vil fortsette å utvikle Sculpt med nye typer skulpturer.', 'Denne opplevelsen inspirerte meg til å starte Sculpt. Jeg ønsket å gi flere gravide i Norge muligheten til å bevare denne tiden på en vakker og personlig måte, som et kunstverk de kan ha med seg resten av livet.'], ['Se andre skulpturer', 'Nå lager jeg også skulpturer av par, barn og familier, og jeg vil fortsette å utvikle Sculpt med nye typer skulpturer.'], [BOOK, null]],
-  prosessen: [['Se tider og steder', CHANGED.prosessen[0][1]], [BOOK, null]],
+  prosessen: [
+    ['Se tider og steder', CHANGED.prosessen[0][1]], [BOOK, null],
+    // Headings for the parts of «Om skulpturen», with the scan paragraph short one sentence.
+    ['Fra skanning til skulptur', 'Om skulpturen'], ['Hver skulptur starter med en personlig skanning av kroppen med en håndholdt 3D-skanner. Skanningen kan sammenlignes med at det tas tusenvis av “bilder” av kroppen din fra alle vinkler, som i løpet av kort tid settes sammen til en nøyaktig 3D-modell. Prosessen er helt ufarlig og ikke-invasiv, og du utsettes ikke for stråling eller andre belastninger. Det er i håndarbeidet skulpturen virkelig får sitt unike uttrykk utover de personlige kroppslige detaljene i printen. Her kombineres kundens ønsker med en forståelse og kjennskap til personen gjennom skanneavtalen, slik at kunstneren kan bruke dette i den videre kunstneriske utformingen av skulpturen.', 'Fra skanning til skulptur'],
+    ['Materialet', 'Hver skulptur starter med en personlig skanning av kroppen med en håndholdt 3D-skanner. Skanningen kan sammenlignes med at det tas tusenvis av “bilder” av kroppen din fra alle vinkler, som i løpet av kort tid settes sammen til en nøyaktig 3D-modell. Prosessen er helt ufarlig og ikke-invasiv, og du utsettes ikke for stråling eller andre belastninger. Det er i håndarbeidet skulpturen virkelig får sitt unike uttrykk utover de personlige kroppslige detaljene i printen. Her kombineres kundens ønsker med en forståelse og kjennskap til personen gjennom skanneavtalen, slik at kunstneren kan bruke dette i den videre kunstneriske utformingen av skulpturen.'], ['Overflaten', 'Materialet er også valgt med tanke på styrke, holdbarhet og et mer bevisst materialvalg i produksjonen.'],
+    ['Størrelse og utførelse', 'For mye sliping kan føre til at nettopp disse detaljene går tapt. Å finne denne balansen er en kunst i seg selv, og noe Sculpt har spesialisert seg på.'], ['Holdbarhet og levering', 'For å ivareta autentisiteten i uttrykket gjøres det ikke justeringer av kroppens grunnleggende proporsjoner. Kroppen gjengis slik den fremkommer i skanningen, uten idealisering eller endring av former. Vi kan likevel gjøre mye med overflater og enten fremheve detaljer eller duse ut detaljer e.l.'],
+  ],
   gallerigravidskulpturer: [[BOOK, null]],
   galleriskulpturer: [[BOOK, null]],
   priser: [[PRICE_BLURB, 'Priser']],
