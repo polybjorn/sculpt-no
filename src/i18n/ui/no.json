@@ -12,7 +12,12 @@
     "homeLabel": "Sculpt, til forsiden",
     "skipLink": "Hopp til innhold",
     "carouselPrev": "Forrige bilder",
-    "carouselNext": "Neste bilder"
+    "carouselNext": "Neste bilder",
+    "photoOpen": "Vis større",
+    "photoClose": "Lukk",
+    "photoPrev": "Forrige bilde",
+    "photoNext": "Neste bilde",
+    "photoCount": "{{n}} av {{total}}"
   },
   "menu": {
     "galleries": "Gallerier",

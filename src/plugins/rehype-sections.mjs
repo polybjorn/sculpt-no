@@ -23,7 +23,8 @@ const IMAGE_ROLES = {
   // Stacked into the text column below 961px, as global.css stacks them.
   split: { sizes: '(max-width: 960px) min(100vw, 44rem), 34rem', widths: [480, 800, 1200, 1500] },
   feature: { sizes: '(max-width: 760px) 100vw, 44rem', widths: [480, 800, 1200, 1500] },
-  gallery: { sizes: '(max-width: 760px) 50vw, 22rem', widths: [400, 700] },
+  // The larger widths are for the lightbox (gallery.js), which reuses the srcset.
+  gallery: { sizes: '(max-width: 760px) 50vw, 22rem', widths: [400, 700, 1000, 1500, 2000] },
 };
 const DEFAULT_ROLE = { sizes: '(max-width: 760px) 100vw, 44rem', widths: [480, 800, 1200] };
 
