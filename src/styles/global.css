@@ -519,16 +519,23 @@ p {
 
 /* The front page ends on two buttons: the booking one filled, the one to
    Prosessen outlined like «Se flere skulpturer». An inset shadow rather than
-   a border, so the two stay one height. */
+   a border, so the two stay one height. A grid as wide as its content gives
+   both the longer label's width, side by side or stacked. */
 .process .actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
   gap: var(--space-s);
+  width: fit-content;
+  margin-inline: auto;
 }
 
 .process .actions p {
   margin: 0;
+}
+
+.process .actions a {
+  display: block;
 }
 
 .process .actions p:first-child a {
@@ -551,12 +558,14 @@ p {
 }
 
 /* A page that opens or closes on a split meets the page's own padding, as a
-   page of text does, rather than adding its section padding to it. */
+   page of text does, rather than adding its section padding to it. A closing
+   button keeps the space every page gives it, not that plus the section's. */
 .page > .split:first-child {
   padding-top: 0;
 }
 
-.page > .split:last-child {
+.page > .split:last-child,
+.page > .split:has(+ .actions) {
   padding-bottom: 0;
 }
 
@@ -1408,6 +1417,13 @@ html:has(.lightbox[open]) {
     text-align: center;
   }
 
+  /* At the phone's size h3 and h4 nearly meet, so the parts of Prosessen
+     take the title step to stand above their own parts and questions. */
+  .page:not(:has(.hero-title)) :is(.split-fill .split-text h2:first-child, .faq > h2) {
+    font-size: var(--fs-h2);
+    line-height: var(--lh-h2);
+  }
+
   .split-fill img {
     position: static;
     /* Not auto: that drops the ratio taken from the width and height
@@ -1469,6 +1485,10 @@ html:has(.lightbox[open]) {
 @media (max-width: 760px) {
   .nav {
     grid-template-columns: 1fr auto;
+  }
+
+  .process .actions {
+    grid-auto-flow: row;
   }
 
   .nav .social {
