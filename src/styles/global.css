@@ -359,8 +359,12 @@ p {
   margin-inline: auto;
 }
 
-/* The next scan days' heading goes out with its boxes, so it heads them. */
-.page > :is(.split, .testimonials, .sculptures, .artist, .gallery, .upcoming, h2:has(+ .upcoming)) {
+/* The next scan days' heading goes out with its boxes, so it heads them.
+   Outside the :is(), whose specificity is its most specific member's: in it,
+   the heading's lifted every section above the stacked split's reading width
+   below 961px. */
+.page > :is(.split, .testimonials, .sculptures, .artist, .gallery, .upcoming),
+.page > h2:has(+ .upcoming) {
   max-width: var(--measure);
 }
 

@@ -20,7 +20,8 @@ const CLOSE = /^<\/div>$/;
 const IMAGE_ROLES = {
   'hero-photo': { sizes: '(max-width: 70rem) 100vw, 70rem', widths: [800, 1200, 1600, 2000], loading: 'eager', fetchpriority: 'high' },
   carousel: { sizes: '15rem', widths: [320, 480] },
-  split: { sizes: '(max-width: 760px) 100vw, 34rem', widths: [480, 800, 1200] },
+  // Stacked into the text column below 961px, as global.css stacks them.
+  split: { sizes: '(max-width: 960px) min(100vw, 44rem), 34rem', widths: [480, 800, 1200, 1500] },
   feature: { sizes: '(max-width: 760px) 100vw, 44rem', widths: [480, 800, 1200, 1500] },
   gallery: { sizes: '(max-width: 760px) 50vw, 22rem', widths: [400, 700] },
 };
