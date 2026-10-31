@@ -854,7 +854,8 @@ p {
   text-align: center;
 }
 
-.faq details {
+/* Lines between the questions only: below the last, the footer draws one. */
+.faq details:not(:last-of-type) {
   border-bottom: 1px solid var(--ink);
 }
 
@@ -1054,10 +1055,6 @@ p {
   white-space: nowrap;
 }
 
-.place:last-child {
-  border-bottom: 1px solid var(--line);
-}
-
 .place {
   display: grid;
   grid-template-columns: 9rem 1fr 9rem;
@@ -1237,7 +1234,7 @@ html:has(.lightbox[open]) {
 
 /* One row where it fits, its ends on the content's edges and equal gaps
    between: the contact first, as when stacked, the company line quiet in the
-   middle, the links last. Below that it stacks, in the narrow block. */
+   middle, the links last. Below that it wraps into rows, in the narrow block. */
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -1324,29 +1321,12 @@ html:has(.lightbox[open]) {
   }
 
   .site-footer {
-    flex-direction: column;
-    gap: var(--space-m);
-    padding-block: var(--space-xl);
-  }
-
-  .footer-links {
-    display: contents;
-  }
-
-  .site-footer .social {
-    order: 1;
-  }
-
-  .footer-source {
-    order: 3;
-    margin-top: calc(-1 * var(--space-2xs));
+    flex-wrap: wrap;
   }
 
   .footer-business {
-    order: 2;
-    width: min(100%, 44rem);
-    padding-top: var(--space-s);
-    border-top: 1px solid var(--line);
+    order: 3;
+    width: 100%;
   }
 
   .nav .social {
@@ -1465,6 +1445,11 @@ html:has(.lightbox[open]) {
 
   .nav-links > li {
     border-top: 1px solid var(--line);
+  }
+
+  /* The contact and the links take a row each here, so both sit centred. */
+  .site-footer {
+    justify-content: center;
   }
 
   .price-groups {
