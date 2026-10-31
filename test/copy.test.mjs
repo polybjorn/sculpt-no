@@ -51,9 +51,15 @@ const REMOVED = {
   priser: [PRICE_BLURB],
   // Typed dates, now read from Ester's calendar (data-feed below).
   'tid-og-sted': ['25 Oktober', '29 November', '20 Desember', '3 November', '8 Desember', '4 November', '9 Desember'],
-  // The scrolling banner, whose words were each a top-level heading on
-  // sculpt.no; its text moved to om-oss without it.
+  // The page, dropped: its plans are what a customer takes for granted. The
+  // banner's words were each a top-level heading on sculpt.no. Its last line
+  // is on kontakt (ADDED).
   'under-utvikling': [
+    'Sculpt i utvikling',
+    'Sculpt er et kunstforetak i kontinuerlig utvikling, med fokus på å forbedre og videreutvikle både produkter og opplevelse. Vi arbeider løpende med nye satsingsområder for å utvide uttrykket og mulighetene innen personlig skulpturkunst.',
+    'I tillegg til å etablere flere lokasjoner for å gjøre personlige skulpturer tilgjengelig for flere, utforsker vi også nye elementer for å stadig gjøre produktet bedre, som spesialdesignede sokler og muligheten for metallisering av skulpturene. Dette er løsninger som kan løfte uttrykket ytterligere og gi hvert kunstverk en enda mer eksklusiv og helhetlig fremtoning.',
+    'Det er viktig for oss å samarbeide med leverandører og partnere som forstår kvaliteten og det kunstneriske uttrykket i Sculpt, slik at alle tilleggselementer holder samme standard som selve skulpturene.',
+    'Dessuten kan vi også tilby bedrifter, kunstnere og idrett samarbeid innenfor vår kategori.',
     'Nyskapende kunst✳︎Kreativ utvikling✳︎Tidløs form✳︎Unike uttrykk✳︎Håndlaget presisjon✳︎Personlig kunst✳︎Innovativt håndverk✳︎Autentisk uttrykk✳︎Nyskapende kunst✳︎Kreativ utvikling✳︎Tidløs form✳︎Unike uttrykk✳︎Håndlaget presisjon✳︎Personlig kunst✳︎Innovativt håndverk✳︎Autentisk uttrykk✳︎',
     'Nyskapende kunst',
     '✳︎',
@@ -110,7 +116,7 @@ const MOVED = {
 // Pages whose whole text, less its REMOVED lines, now follows another's, ahead
 // of that page's added lines, in this order. The folded page is no longer
 // built, so its snapshot is held here instead.
-const FOLDED = { prosessen: ['omskulpturen'], 'om-oss': ['under-utvikling'] };
+const FOLDED = { prosessen: ['omskulpturen'] };
 
 const BOOK = 'Bestill din skulptur';
 const ADDED = {
@@ -121,7 +127,7 @@ const ADDED = {
   gallerigravidskulpturer: [[BOOK, null]],
   galleriskulpturer: [[BOOK, null]],
   priser: [[PRICE_BLURB, 'Priser']],
-  kontakt: [['Send SMS', '480 05 508']],
+  kontakt: [['Dessuten kan vi også tilby bedrifter, kunstnere og idrett samarbeid innenfor vår kategori.', 'Har du spørsmål om skulpturene, prosessen eller booking? Jeg hjelper deg gjerne. Send meg en melding eller en e-post, så svarer jeg så fort jeg kan.'], ['Send SMS', '480 05 508']],
   'tid-og-sted': [['Steder', 'Ser du ikke en dag som passer for deg, ta gjerne kontakt. Noen steder kan det være mulighet for fleksibilitet.']],
 };
 
@@ -129,7 +135,7 @@ const ADDED = {
 // snapshot's. The layout ends every title in "| Sculpt" (src/content.config.mjs
 // says why), so the snapshot's endings disagree with most pages.
 const META = {
-  'om-oss': { title: 'Om oss: Få et minne, bestill skulptur i dag | Sculpt' },
+  'om-oss': { title: 'Om meg: Få et minne, bestill skulptur i dag | Sculpt' },
   prosessen: {
     title: 'Hvordan lages en personlig 3D-skulptur? | Sculpt',
     description: 'Slik foregår det å få laget en personlig skulptur hos Sculpt, fra første samtale og skanning til ferdig skulptur sendt hjem til deg.',

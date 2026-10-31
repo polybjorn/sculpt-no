@@ -25,13 +25,13 @@ export const menu = [
   'contact',
 ];
 
-// sculpt.no's pages folded into another, so a link, bookmark or search result
+// sculpt.no's pages folded into another or dropped, so a link, bookmark or search result
 // for the old address still lands on its text. /home-1-1 was a copy of the
 // front page in sculpt.no's sitemap; /gallerier and /informasjon were its menu
 // folders and sent a visitor where these do. Each goes once nothing reaches it (#26).
 export const redirects = {
   omskulpturen: 'prosessen/#om-skulpturen',
-  'under-utvikling': 'om-oss/#sculpt-i-utvikling',
+  'under-utvikling': 'om-oss/',
   'home-1-1': '',
   gallerier: 'gallerigravidskulpturer/',
   informasjon: 'om-oss/',

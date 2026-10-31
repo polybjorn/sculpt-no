@@ -13,6 +13,8 @@ Send ønsket by og tid/måned. Er du gravid, oppgi gjerne svangerskapsuke. Mello
 
 Har du spørsmål om skulpturene, prosessen eller booking? Jeg hjelper deg gjerne. Send meg en melding eller en e-post, så svarer jeg så fort jeg kan.
 
+Dessuten kan vi også tilby bedrifter, kunstnere og idrett samarbeid innenfor vår kategori.
+
 ## E-post
 
 [sculptnorge@outlook.com](mailto:sculptnorge@outlook.com?subject=Bestilling&body=By%3A%20%0ATid%2Fm%C3%A5ned%3A%20%0ASvangerskapsuke%3A%20%0A)
