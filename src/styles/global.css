@@ -90,6 +90,19 @@
      text, for text at body size; em, so it follows the size it is used at. */
   --text-body: 38em;
   --gutter: clamp(1rem, 4vw, 3rem);
+  /* Every margin, padding and gap in rem names one of these, and
+     test/spacing.test.mjs refuses any other; spacing that follows its own
+     text, a paragraph's or a button's, is in em instead. */
+  --space-3xs: .25rem;
+  --space-2xs: .5rem;
+  --space-xs: .75rem;
+  --space-s: 1rem;
+  --space-m: 1.5rem;
+  --space-l: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  /* A step's number circle; the line through the steps runs at half of it. */
+  --step: 2.2rem;
 }
 
 * {
@@ -181,7 +194,7 @@ p {
   z-index: 10;
   background: var(--ink);
   color: var(--paper);
-  padding: .5rem 1rem;
+  padding: var(--space-2xs) var(--space-s);
 }
 
 .skip-link:focus {
@@ -203,16 +216,16 @@ p {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-s);
   max-width: 90rem;
   margin: 0 auto;
-  padding: .7rem var(--gutter);
+  padding: var(--space-xs) var(--gutter);
 }
 
 .nav-home {
   display: flex;
   align-items: center;
-  gap: .6rem;
+  gap: var(--space-2xs);
   justify-self: start;
   text-decoration: none;
   font: 400 var(--fs-h4)/var(--lh-mark) var(--font-display);
@@ -228,7 +241,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: .2rem 1.6rem;
+  gap: var(--space-3xs) var(--space-m);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -271,7 +284,7 @@ p {
   display: inline-block;
   width: .35rem;
   height: .35rem;
-  margin: 0 0 .2rem .5rem;
+  margin: 0 0 var(--space-3xs) var(--space-2xs);
   border-right: 1px solid;
   border-bottom: 1px solid;
   transform: rotate(45deg);
@@ -280,7 +293,7 @@ p {
 
 .menu-group[open] summary::after {
   transform: rotate(-135deg);
-  margin-bottom: -.05rem;
+  margin-bottom: -.05em;
 }
 
 .menu-group ul {
@@ -290,7 +303,7 @@ p {
   z-index: 6;
   list-style: none;
   margin: 0;
-  padding: .8rem 1rem;
+  padding: var(--space-xs) var(--space-s);
   background: var(--paper);
   white-space: nowrap;
   box-shadow: 0 6px 20px rgb(54 48 42 / .12);
@@ -306,7 +319,7 @@ p {
 
 .social {
   display: flex;
-  gap: .8rem;
+  gap: var(--space-xs);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -318,7 +331,7 @@ p {
 
 .social a {
   display: block;
-  padding: .2rem;
+  padding: var(--space-3xs);
 }
 
 .social svg {
@@ -335,7 +348,7 @@ p {
 /* Page body: text runs at reading width, the sections below widen it. */
 
 .page {
-  padding: 3rem var(--gutter) 5rem;
+  padding: var(--space-xl) var(--gutter) var(--space-2xl);
 }
 
 .page > * {
@@ -360,7 +373,7 @@ p {
 
 .page ul,
 .page ol {
-  padding-left: 1.4rem;
+  padding-left: var(--space-m);
 }
 
 /* Inner page titles at the live site's size, one step below the front page
@@ -379,9 +392,17 @@ p {
   line-height: var(--lh-h3);
 }
 
-/* A heading after the steps opens a new part of the page, not a sixth step. */
-.page > .steps + h2 {
-  margin-top: 2em;
+/* A heading after text opens a new part of the page: more room above it than
+   below, so it reads with what follows, and after the steps it reads as a part
+   rather than a sixth step. */
+.page > h2:not(:first-child) {
+  margin-top: var(--space-xl);
+}
+
+/* What a heading heads sits at the heading's own distance, whatever space the
+   block keeps from text. */
+.page > :is(h1, h2) + * {
+  margin-top: 0;
 }
 
 /* Front page */
@@ -407,7 +428,7 @@ p {
 }
 
 .page > .hero-photo:first-child {
-  margin-top: -3rem;
+  margin-top: calc(-1 * var(--space-xl));
 }
 
 /* The statues fill 27% to 88% of the photo's height, so this frame cuts only
@@ -425,7 +446,7 @@ p {
 
 .hero-title {
   text-align: center;
-  padding-top: 1.5rem;
+  padding-top: var(--space-m);
 }
 
 .page > .hero-title {
@@ -453,7 +474,7 @@ p {
   text-align: center;
   font-size: var(--fs-body);
   line-height: var(--lh-body);
-  padding-block: 1rem 3rem;
+  padding-block: var(--space-s) var(--space-xl);
 }
 
 .intro > p {
@@ -463,7 +484,7 @@ p {
 
 .actions {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: var(--space-l);
 }
 
 .actions a {
@@ -496,9 +517,19 @@ p {
 .split {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  gap: 4rem;
+  gap: var(--space-2xl);
   align-items: start;
-  padding-block: 3rem 5rem;
+  padding-block: var(--space-xl);
+}
+
+/* A page that opens or closes on a split meets the page's own padding, as a
+   page of text does, rather than adding its section padding to it. */
+.page > .split:first-child {
+  padding-top: 0;
+}
+
+.page > .split:last-child {
+  padding-bottom: 0;
 }
 
 .split-media-first {
@@ -530,27 +561,26 @@ p {
   width: 45%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  margin: 0 0 1.5rem 4rem;
+  margin: 0 0 var(--space-m) var(--space-2xl);
 }
 
 /* Contact details read as labels under the title, not as sections. */
 .split-text h1 ~ h2 {
   font-size: var(--fs-h4);
   line-height: var(--lh-h4);
-  margin: 1.5rem 0 .2rem;
+  margin: var(--space-m) 0 var(--space-3xs);
 }
 
 .testimonials,
 .sculptures {
   text-align: center;
-  padding-block: 4rem 2rem;
+  padding-block: var(--space-xl);
 }
 
 .reviews {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 2.5rem;
+  gap: var(--space-l);
   font-size: var(--fs-small);
   line-height: var(--lh-small);
 }
@@ -571,8 +601,8 @@ p {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: .8rem;
-  margin-top: 2.5rem;
+  gap: var(--space-xs);
+  margin-top: var(--space-l);
   padding: .8em 2em;
   border: 1px solid var(--ink);
   border-radius: .25rem;
@@ -615,10 +645,10 @@ p {
 
 .carousel {
   display: flex;
-  gap: 2.5rem;
+  gap: var(--space-l);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 1.5rem var(--gutter) 1.5rem;
+  padding: var(--space-m) var(--gutter) var(--space-m);
   scrollbar-color: var(--line) transparent;
 }
 
@@ -684,7 +714,7 @@ p {
 }
 
 .artist {
-  padding-block: 4rem 2rem;
+  padding-block: var(--space-xl);
 }
 
 .artist > h2 {
@@ -692,15 +722,15 @@ p {
 }
 
 .artist .split {
-  padding-block: 2rem 3rem;
+  padding-block: 0;
 }
 
 .artist blockquote {
-  margin: 1.5rem 0 0;
+  margin: var(--space-m) 0 0;
 }
 
 .process {
-  padding-block: 3rem;
+  padding-block: var(--space-xl);
 }
 
 .process > h2 {
@@ -717,9 +747,8 @@ p {
   display: flex;
   position: relative;
   padding-left: 0;
-  margin-top: 2.5rem;
   /* Past the text column, so "Konsultasjon" fits its share unbroken. */
-  margin-inline: -2rem;
+  margin-inline: calc(-1 * var(--space-l));
 }
 
 .process li {
@@ -734,7 +763,7 @@ p {
 .process li:not(:last-child)::after {
   content: "";
   position: absolute;
-  top: 1.1rem;
+  top: calc(var(--step) / 2);
   left: 50%;
   width: 100%;
   border-top: 1px solid var(--line);
@@ -756,9 +785,9 @@ p {
   place-items: center;
   position: relative;
   z-index: 1;
-  width: 2.2rem;
-  height: 2.2rem;
-  margin: 0 auto .8rem;
+  width: var(--step);
+  height: var(--step);
+  margin: 0 auto var(--space-xs);
   border: 1px solid var(--ink);
   border-radius: 50%;
   background: var(--paper);
@@ -780,15 +809,15 @@ p {
 .steps li {
   counter-increment: step;
   position: relative;
-  padding: 0 0 1.6rem 3.4rem;
+  padding: 0 0 var(--space-m) calc(var(--step) + var(--space-s));
 }
 
 .steps li:not(:last-child)::before {
   content: "";
   position: absolute;
-  top: 2.2rem;
+  top: var(--step);
   bottom: 0;
-  left: 1.1rem;
+  left: calc(var(--step) / 2);
   border-left: 1px solid var(--line);
 }
 
@@ -797,8 +826,8 @@ p {
 .steps li > h2 {
   display: flex;
   align-items: center;
-  min-height: 2.2rem;
-  margin: 0 0 .5rem;
+  min-height: var(--step);
+  margin: 0 0 var(--space-2xs);
   font-size: var(--fs-h4);
   line-height: var(--lh-h4);
 }
@@ -819,12 +848,11 @@ p {
 }
 
 .faq {
-  padding-block: 3rem 2rem;
+  padding-block: var(--space-xl) var(--space-l);
 }
 
 .faq > h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
 }
 
 .faq details {
@@ -837,8 +865,8 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  padding: 1.4rem 0;
+  gap: var(--space-s);
+  padding: var(--space-m) 0;
   font-size: var(--fs-h4);
   line-height: var(--lh-h4);
   margin: 0;
@@ -856,7 +884,7 @@ p {
   border-right: 1px solid;
   border-bottom: 1px solid;
   transform: rotate(45deg);
-  margin-right: .3rem;
+  margin-right: var(--space-3xs);
   transition: transform .25s ease-out;
 }
 
@@ -887,13 +915,13 @@ p {
    reaching 0. */
 .faq .answer > * {
   max-width: var(--text-body);
-  padding-bottom: .5rem;
+  padding-bottom: var(--space-2xs);
 }
 
 /* Other pages */
 
 .feature {
-  margin-block: 1rem 3rem;
+  margin-block: var(--space-l);
 }
 
 /* The full text column, so its edges line up with the heading above it and
@@ -912,19 +940,19 @@ p {
   display: grid;
   /* Stacked once two boxes no longer fit their longest word, «Standardmodell». */
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
-  gap: 1rem;
-  margin-block: 2rem 1.5rem;
+  gap: var(--space-s);
+  margin-block: var(--space-l);
 }
 
 .price-model {
   border: 1px solid var(--ink);
-  padding: 1.4rem 1.4rem 1.2rem;
+  padding: var(--space-m) var(--space-m) var(--space-s);
 }
 
 .price-model h3 {
   font-size: var(--fs-h4);
   line-height: var(--lh-h4);
-  margin-bottom: .8rem;
+  margin-bottom: var(--space-xs);
 }
 
 .price-model p {
@@ -945,14 +973,14 @@ p {
 .price-groups {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem 2.5rem;
+  gap: var(--space-s) var(--space-l);
 }
 
 .price-group h3,
 .price-other h3 {
   font-size: var(--fs-h4);
   line-height: var(--lh-h4);
-  margin-bottom: .4rem;
+  margin-bottom: var(--space-2xs);
 }
 
 .price-group ul {
@@ -962,7 +990,7 @@ p {
 }
 
 .price-group li {
-  padding-block: .6rem;
+  padding-block: var(--space-2xs);
   border-top: 1px solid var(--line);
   line-height: var(--lh-row);
 }
@@ -971,8 +999,8 @@ p {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0 1rem;
-  margin-block: 1.5rem 2rem;
+  gap: 0 var(--space-s);
+  margin-block: var(--space-l);
 }
 
 .price-other p {
@@ -988,7 +1016,7 @@ p {
   justify-content: center;
   gap: .3em 1em;
   margin: 0;
-  padding: 1.2rem var(--gutter);
+  padding: var(--space-s) var(--gutter);
   border-block: 1px solid var(--line);
   font: 400 var(--fs-h3)/var(--lh-h3) var(--font-display);
   letter-spacing: var(--ls-display);
@@ -1015,20 +1043,16 @@ p {
 .page .upcoming {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1rem;
+  gap: var(--space-s);
   padding: 0;
   font-size: var(--fs-small);
   line-height: var(--lh-small);
 }
 
-.page > h2:has(+ :is(.upcoming, .places)) {
-  margin-top: 3rem;
-}
-
 .page > .upcoming li {
   display: flex;
   flex-direction: column;
-  padding: 1.2rem 1.4rem;
+  padding: var(--space-s) var(--space-m);
   border: 1px solid var(--ink);
   font-size: var(--fs-small);
   line-height: var(--lh-small);
@@ -1047,7 +1071,7 @@ p {
 
 .upcoming strong {
   font-weight: 500;
-  margin-top: .6rem;
+  margin-top: var(--space-2xs);
 }
 
 /* A time stays whole when the date beside it wraps. */
@@ -1062,9 +1086,9 @@ p {
 .place {
   display: grid;
   grid-template-columns: 9rem 1fr 9rem;
-  gap: 0 2rem;
+  gap: 0 var(--space-l);
   align-items: baseline;
-  padding: 1.3rem 0;
+  padding: var(--space-m) 0;
   border-top: 1px solid var(--line);
 }
 
@@ -1077,7 +1101,7 @@ p {
 
 .place > p {
   grid-column: 2;
-  margin: 0 0 .6rem;
+  margin: 0 0 var(--space-2xs);
 }
 
 .place > p:last-of-type {
@@ -1099,8 +1123,8 @@ p {
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-top: 3rem;
+  gap: var(--space-s);
+  margin-top: var(--space-l);
 }
 
 .gallery img {
@@ -1118,8 +1142,8 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem 2rem;
-  padding: 2rem max(var(--gutter), calc((100% - var(--measure)) / 2));
+  gap: var(--space-s) var(--space-l);
+  padding: var(--space-l) max(var(--gutter), calc((100% - var(--measure)) / 2));
   border-top: 1px solid var(--line);
   text-align: center;
   font-size: var(--fs-small);
@@ -1130,7 +1154,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: .3rem 1.6rem;
+  gap: var(--space-3xs) var(--space-m);
   margin: 0;
 }
 
@@ -1138,18 +1162,18 @@ p {
    inline links fail the 24px touch-target minimum on phones. */
 .footer-contact a {
   display: inline-block;
-  padding-block: .15rem;
+  padding-block: var(--space-3xs);
 }
 
 .footer-links {
   display: flex;
   order: 2;
   align-items: center;
-  gap: 2rem;
+  gap: var(--space-l);
 }
 
 .site-footer .social {
-  gap: 1rem;
+  gap: var(--space-s);
 }
 
 /* Larger than the header's, as on the live site. */
@@ -1201,8 +1225,8 @@ p {
 
   .site-footer {
     flex-direction: column;
-    gap: 1.4rem;
-    padding-block: 3rem;
+    gap: var(--space-m);
+    padding-block: var(--space-xl);
   }
 
   .footer-links {
@@ -1215,13 +1239,13 @@ p {
 
   .footer-source {
     order: 3;
-    margin-top: -.6rem;
+    margin-top: calc(-1 * var(--space-2xs));
   }
 
   .footer-business {
     order: 2;
     width: min(100%, 44rem);
-    padding-top: 1.2rem;
+    padding-top: var(--space-s);
     border-top: 1px solid var(--line);
   }
 
@@ -1230,14 +1254,14 @@ p {
   }
 
   .nav-links {
-    column-gap: .8rem;
+    column-gap: var(--space-xs);
   }
 
   /* Side by side here, the text falls under 40 characters a line and the photo
      to a thumbnail. */
   .page .split:not(.split-fill) {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: var(--space-l);
     max-width: var(--text);
     margin-inline: auto;
   }
@@ -1245,7 +1269,7 @@ p {
   /* Five names in a row would wrap word by word, so the path turns downward. */
   .process ol {
     flex-direction: column;
-    gap: 1.1rem;
+    gap: var(--space-s);
     max-width: 18rem;
     margin-inline: auto;
   }
@@ -1253,7 +1277,7 @@ p {
   .process ol::before {
     content: "";
     position: absolute;
-    inset: 1rem auto 1rem 1.1rem;
+    inset: var(--space-s) auto var(--space-s) calc(var(--step) / 2);
     border-left: 1px solid var(--line);
   }
 
@@ -1268,7 +1292,7 @@ p {
   .process li > :is(h2, h3, h4) {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: var(--space-s);
     font-size: var(--fs-h4);
     line-height: var(--lh-h4);
   }
@@ -1310,7 +1334,7 @@ p {
     background: none;
     border: 1px solid;
     border-radius: .25rem;
-    padding: .2rem .8rem;
+    padding: var(--space-3xs) var(--space-xs);
     cursor: pointer;
     justify-self: end;
   }
@@ -1341,7 +1365,7 @@ p {
   }
 
   .price-model {
-    padding: 1rem;
+    padding: var(--space-s);
   }
 
   .price-model h3 {
@@ -1357,19 +1381,19 @@ p {
   .nav-links > li > a,
   .menu-group summary {
     display: block;
-    padding: .7rem 0;
+    padding: var(--space-xs) 0;
   }
 
   .menu-group ul {
     position: static;
     box-shadow: none;
-    padding: 0 0 .6rem 1rem;
+    padding: 0 0 var(--space-2xs) var(--space-s);
     white-space: normal;
   }
 
   .menu-group li a {
     display: block;
-    padding: .35rem 0;
+    padding: var(--space-2xs) 0;
   }
 
   .reviews,
@@ -1382,7 +1406,7 @@ p {
   .split-fill {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: var(--space-l);
   }
 
   .split-fill img {
@@ -1397,7 +1421,7 @@ p {
 
   .place {
     grid-template-columns: 1fr;
-    gap: .4rem;
+    gap: var(--space-2xs);
   }
 
   .place > :is(h3, p, .place-days),
@@ -1408,7 +1432,7 @@ p {
 
   .gallery {
     grid-template-columns: repeat(2, 1fr);
-    gap: .6rem;
+    gap: var(--space-2xs);
   }
 
   .actions a {
@@ -1416,7 +1440,7 @@ p {
   }
 
   .carousel {
-    gap: 1rem;
+    gap: var(--space-s);
   }
 
   .carousel img {

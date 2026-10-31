@@ -78,6 +78,38 @@ column or left beside a photo; a part of the page, left-aligned with the text
 it heads; and a step name. Only the title is centred, since a centred heading
 over left-aligned text reads as detached from it.
 
+## Spacing
+
+| Token | Size | Used for |
+|---|---|---|
+| `--space-3xs` | .25rem | a label tight to its value |
+| `--space-2xs` | .5rem | inside rows and menus |
+| `--space-xs` | .75rem | header and menu padding |
+| `--space-s` | 1rem | small gaps, the intro's top |
+| `--space-m` | 1.5rem | box padding, list indents |
+| `--space-l` | 2rem | a block in a text column, the buttons |
+| `--space-xl` | 3rem | a front page section's padding, a new part's heading |
+| `--space-2xl` | 4rem | the page's end, the gap beside a photo |
+
+Every margin, padding and gap in rem names a step, and
+`test/spacing.test.mjs` refuses any other. Spacing that belongs to text stays
+in em, so it follows the size: a paragraph's 1em, a heading's .5em, a button's
+padding.
+
+Where things sit follows a few rules rather than per-section values:
+
+- A front page section keeps `--space-xl` above and below, so two sections
+  meet at 6rem wherever they meet. The sections had drifted from 6rem to over
+  10rem
+- What a heading heads sits at the heading's .5em, whether text, the scan
+  days or the steps. A heading that opens a new part after text gets
+  `--space-xl` above it, so it reads with what follows rather than with what
+  came before
+- A block in a text column, like a gallery, the price boxes or a photo, keeps
+  `--space-l` from the text around it
+- A page that opens or closes on a split meets the page's own padding, so Om
+  oss and Kontakt start as high as the other pages
+
 ## Layout
 
 - The header is solid paper with a hairline, sticky, logo and wordmark left,
