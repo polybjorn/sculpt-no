@@ -40,18 +40,33 @@ instead: one face fewer to load, and at button size the two are hard to tell
 apart.
 
 Sizes are the live site's scale, measured at 1440px wide, as `--fs-*` tokens
-on `:root`; `test/type-scale.test.mjs` fails any font size that names none.
+on `:root`, each with one leading as `--lh-*`; `test/type-scale.test.mjs`
+fails any font size that names none, and any rule that sets a size without
+its step's leading beside it. Before the pairing, a size set on an element
+kept the leading of the element's own rule, so one step read at up to four.
 
-| Token | Size | Used for |
-|---|---|---|
-| `--fs-h1` | 78px, down to 42px | The front page title only |
-| `--fs-h2` | 52px, down to 34px | Front page section headings, and the title of every other page |
-| `--fs-h3` | 37px, down to 27px | A part of an inner page, like «Om skulpturen» or «Priser», the Om oss word band, the date in a scan day box |
-| `--fs-h4` | 26.4px | Step names on Prosessen, FAQ questions, cities on Tid og sted, contact labels, the wordmark |
-| `--fs-h5` | 19.2px | The front page step names in their row; not on the live site, one x1.4 step below h4 |
-| `--fs-large` | 19.5px, .016em tracking | Running text, as the live site's "large" paragraphs |
-| `--fs-body` | 16px/1.8, .02em tracking | Intro, FAQ answers, menu, buttons |
-| `--fs-small` | 14.4px | Reviews, the kicker under the front page title, the footer |
+| Token | Size | Leading | Used for |
+|---|---|---|---|
+| `--fs-h1` | 78px, down to 42px | 1.07 | The front page title only |
+| `--fs-h2` | 52px, down to 34px | 1.1 | Front page section headings, and the title of every other page |
+| `--fs-h3` | 37px, down to 27px | 1.15 | A part of an inner page, like «Om skulpturen» or «Priser», the Om oss word band, the date in a scan day box |
+| `--fs-h4` | 26.4px | 1.2 | Step names on Prosessen, FAQ questions, cities on Tid og sted, contact labels, the wordmark |
+| `--fs-h5` | 19.2px | 1.2 | The front page step names in their row; not on the live site, one x1.4 step below h4 |
+| `--fs-large` | 19.5px | 1.8 | Running text, as the live site's "large" paragraphs |
+| `--fs-body` | 16px | 1.8 | Intro, FAQ answers, menu, buttons |
+| `--fs-small` | 14.4px | 1.7 | Reviews, the kicker under the front page title, the footer, scan day boxes |
+
+Three leadings belong to no step: `--lh-mark` (1) for the wordmark and the step
+numbers, `--lh-control` (1.2) for button labels, `--lh-row` (1.5) for price
+rows. Tracking is a role, not a size: `--ls-display` (.01em) for Cormorant,
+`--ls-caps` (.06em) for the uppercase labels, and `--ls-body` (.02rem) for DM
+Sans, one length at every size, which the live site's .02em at 16px and
+.016em at 19.5px both come to.
+
+Body text wraps with `text-wrap: pretty`, so a paragraph does not end on a
+word alone where the browser can avoid it; headings balance instead. Text at
+body size runs at `--text-body` (38em), the same 70-odd characters a line that
+`--text` gives the large running text.
 
 The first port read the live site's 16px intro paragraph as the body size and
 missed that its running text is the large size; the scale corrects that. It

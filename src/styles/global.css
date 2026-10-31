@@ -62,8 +62,33 @@
   --fs-large: 1.22rem;
   --fs-body: 1rem;
   --fs-small: .9rem;
+  /* One leading per step, set beside its size in every rule: a size changed
+     on an element otherwise keeps the leading of the element's own rule. */
+  --lh-h1: 1.07;
+  --lh-h2: 1.1;
+  --lh-h3: 1.15;
+  --lh-h4: 1.2;
+  --lh-h5: 1.2;
+  --lh-large: 1.8;
+  --lh-body: 1.8;
+  --lh-small: 1.7;
+  /* Sized to the glyph: the wordmark and the step numbers. */
+  --lh-mark: 1;
+  /* A button label, one line inside its own padding. */
+  --lh-control: 1.2;
+  /* A price row, the name and its price read as one pair between borders. */
+  --lh-row: 1.5;
+  /* DM Sans tracks by the same length at every size, as the live site's
+     .02em at 16px and .016em at 19.5px both come to; em would recompute it at
+     each size. */
+  --ls-display: .01em;
+  --ls-body: .02rem;
+  --ls-caps: .06em;
   --measure: 70rem;
   --text: 44rem;
+  /* The same 70-odd characters a line as --text gives the large running
+     text, for text at body size; em, so it follows the size it is used at. */
+  --text-body: 38em;
   --gutter: clamp(1rem, 4vw, 3rem);
 }
 
@@ -81,8 +106,11 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font: 300 var(--fs-body)/1.8 var(--font-body);
-  letter-spacing: .02em;
+  font: 300 var(--fs-body)/var(--lh-body) var(--font-body);
+  letter-spacing: var(--ls-body);
+  /* No paragraph ends on a word alone where the browser can help it;
+     headings balance instead. */
+  text-wrap: pretty;
 }
 
 img {
@@ -102,7 +130,7 @@ strong {
 h1, h2, h3, h4, summary {
   font-family: var(--font-display);
   font-weight: 400;
-  letter-spacing: .01em;
+  letter-spacing: var(--ls-display);
   margin: 0 0 .5em;
   /* Even lines at every width, so no heading needs a hand-placed break or
      leaves one word alone on its last line. */
@@ -111,22 +139,22 @@ h1, h2, h3, h4, summary {
 
 h1 {
   font-size: var(--fs-h1);
-  line-height: 1.07;
+  line-height: var(--lh-h1);
 }
 
 h2 {
   font-size: var(--fs-h2);
-  line-height: 1.1;
+  line-height: var(--lh-h2);
 }
 
 h3 {
   font-size: var(--fs-h3);
-  line-height: 1.15;
+  line-height: var(--lh-h3);
 }
 
 h4 {
   font-size: var(--fs-h4);
-  line-height: 1.17;
+  line-height: var(--lh-h4);
 }
 
 p {
@@ -139,7 +167,7 @@ p {
 .page > :is(ul, ol, .steps) li,
 .split-text p {
   font-size: var(--fs-large);
-  letter-spacing: .016em;
+  line-height: var(--lh-large);
 }
 
 :focus-visible {
@@ -187,7 +215,8 @@ p {
   gap: .6rem;
   justify-self: start;
   text-decoration: none;
-  font: 400 var(--fs-h4)/1 var(--font-display);
+  font: 400 var(--fs-h4)/var(--lh-mark) var(--font-display);
+  letter-spacing: var(--ls-display);
 }
 
 .nav-home img {
@@ -204,6 +233,7 @@ p {
   margin: 0;
   padding: 0;
   font-size: var(--fs-body);
+  line-height: var(--lh-body);
 }
 
 .nav-links a,
@@ -338,6 +368,7 @@ p {
 .page > h1:first-child,
 .split-text h1 {
   font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
 }
 
 /* A part of an inner page, one step below its title. The front page, the
@@ -345,6 +376,7 @@ p {
 .page > h2,
 .page:not(:has(.hero-title)) .split-text h2:first-child {
   font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
 }
 
 /* A heading after the steps opens a new part of the page, not a sixth step. */
@@ -413,14 +445,20 @@ p {
 
 .hero-title p {
   font-size: var(--fs-small);
-  letter-spacing: .06em;
-  line-height: 1.7;
+  line-height: var(--lh-small);
+  letter-spacing: var(--ls-caps);
 }
 
 .intro {
   text-align: center;
   font-size: var(--fs-body);
+  line-height: var(--lh-body);
   padding-block: 1rem 3rem;
+}
+
+.intro > p {
+  max-width: var(--text-body);
+  margin-inline: auto;
 }
 
 .actions {
@@ -430,8 +468,8 @@ p {
 
 .actions a {
   display: inline-block;
-  font: 500 var(--fs-body)/1.2 var(--font-body);
-  letter-spacing: .02em;
+  font: 500 var(--fs-body)/var(--lh-control) var(--font-body);
+  letter-spacing: var(--ls-body);
   text-decoration: none;
   padding: 1.1em 4.5em;
   border-radius: .25rem;
@@ -489,6 +527,7 @@ p {
 /* Contact details read as labels under the title, not as sections. */
 .split-text h1 ~ h2 {
   font-size: var(--fs-h4);
+  line-height: var(--lh-h4);
   margin: 1.5rem 0 .2rem;
 }
 
@@ -504,7 +543,7 @@ p {
   gap: 2rem;
   margin-top: 2.5rem;
   font-size: var(--fs-small);
-  line-height: 1.6;
+  line-height: var(--lh-small);
 }
 
 /* Three reviews show, as in sculpt.no's section; the three that sat above
@@ -528,8 +567,8 @@ p {
   padding: .8em 2em;
   border: 1px solid var(--ink);
   border-radius: .25rem;
-  font: 500 var(--fs-body)/1.2 var(--font-body);
-  letter-spacing: .02em;
+  font: 500 var(--fs-body)/var(--lh-control) var(--font-body);
+  letter-spacing: var(--ls-body);
 }
 
 .testimonials details:not([open]) .open,
@@ -696,7 +735,7 @@ p {
 .process li > :is(h2, h3, h4) {
   margin: 0;
   font-size: var(--fs-h5);
-  line-height: 1.2;
+  line-height: var(--lh-h5);
 }
 
 /* The paper fill and z-index hide the line behind each number. Cormorant's
@@ -714,8 +753,9 @@ p {
   border: 1px solid var(--ink);
   border-radius: 50%;
   background: var(--paper);
-  font: 400 var(--fs-h5)/1 var(--font-display);
+  font: 400 var(--fs-h5)/var(--lh-mark) var(--font-display);
   font-variant-numeric: lining-nums;
+  letter-spacing: var(--ls-display);
 }
 
 /* The front page's path turned downward, as on its phone layout, at every
@@ -751,7 +791,7 @@ p {
   min-height: 2.2rem;
   margin: 0 0 .5rem;
   font-size: var(--fs-h4);
-  line-height: 1.2;
+  line-height: var(--lh-h4);
 }
 
 .steps li > h2::before {
@@ -791,7 +831,7 @@ p {
   gap: 1rem;
   padding: 1.4rem 0;
   font-size: var(--fs-h4);
-  line-height: 1.2;
+  line-height: var(--lh-h4);
   margin: 0;
 }
 
@@ -837,6 +877,7 @@ p {
 /* On the paragraphs, not the box: padding would keep a closed row from
    reaching 0. */
 .faq .answer > * {
+  max-width: var(--text-body);
   padding-bottom: .5rem;
 }
 
@@ -873,20 +914,22 @@ p {
 
 .price-model h3 {
   font-size: var(--fs-h4);
+  line-height: var(--lh-h4);
   margin-bottom: .8rem;
 }
 
 .price-model p {
   margin: 0;
   font-size: var(--fs-small);
-  letter-spacing: .06em;
+  line-height: var(--lh-small);
+  letter-spacing: var(--ls-caps);
   text-transform: uppercase;
 }
 
 .price-model strong {
   display: block;
-  font: 400 var(--fs-h3)/1.1 var(--font-display);
-  letter-spacing: .01em;
+  font: 400 var(--fs-h3)/var(--lh-h3) var(--font-display);
+  letter-spacing: var(--ls-display);
   text-transform: none;
 }
 
@@ -899,6 +942,7 @@ p {
 .price-group h3,
 .price-other h3 {
   font-size: var(--fs-h4);
+  line-height: var(--lh-h4);
   margin-bottom: .4rem;
 }
 
@@ -911,7 +955,7 @@ p {
 .price-group li {
   padding-block: .6rem;
   border-top: 1px solid var(--line);
-  line-height: 1.5;
+  line-height: var(--lh-row);
 }
 
 .price-other {
@@ -937,7 +981,8 @@ p {
   margin: 0;
   padding: 1.2rem var(--gutter);
   border-block: 1px solid var(--line);
-  font: 400 var(--fs-h3)/1.3 var(--font-display);
+  font: 400 var(--fs-h3)/var(--lh-h3) var(--font-display);
+  letter-spacing: var(--ls-display);
 }
 
 /* The band closes the page, so the footer's rule is its lower edge. */
@@ -964,6 +1009,7 @@ p {
   gap: 1rem;
   padding: 0;
   font-size: var(--fs-small);
+  line-height: var(--lh-small);
 }
 
 .page > h2:has(+ :is(.upcoming, .places)) {
@@ -976,7 +1022,7 @@ p {
   padding: 1.2rem 1.4rem;
   border: 1px solid var(--ink);
   font-size: var(--fs-small);
-  line-height: 1.6;
+  line-height: var(--lh-small);
 }
 
 /* The month always under the number, so no box in the row breaks differently
@@ -985,8 +1031,9 @@ p {
   width: min-content;
   font-family: var(--font-display);
   font-size: var(--fs-h3);
-  line-height: 1.1;
+  line-height: var(--lh-h3);
   font-variant-numeric: lining-nums;
+  letter-spacing: var(--ls-display);
 }
 
 .upcoming strong {
@@ -1015,6 +1062,7 @@ p {
 .place > h3 {
   grid-row: 1 / span 9;
   font-size: var(--fs-h4);
+  line-height: var(--lh-h4);
   margin: 0;
 }
 
@@ -1066,6 +1114,7 @@ p {
   border-top: 1px solid var(--line);
   text-align: center;
   font-size: var(--fs-small);
+  line-height: var(--lh-small);
 }
 
 .footer-contact {
@@ -1203,6 +1252,7 @@ p {
     align-items: center;
     gap: 1rem;
     font-size: var(--fs-h4);
+    line-height: var(--lh-h4);
   }
 
   .process li > :is(h2, h3, h4)::before {
@@ -1278,10 +1328,12 @@ p {
 
   .price-model h3 {
     font-size: var(--fs-h5);
+    line-height: var(--lh-h5);
   }
 
   .price-model strong {
     font-size: var(--fs-h4);
+    line-height: var(--lh-h4);
   }
 
   .nav-links > li > a,
