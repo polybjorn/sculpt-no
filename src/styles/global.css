@@ -643,10 +643,11 @@ p {
   text-align: center;
 }
 
+/* Small enough that "3D-modellering" fits its sixth unbroken. */
 .process li > :is(h2, h3, h4) {
   margin: 0;
-  font: 400 .95rem/1.3 var(--font-body);
-  letter-spacing: .02em;
+  font-size: 1.2rem;
+  line-height: 1.2;
 }
 
 /* The paper fill hides the line behind each number. Cormorant's default
@@ -948,7 +949,7 @@ p {
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 
   .process li > :is(h2, h3, h4)::before {
