@@ -1,4 +1,6 @@
 // @ts-check
+import { createHash } from 'node:crypto';
+import { readdirSync, readFileSync } from 'node:fs';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { locales, defaultLocale } from './src/i18n/locales.js';
@@ -14,6 +16,13 @@ import { redirects } from './src/i18n/pages.js';
 const site = 'https://polybjorn.github.io';
 const isPreview = !site.includes('sculpt.no');
 const base = process.env.PREVIEW_BASE ?? '/sculpt-no';
+
+// Astro caches rendered markdown by the markdown alone, so a plugin edit needs
+// a changed config to reach the pages; a digest of their source is that change.
+const plugins = new URL('./src/plugins/', import.meta.url);
+const pluginsDigest = createHash('sha256')
+  .update(readdirSync(plugins).sort().map((f) => readFileSync(new URL(f, plugins), 'utf8')).join('\0'))
+  .digest('hex');
 
 export default defineConfig({
   site,
@@ -35,7 +44,7 @@ export default defineConfig({
     // alone rather than letting smart quotes rewrite it.
     smartypants: false,
     remarkPlugins: [[remarkPageLinks, { digest: pagesDigest() }]],
-    rehypePlugins: [rehypeSections, rehypeNbsp],
+    rehypePlugins: [rehypeSections, [rehypeNbsp, { digest: pluginsDigest }]],
   },
   compressHTML: true,
   vite: {
