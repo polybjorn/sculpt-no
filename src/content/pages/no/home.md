@@ -110,6 +110,8 @@ En personlig skulptur erstatter ikke fotografiene dine, men gir deg en annen må
 
 </details>
 
+[Les flere anmeldelser på Google](https://share.google/piaA8agXoT83MRBzY)
+
 </div>
 
 <div class="sculptures">
@@ -203,91 +205,8 @@ En personlig skulptur erstatter ikke fotografiene dine, men gir deg en annen må
 
 [Les mer om prosessen]({{processPage}})
 
-</div>
-
-</div>
-
-<div class="faq">
-
-## Ofte stilte spørsmål
-
-<details>
-<summary>Må jeg være naken under skanningen?</summary>
-
-For best resultat anbefales det å være naken under skanning. Det er **valgfritt**, og vi sørger for et trygt og komfortabelt miljø med respekt for privatlivet ditt. Sømløs truse går også fint, selv om området kan bli litt mer utduset enn  uten.
-
-</details>
-
-<details>
-<summary>Hvor lang tid tar skanningen, og er den trygg?</summary>
-
-Skanningen tar maks **2 minutter**. Vi bruker en håndholdt skanner. Det er **ikke farlig** for verken deg eller barnet.
-
-</details>
-
-<details>
-<summary>Hvordan foregår skanningen?</summary>
-
-Det tas tusenvis av bilder av kroppen din via den håndholdte skanneren. Du kan stå på et snurrebrett, eller vi kan gå rundt deg – vi justerer prosessen etter dine behov.
-
-</details>
-
-<details>
-<summary>Når i svangerskapet er det best å skanne?</summary>
-
-Anbefalt tid er mellom **uke 32 og 36** for best mulig resultat før fødselen. Det er likevel opp til deg om du ønsker tidligere eller tør satse på senere.
-
-</details>
-
-<details>
-<summary>Hvor lang tid tar produksjonen av skulpturen?</summary>
-
-Produksjonen tar omtrent **én måned** på grunn av en grundig prosess med blant annet pussing, tørking, maling, herding og annet håndarbeid.
-
-</details>
-
-<details>
-<summary>Kan dere skanne andre kroppstyper enn gravide?</summary>
-
-Ja, etter forespørsel. Noen velger det som minne før medisinske inngrep eller ved spesielle kroppstilstander. Barn er vanskelige å skanne fordi de må stå helt stille, men nyfødte kan være mulige siden de ofte sover. 3D-skulptur av mor sammen med nyfødt er populært. Ta kontakt for forespørsel. JEg synes det er spennende med andre oppdrag enn gravide også
-
-</details>
-
-<details>
-<summary>Hvor utfører dere skanning?</summary>
-
-Vi skanner på Sør-Vestlandet mellom **Kristiansand** og **Stavanger**, med egne dager i storbyene. Vi tar også imot kunder i **Flekkefjord** (studio og produksjon), i tillegg til i Fredrikstad og Oslo.
-
-[Oslo]({{schedulePage}}): studio Metro
-
-[Stavanger]({{schedulePage}}): Stavanger Tinfabrik
-
-[Kristiansand]({{schedulePage}}): Huset i Markens
-
-[Fredrikstad]({{schedulePage}}): Nails by Majika
-
-[Flekkefjord]({{schedulePage}}): Hjemmestudio hos kunstneren selv
-
-</details>
-
-<details>
-<summary>Vises arr, tatoveringer og cellulitter – og kan dere gjøre noe med det?</summary>
-
-Ja, de kan vises på skulpturen, men vi kan fjerne eller myke ut detaljer som arr, tatoveringer, cellulitter og andre uønskelige hudtilstander under den digitale redigeringen.
-
-</details>
-
-<details>
-<summary>Andres anmeldelser</summary>
-
-[Les flere anmeldelser på Google](https://share.google/piaA8agXoT83MRBzY)
-
-</details>
-
-</div>
-
-<div class="actions">
-
 [Bestill din skulptur]({{contactPage}})
+
+</div>
 
 </div>

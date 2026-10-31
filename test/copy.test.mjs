@@ -34,6 +34,9 @@ const REMOVED = {
   ],
   // Newsletter signup, left out until Ester decides whether to keep it.
   index: [
+    // The reviews link was a fold of its own in the FAQ; it is a plain link
+    // under the reviews now that the FAQ is on prosessen.
+    'Andres anmeldelser',
     // The artist's full story is on om-oss; the front page keeps its opening.
     '— Kunstner og daglig leder',
     'For meg ble skulpturen en måte å bevare et øyeblikk som ellers bare eksisterer i minner og bilder. Den minner meg fortsatt om en helt unik periode.',
@@ -111,7 +114,10 @@ const CHANGED = {
 
 const MOVED = {
   // The three reviews above the hero photo, now after the other three.
-  index: { first: '⭐️⭐️⭐️⭐️⭐️', last: 'Kristine', before: 'Våre skulpturer' },
+  index: [
+    { first: '⭐️⭐️⭐️⭐️⭐️', last: 'Kristine', before: 'Våre skulpturer' },
+    { first: 'Les flere anmeldelser på Google', last: 'Les flere anmeldelser på Google', before: 'Våre skulpturer' },
+  ],
   priser: { first: 'Priser', last: BOOK, before: 'Ulike positurer' },
   // The model is made before it is adjusted, so its paragraph comes first.
   prosessen: {
@@ -131,6 +137,19 @@ const MOVED = {
 // of that page's added lines, in this order. The folded page is no longer
 // built, so its snapshot is held here instead.
 const FOLDED = { prosessen: ['omskulpturen'] };
+
+// Runs of lines moved to another page: taken from the first page once its
+// lines are changed and moved, and put after a line of the second once its
+// folded pages are in.
+const CARRIED = [
+  // The FAQ asks mostly about the scan and the making, which prosessen tells.
+  {
+    from: 'index', first: 'Ofte stilte spørsmål',
+    last: 'Ja, de kan vises på skulpturen, men vi kan fjerne eller myke ut detaljer som arr, tatoveringer, cellulitter og andre uønskelige hudtilstander under den digitale redigeringen.',
+    to: 'prosessen',
+    after: 'Fordi skulpturen skapes gjennom en rekke ulike prosesser tar den tid å lage, og det tar vanligvis rundt ca 1 måned før den er ferdig og sendes.',
+  },
+];
 
 const ADDED = {
   // Both labels of the reviews button, one hidden by CSS, read as one line.
@@ -173,17 +192,33 @@ const at = (lines, line, name) => {
   return i;
 };
 
-const expected = (name, lines) => {
-  let out = [...lines];
+const arranged = (name, lines) => {
+  const out = [...lines];
   for (const [from, to] of CHANGED[name] ?? []) out[at(out, from, name)] = to;
   for (const move of [MOVED[name] ?? []].flat()) {
     const first = at(out, move.first, name);
     const run = out.splice(first, at(out, move.last, name) - first + 1);
     out.splice(at(out, move.before, name), 0, ...run);
   }
+  return out;
+};
+
+const carriedRun = (carry, lines) => {
+  const first = at(lines, carry.first, carry.from);
+  return lines.splice(first, at(lines, carry.last, carry.from) - first + 1);
+};
+
+const expected = (name, lines) => {
+  const out = arranged(name, lines);
+  for (const carry of CARRIED.filter((c) => c.from === name)) carriedRun(carry, out);
   for (const other of FOLDED[name] ?? []) {
     const dropped = new Set(REMOVED[other] ?? []);
     out.push(...fixtureLines(other).filter((l) => !dropped.has(l)));
+  }
+  for (const carry of CARRIED.filter((c) => c.to === name)) {
+    const dropped = new Set(REMOVED[carry.from] ?? []);
+    const source = arranged(carry.from, fixtureLines(carry.from).filter((l) => !dropped.has(l)));
+    out.splice(at(out, carry.after, name) + 1, 0, ...carriedRun(carry, source));
   }
   for (const [line, after] of ADDED[name] ?? []) {
     if (after === null) out.push(line);

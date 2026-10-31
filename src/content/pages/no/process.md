@@ -3,11 +3,17 @@ title: "Hvordan lages en personlig 3D-skulptur?"
 description: "Slik foregår det å få laget en personlig skulptur hos Sculpt, fra første samtale og skanning til ferdig skulptur sendt hjem til deg."
 ---
 
+<div class="split split-steps">
+
+<div class="split-text">
+
 # En enkel og trygg prosess – steg for steg
 
 Å få laget en personlig skulptur er en helt unik opplevelse, og mange lurer på hvordan det faktisk foregår. Derfor har jeg gjort prosessen så trygg, enkel og forutsigbar som mulig. Hos Sculpt blir du fulgt opp gjennom hvert steg – fra første samtale til ferdig skulptur – slik at du alltid vet hva som skjer, og kan føle deg komfortabel hele veien.
 
 Under finner du en oversikt over hele prosessen, og hva du kan forvente fra første møte til skulpturen står klar i hendene dine.
+
+</div>
 
 <div class="steps">
 
@@ -34,6 +40,8 @@ Under finner du en oversikt over hele prosessen, og hva du kan forvente fra før
 5. ## Levering
 
    Når skulpturen er ferdig, pakkes den trygt og sendes til deg. Hver skulptur behandles med stor omtanke, slik at du mottar et varig minne med høy kvalitet og personlig preg.
+
+</div>
 
 </div>
 
@@ -80,6 +88,78 @@ Skulpturen er solid, men den kan skades ved fall eller om den utsettes for sterk
 Fordi skulpturen skapes gjennom en rekke ulike prosesser tar den tid å lage, og det tar vanligvis rundt ca 1 måned før den er ferdig og sendes.
 
 </div>
+
+</div>
+
+<div class="faq">
+
+## Ofte stilte spørsmål
+
+<details>
+<summary>Må jeg være naken under skanningen?</summary>
+
+For best resultat anbefales det å være naken under skanning. Det er **valgfritt**, og vi sørger for et trygt og komfortabelt miljø med respekt for privatlivet ditt. Sømløs truse går også fint, selv om området kan bli litt mer utduset enn  uten.
+
+</details>
+
+<details>
+<summary>Hvor lang tid tar skanningen, og er den trygg?</summary>
+
+Skanningen tar maks **2 minutter**. Vi bruker en håndholdt skanner. Det er **ikke farlig** for verken deg eller barnet.
+
+</details>
+
+<details>
+<summary>Hvordan foregår skanningen?</summary>
+
+Det tas tusenvis av bilder av kroppen din via den håndholdte skanneren. Du kan stå på et snurrebrett, eller vi kan gå rundt deg – vi justerer prosessen etter dine behov.
+
+</details>
+
+<details>
+<summary>Når i svangerskapet er det best å skanne?</summary>
+
+Anbefalt tid er mellom **uke 32 og 36** for best mulig resultat før fødselen. Det er likevel opp til deg om du ønsker tidligere eller tør satse på senere.
+
+</details>
+
+<details>
+<summary>Hvor lang tid tar produksjonen av skulpturen?</summary>
+
+Produksjonen tar omtrent **én måned** på grunn av en grundig prosess med blant annet pussing, tørking, maling, herding og annet håndarbeid.
+
+</details>
+
+<details>
+<summary>Kan dere skanne andre kroppstyper enn gravide?</summary>
+
+Ja, etter forespørsel. Noen velger det som minne før medisinske inngrep eller ved spesielle kroppstilstander. Barn er vanskelige å skanne fordi de må stå helt stille, men nyfødte kan være mulige siden de ofte sover. 3D-skulptur av mor sammen med nyfødt er populært. Ta kontakt for forespørsel. JEg synes det er spennende med andre oppdrag enn gravide også
+
+</details>
+
+<details>
+<summary>Hvor utfører dere skanning?</summary>
+
+Vi skanner på Sør-Vestlandet mellom **Kristiansand** og **Stavanger**, med egne dager i storbyene. Vi tar også imot kunder i **Flekkefjord** (studio og produksjon), i tillegg til i Fredrikstad og Oslo.
+
+[Oslo]({{schedulePage}}): studio Metro
+
+[Stavanger]({{schedulePage}}): Stavanger Tinfabrik
+
+[Kristiansand]({{schedulePage}}): Huset i Markens
+
+[Fredrikstad]({{schedulePage}}): Nails by Majika
+
+[Flekkefjord]({{schedulePage}}): Hjemmestudio hos kunstneren selv
+
+</details>
+
+<details>
+<summary>Vises arr, tatoveringer og cellulitter – og kan dere gjøre noe med det?</summary>
+
+Ja, de kan vises på skulpturen, men vi kan fjerne eller myke ut detaljer som arr, tatoveringer, cellulitter og andre uønskelige hudtilstander under den digitale redigeringen.
+
+</details>
 
 </div>
 

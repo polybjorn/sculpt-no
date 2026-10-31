@@ -180,7 +180,8 @@ p {
 /* sculpt.no sets its running text in its large size; the intro, reviews and
    FAQ answers stay at body size. */
 .page > p,
-.page > :is(ul, ol, .steps) li,
+.page > :is(ul, ol) li,
+.steps li,
 .split-text p {
   font-size: var(--fs-large);
   line-height: var(--lh-large);
@@ -389,7 +390,7 @@ p {
 /* A part of an inner page, one step below its title. The front page, the
    only one with a hero, keeps its section headings at h2's size. */
 .page > h2,
-.page:not(:has(.hero-title)) .split-text h2:first-child {
+.page:not(:has(.hero-title)) :is(.split-text h2:first-child, .faq > h2) {
   font-size: var(--fs-h3);
   line-height: var(--lh-h3);
 }
@@ -516,6 +517,31 @@ p {
   color: var(--paper);
 }
 
+/* The front page ends on two buttons: the booking one filled, the one to
+   Prosessen outlined like «Se flere skulpturer». An inset shadow rather than
+   a border, so the two stay one height. */
+.process .actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-s);
+}
+
+.process .actions p {
+  margin: 0;
+}
+
+.process .actions p:first-child a {
+  background: none;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+
+.process .actions p:first-child a:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
 .split {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -536,6 +562,24 @@ p {
 
 .split-media-first {
   grid-template-columns: 1fr 1.1fr;
+}
+
+/* Prosessen's title and intro beside its steps, held in view while they
+   scroll past. Under the title, the steps ran down a reading-width column
+   with the page's sides left empty. */
+.split-steps {
+  grid-template-columns: 1fr 1.25fr;
+}
+
+.split-steps > .split-text {
+  position: sticky;
+  top: var(--below-header);
+}
+
+/* The first step level with the title beside it, and stacked, the intro's
+   paragraph margin is the only space above it. */
+.split-steps ol {
+  margin-top: 0;
 }
 
 .split img {
@@ -1352,6 +1396,16 @@ html:has(.lightbox[open]) {
     gap: var(--space-l);
     max-width: var(--text);
     margin-inline: auto;
+  }
+
+  /* Stacked, Prosessen opens as before: the title centred, as on the other
+     pages, and the steps straight after the intro. */
+  .page .split-steps {
+    row-gap: 0;
+  }
+
+  .split-steps h1 {
+    text-align: center;
   }
 
   .split-fill img {
