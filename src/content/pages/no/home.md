@@ -57,6 +57,29 @@ En personlig skulptur erstatter ikke fotografiene dine, men gir deg en annen må
 
 </div>
 
+<div class="sculptures">
+
+<div class="carousel">
+
+![En antikk kvinnelig figur laget av stein som viser en gravid person med bryst og mage, uten hode.](../../../assets/images/home-03.webp)
+![En hvit skulptur av en gravid kvinne uten hode, plassert på en hvit overflate.](../../../assets/images/under-utvikling-01.webp)
+![En svart skulptur av en kvinnekropp uten hode og armer, plassert på en hvit overflate.](../../../assets/images/home-05.webp)
+![Gravidskulptur i bronsefarget utførelse med armene hevet, på en marmorplate.](../../../assets/images/home-08.webp)
+![Gravidskulptur i steinutførelse med hendene på magen, foran et vindu med utsikt over snø og fjord.](../../../assets/images/home-13.webp)
+![Detaljbilde av personlig gravidskulptur av Sculpt i gult gull](../../../assets/images/gallerigravid-17.webp)
+![Gravidskulptur i steinutførelse med én hånd på brystet og én under magen, i sanden på en strand.](../../../assets/images/home-23.webp)
+![Gravidskulptur i perleutførelse med én hånd på brystet og én under magen, på en marmorplate.](../../../assets/images/home-26.webp)
+
+</div>
+
+<div class="actions">
+
+[Se flere skulpturer]({{galleryPregnancyPage}})
+
+</div>
+
+</div>
+
 <div class="testimonials">
 
 ## Hva kundene våre sier
@@ -111,57 +134,6 @@ En personlig skulptur erstatter ikke fotografiene dine, men gir deg en annen må
 </details>
 
 [Les flere anmeldelser på Google](https://share.google/piaA8agXoT83MRBzY)
-
-</div>
-
-<div class="sculptures">
-
-## Våre skulpturer
-
-<div class="carousel">
-
-![En antikk kvinnelig figur laget av stein som viser en gravid person med bryst og mage, uten hode.](../../../assets/images/home-03.webp)
-![En hvit skulptur av en gravid kvinne uten hode, plassert på en hvit overflate.](../../../assets/images/under-utvikling-01.webp)
-![En svart skulptur av en kvinnekropp uten hode og armer, plassert på en hvit overflate.](../../../assets/images/home-05.webp)
-![En skulptur av en gravid kvinnekropp med en metallisk finish, uten hode og armer, plassert mot en enkel, hvit bakgrunn.](../../../assets/images/home-06.webp)
-![Skulptur av en kvinne uten hode, med hånden på magen og en annen hånd som støtter under magen, laget av en lys keramikk eller steinmateriale.](../../../assets/images/home-07.webp)
-![Gravidskulptur i bronsefarget utførelse med armene hevet, på en marmorplate.](../../../assets/images/home-08.webp)
-![Personlig gravidskulptur i 3D i hvit matt og håndlaget steinfinish fra Sculpt](../../../assets/images/gallerigravid-06.webp)
-![Hvit gravidskulptur med hendene rundt magen, i sollys fra et vindu.](../../../assets/images/home-10.webp)
-![Gravidskulptur i perleutførelse](../../../assets/images/gallerigravid-36.webp)
-![Gravidskulptur i steinutførelse med hendene rundt magen.](../../../assets/images/home-12.webp)
-![Gravidskulptur i steinutførelse med hendene på magen, foran et vindu med utsikt over snø og fjord.](../../../assets/images/home-13.webp)
-![Gravidskulptur i steinutførelse med armen rundt magen, på en marmorplate.](../../../assets/images/home-14.webp)
-![Personlig kunstverk av gravidmage i nude mørkere nyanse](../../../assets/images/gallerigravid-16.webp)
-![Håndmalt gravidskulptur i metallisk bronsefinish av Sculpt](../../../assets/images/gallerigravid-15.webp)
-![Personlig gravidskulptur i matt bronsefarget finish av Sculpt](../../../assets/images/gallerigravid-13.webp)
-![Gravidskulptur med Sculpts signaturutførelse i grå marmorutførelse, skapt etter kvinnens egen kropp og ønsker.](../../../assets/images/gallerigravid-14.webp)
-![Personlig gravidskulptur i Sculpts egenutviklede signaturfinish med et naturtro uttrykk av stein. To ulike typer](../../../assets/images/gallerigravid-12.webp)
-![Detaljbilde av personlig gravidskulptur av Sculpt i gult gull](../../../assets/images/gallerigravid-17.webp)
-![Personlig gravidskulptur i bronsefarget utførelse. Bronseutførelse kan fås i ulike nyanser og fra blank til mattere](../../../assets/images/gallerigravid-20.webp)
-![3D-skulptur av gravid kvinne med Sculpts signaturutførelse og håndbearbeidet steinfinish.](../../../assets/images/gallerigravid-18.webp)
-![Gravidskulptur i steinutførelse med én hånd på brystet og én under magen, i sanden på en strand.](../../../assets/images/home-23.webp)
-![Personlig gravidskulptur i Sculpts signaturutførselse, stein, i ulike positurer](../../../assets/images/gallerigravid-22.webp)
-![Gravidskulptur med Sculpts signaturutførelse i stein, der kroppens former og detaljer fremheves. Denne i varme toner](../../../assets/images/gallerigravid-35.webp)
-![Gravidskulptur i perleutførelse med én hånd på brystet og én under magen, på en marmorplate.](../../../assets/images/home-26.webp)
-![Personlig gravidskulptur med signaturfinish fra Sculpt, et minne fra graviditeten bevart som kunst.](../../../assets/images/gallerigravid-26.webp)
-![Bronsefarget 3D-skulptur av gravid kvinne av Sculpt](../../../assets/images/gallerigravid-27.webp)
-![Gravidskulptur i steinutførelse med hånden på hoften, på en marmorplate ved et vindu.](../../../assets/images/home-29.webp)
-![Personlig gravidskulptur med signaturfinish fra Sculpt, i steinutførelse, og i bronseutførelse, et minne fra graviditeten bevart som kunst.](../../../assets/images/gallerigravid-29.webp)
-![Steinutførelse og perleutførelse på 3D-gravidskulptur fra Sculpt](../../../assets/images/gallerigravid-30.webp)
-![To ulike kvinnekropper, men i samme positur og finsih på gravidskulpturen fra Sculpt](../../../assets/images/gallerigravid-31.webp)
-![Ulike hvit matte 3D-gravidskulpturer av Sculpt](../../../assets/images/gallerigravid-33.webp)
-![Gravidskulptur i steinutførelse med armene hevet, på en rund sokkel av mørk stein.](../../../assets/images/home-34.webp)
-![Håndmalt gravidskulptur med Sculpts karakteristiske signaturfinish og et skulpturelt steinuttrykk.](../../../assets/images/gallerigravid-34.webp)
-![Hvit blank utførelse på Gravidskulptur av Sculpt](../../../assets/images/gallerigravid-32.webp)
-
-</div>
-
-<div class="actions">
-
-[Se flere skulpturer]({{galleryPregnancyPage}})
-
-</div>
 
 </div>
 

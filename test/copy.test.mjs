@@ -37,6 +37,8 @@ const REMOVED = {
     // The reviews link was a fold of its own in the FAQ; it is a plain link
     // under the reviews now that the FAQ is on prosessen.
     'Andres anmeldelser',
+    // The photos' heading: the strip says what it is without it.
+    'Våre skulpturer',
     // The artist's section: om-oss tells the same story in full, and the menu
     // always shows it.
     'Møt kunstneren bak Sculpt',
@@ -121,10 +123,12 @@ const CHANGED = {
 const LOOKS = 'Se design og utførelse';
 
 const MOVED = {
-  // The three reviews above the hero photo, now after the other three.
   index: [
-    { first: '⭐️⭐️⭐️⭐️⭐️', last: 'Kristine', before: 'Våre skulpturer' },
-    { first: 'Les flere anmeldelser på Google', last: 'Les flere anmeldelser på Google', before: 'Våre skulpturer' },
+    // The photos, now above the reviews.
+    { first: 'Se flere skulpturer', last: 'Se flere skulpturer', before: 'Hva kundene våre sier' },
+    // The three reviews above the hero photo, now after the other three.
+    { first: '⭐️⭐️⭐️⭐️⭐️', last: 'Kristine', before: 'En enkel og trygg prosess – steg for steg' },
+    { first: 'Les flere anmeldelser på Google', last: 'Les flere anmeldelser på Google', before: 'En enkel og trygg prosess – steg for steg' },
   ],
   priser: { first: 'Priser', last: BOOK, before: 'Ulike positurer' },
   // The model is made before it is adjusted, so its paragraph comes first.

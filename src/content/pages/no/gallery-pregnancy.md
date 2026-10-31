@@ -52,6 +52,12 @@ Et fysisk minne fra graviditeten, som du kan se, holde og kjenne igjen deg selv 
 ![Stål metallic finish 3D-gravidskulptur av Sculpt](../../../assets/images/gallerigravid-37.webp)
 ![Gravidskulptur med kintsugiutførelse, en kinesisk kunstform der knust porselen limes sammen med gull med dyp symbolikk - av Sculpt](../../../assets/images/gallerigravid-38.webp)
 ![Nude gravidskulptur av Sculpt](../../../assets/images/gallerigravid-39.webp)
+![En skulptur av en gravid kvinnekropp med en metallisk finish, uten hode og armer, plassert mot en enkel, hvit bakgrunn.](../../../assets/images/home-06.webp)
+![Skulptur av en kvinne uten hode, med hånden på magen og en annen hånd som støtter under magen, laget av en lys keramikk eller steinmateriale.](../../../assets/images/home-07.webp)
+![Hvit gravidskulptur med hendene rundt magen, i sollys fra et vindu.](../../../assets/images/home-10.webp)
+![Gravidskulptur i steinutførelse med armen rundt magen, på en marmorplate.](../../../assets/images/home-14.webp)
+![Gravidskulptur i steinutførelse med hånden på hoften, på en marmorplate ved et vindu.](../../../assets/images/home-29.webp)
+![Gravidskulptur i steinutførelse med armene hevet, på en rund sokkel av mørk stein.](../../../assets/images/home-34.webp)
 
 </div>
 

@@ -367,7 +367,7 @@ p {
    Outside the :is(), whose specificity is its most specific member's: in it,
    the heading's lifted every section above the stacked split's reading width
    below 961px. */
-.page > :is(.split, .testimonials, .sculptures, .gallery, .upcoming),
+.page > :is(.split, .testimonials, .sculptures, .process, .gallery, .upcoming),
 .page > h2:has(+ .upcoming) {
   max-width: var(--measure);
 }
@@ -776,8 +776,10 @@ p {
   display: flex;
   position: relative;
   padding-left: 0;
-  /* Past the text column, for room between the five names on one line. */
-  margin-inline: calc(-1 * var(--space-l));
+  /* The section is as wide as the others so its heading keeps to one line;
+     the steps stay by the text column, with room for the five names. */
+  max-width: calc(var(--text) + 2 * var(--space-l));
+  margin-inline: auto;
 }
 
 .process li {
