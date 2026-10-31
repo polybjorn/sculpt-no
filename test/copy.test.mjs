@@ -125,6 +125,8 @@ const MOVED = {
     last: 'Basert på skanningen lages en nøyaktig 3D-modell av kroppen din. Her finjusteres form og detaljer slik at skulpturen gjengir uttrykket på en naturlig og vakker måte.',
     before: 'Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Justeringene gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.',
   },
+  // The bold line between paragraphs, now the italic intro of «Om skulpturen».
+  omskulpturen: { first: 'Skulpturen er et personlig minne du har lyst til å ha fremme. Underveis snakker vi om positur, farge og utførelse, og finner sammen uttrykket som passer deg og hjemmet ditt.', last: 'Skulpturen er et personlig minne du har lyst til å ha fremme. Underveis snakker vi om positur, farge og utførelse, og finner sammen uttrykket som passer deg og hjemmet ditt.', before: 'Skulpturene fra Sculpt lages med en biobasert polymer som grunnmateriale. Materialet er nøye valgt for sine egenskaper og mulighetene det gir for kunstnerisk bearbeiding.' },
   // Her home studio first, then the cities nearest it; moves apply in order.
   'tid-og-sted': [
     { first: 'Flekkefjord', last: 'Ta kontakt så finner vi en tid.', before: 'Oslo' },
@@ -159,7 +161,7 @@ const ADDED = {
   prosessen: [
     ['Se tider og steder', CHANGED.prosessen[0][1]], [BOOK, null],
     // Headings for the parts of «Om skulpturen», with the scan paragraph short one sentence.
-    ['Fra skanning til skulptur', 'Om skulpturen'], ['Hver skulptur starter med en personlig skanning av kroppen med en håndholdt 3D-skanner. Skanningen kan sammenlignes med at det tas tusenvis av “bilder” av kroppen din fra alle vinkler, som i løpet av kort tid settes sammen til en nøyaktig 3D-modell. Prosessen er helt ufarlig og ikke-invasiv, og du utsettes ikke for stråling eller andre belastninger. Det er i håndarbeidet skulpturen virkelig får sitt unike uttrykk utover de personlige kroppslige detaljene i printen. Her kombineres kundens ønsker med en forståelse og kjennskap til personen gjennom skanneavtalen, slik at kunstneren kan bruke dette i den videre kunstneriske utformingen av skulpturen.', 'Fra skanning til skulptur'],
+    ['Fra skanning til skulptur', MOVED.omskulpturen.first], ['Hver skulptur starter med en personlig skanning av kroppen med en håndholdt 3D-skanner. Skanningen kan sammenlignes med at det tas tusenvis av “bilder” av kroppen din fra alle vinkler, som i løpet av kort tid settes sammen til en nøyaktig 3D-modell. Prosessen er helt ufarlig og ikke-invasiv, og du utsettes ikke for stråling eller andre belastninger. Det er i håndarbeidet skulpturen virkelig får sitt unike uttrykk utover de personlige kroppslige detaljene i printen. Her kombineres kundens ønsker med en forståelse og kjennskap til personen gjennom skanneavtalen, slik at kunstneren kan bruke dette i den videre kunstneriske utformingen av skulpturen.', 'Fra skanning til skulptur'],
     ['Materialet', 'Hver skulptur starter med en personlig skanning av kroppen med en håndholdt 3D-skanner. Skanningen kan sammenlignes med at det tas tusenvis av “bilder” av kroppen din fra alle vinkler, som i løpet av kort tid settes sammen til en nøyaktig 3D-modell. Prosessen er helt ufarlig og ikke-invasiv, og du utsettes ikke for stråling eller andre belastninger. Det er i håndarbeidet skulpturen virkelig får sitt unike uttrykk utover de personlige kroppslige detaljene i printen. Her kombineres kundens ønsker med en forståelse og kjennskap til personen gjennom skanneavtalen, slik at kunstneren kan bruke dette i den videre kunstneriske utformingen av skulpturen.'], ['Overflaten', 'Materialet er også valgt med tanke på styrke, holdbarhet og et mer bevisst materialvalg i produksjonen.'],
     ['Størrelse og utførelse', 'For mye sliping kan føre til at nettopp disse detaljene går tapt. Å finne denne balansen er en kunst i seg selv, og noe Sculpt har spesialisert seg på.'], ['Holdbarhet og levering', 'For å ivareta autentisiteten i uttrykket gjøres det ikke justeringer av kroppens grunnleggende proporsjoner. Kroppen gjengis slik den fremkommer i skanningen, uten idealisering eller endring av former. Vi kan likevel gjøre mye med overflater og enten fremheve detaljer eller duse ut detaljer e.l.'],
   ],
@@ -213,7 +215,7 @@ const expected = (name, lines) => {
   for (const carry of CARRIED.filter((c) => c.from === name)) carriedRun(carry, out);
   for (const other of FOLDED[name] ?? []) {
     const dropped = new Set(REMOVED[other] ?? []);
-    out.push(...fixtureLines(other).filter((l) => !dropped.has(l)));
+    out.push(...arranged(other, fixtureLines(other).filter((l) => !dropped.has(l))));
   }
   for (const carry of CARRIED.filter((c) => c.to === name)) {
     const dropped = new Set(REMOVED[carry.from] ?? []);
