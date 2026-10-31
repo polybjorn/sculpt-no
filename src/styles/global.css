@@ -860,7 +860,8 @@ p {
    other. */
 .price-models {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* Stacked once two boxes no longer fit their longest word, «Standardmodell». */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
   gap: 1rem;
   margin-block: 2rem 1.5rem;
 }
@@ -978,7 +979,10 @@ p {
   line-height: 1.6;
 }
 
+/* The month always under the number, so no box in the row breaks differently
+   from the next. */
 .upcoming .day {
+  width: min-content;
   font-family: var(--font-display);
   font-size: var(--fs-h3);
   line-height: 1.1;
@@ -1205,6 +1209,20 @@ p {
     flex: none;
     margin: 0;
   }
+
+  /* Five boxes in a row are narrower than «november»; one row still,
+     scrolled sideways like the front page strip. */
+  .page .upcoming {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 11rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .upcoming li {
+    scroll-snap-align: start;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1310,19 +1328,6 @@ p {
        attributes, and a photo not yet loaded collapses to nothing. */
     aspect-ratio: 1;
     margin: 0;
-  }
-
-  /* One row still, scrolled sideways like the front page strip. */
-  .page .upcoming {
-    grid-template-columns: none;
-    grid-auto-flow: column;
-    grid-auto-columns: 11rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-
-  .upcoming li {
-    scroll-snap-align: start;
   }
 
   .place {
