@@ -44,17 +44,24 @@ on `:root`; `test/type-scale.test.mjs` fails any font size that names none.
 
 | Token | Size | Used for |
 |---|---|---|
-| `--fs-h1` | 78px, down to 42px | Page titles, on every page |
-| `--fs-h2` | 52px, down to 34px | Section headings |
-| `--fs-h3` | 37px, down to 27px | Sub-headings, the Om oss word band |
-| `--fs-h4` | 26.4px | FAQ questions, cities on Tid og sted, contact labels, the wordmark |
+| `--fs-h1` | 78px, down to 42px | The front page title only |
+| `--fs-h2` | 52px, down to 34px | Front page section headings, and the title of every other page |
+| `--fs-h3` | 37px, down to 27px | A part of an inner page, like «Om skulpturen» or «Priser», the Om oss word band |
+| `--fs-h4` | 26.4px | Step names on Prosessen, FAQ questions, cities on Tid og sted, contact labels, the wordmark |
 | `--fs-h5` | 19.2px | The front page step names in their row; not on the live site, one x1.4 step below h4 |
 | `--fs-large` | 19.5px, .016em tracking | Running text, as the live site's "large" paragraphs |
 | `--fs-body` | 16px/1.8, .02em tracking | Intro, FAQ answers, menu, buttons |
 | `--fs-small` | 14.4px | Reviews, the kicker under the front page title, the footer |
 
 The first port read the live site's 16px intro paragraph as the body size and
-missed that its running text is the large size; the scale corrects that.
+missed that its running text is the large size; the scale corrects that. It
+also set the inner page titles at the front page title's size, where the live
+site sets them at h2's, so long titles broke over two lines.
+
+Headings on inner pages run three levels: the title, centred above a single
+column or left beside a photo; a part of the page, left-aligned with the text
+it heads; and a step name. Only the title is centred, since a centred heading
+over left-aligned text reads as detached from it.
 
 ## Layout
 
@@ -71,7 +78,8 @@ missed that its running text is the large size; the scale corrects that.
   carousel widen to `--measure` (70rem); the carousel row is full bleed, and
   the hero photo too until it reaches `--measure`. The hero keeps one frame,
   every statue whole and the fade on the table under them, so the width sets
-  its height
+  its height. A photo inside a text section fills that column, so its edges
+  line up with the heading above and the text below
 - Content files mark their sections with `<div class="...">` lines, turned into
   wrappers by `src/plugins/rehype-sections.mjs`, which also gives each image
   `sizes` and `srcset` widths that fit its section

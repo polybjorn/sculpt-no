@@ -332,6 +332,20 @@ p {
   padding-left: 1.4rem;
 }
 
+/* Inner page titles at the live site's size, one step below the front page
+   title, so a title like "Oppsatte tider og steder" holds one line. */
+.page > h1:first-child,
+.split-text h1 {
+  font-size: var(--fs-h2);
+}
+
+/* A part of an inner page, one step below its title. The front page, the
+   only one with a hero, keeps its section headings at h2's size. */
+.page > h2,
+.page:not(:has(.hero-title)) .split-text h2:first-child {
+  font-size: var(--fs-h3);
+}
+
 /* A heading after the steps opens a new part of the page, not a sixth step. */
 .page > .steps + h2 {
   margin-top: 2em;
@@ -735,7 +749,7 @@ p {
   align-items: center;
   min-height: 2.2rem;
   margin: 0 0 .5rem;
-  font-size: var(--fs-h3);
+  font-size: var(--fs-h4);
   line-height: 1.2;
 }
 
@@ -831,10 +845,10 @@ p {
   margin-block: 1rem 3rem;
 }
 
+/* The full text column, so its edges line up with the heading above it and
+   the text below. */
 .feature img {
   width: 100%;
-  max-width: 34rem;
-  margin-inline: auto;
   aspect-ratio: 3 / 2;
   object-fit: cover;
   object-position: 50% 55%;
