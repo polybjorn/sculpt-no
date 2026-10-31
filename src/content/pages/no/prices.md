@@ -11,37 +11,59 @@ description: "Se priser på personlige gravidskulpturer og 3D-skulpturer fra Scu
 
 Dine egne former, foreviget i et personlig kunstverk. Et minne du kan glede deg over resten av livet, og som kan leve videre i generasjoner.
 
-**Premiummodell 20 cm**
+<div class="price-models">
 
-**Pris: 7 800 kr**
+<div class="price-model">
 
-**Standardmodell 16 cm**
+### Premiummodell 20 cm
 
-**Pris: 7 600 kr**
+Pris: **7 800 kr**
 
-**Tilvalg:**
+</div>
 
-**Skulptur med hode**
+<div class="price-model">
 
-**Tillegg: 2 000 kr**
+### Standardmodell 16 cm
 
-**Flere personer i samme skulptur**
+Pris: **7 600 kr**
 
-**Tillegg: 2 000 kr per ekstra person**
+</div>
 
-**Utførelse:**
+</div>
 
-Stein, marmor og andre unike utførelser
+<div class="price-groups">
 
-**Tillegg: 800 kr**
+<div class="price-group">
 
-Bronse, gammelt gull, sølv med skygger og nyanser, stål og lignende metalliske finisher
+### Tilvalg:
 
-**Tillegg: 700 kr**
+- Skulptur med hode\
+  **Tillegg: 2 000 kr**
+- Flere personer i samme skulptur\
+  **Tillegg: 2 000 kr per ekstra person**
 
-**Andre størrelser**
+</div>
+
+<div class="price-group">
+
+### Utførelse:
+
+- Stein, marmor og andre unike utførelser\
+  **Tillegg: 800 kr**
+- Bronse, gammelt gull, sølv med skygger og nyanser, stål og lignende metalliske finisher\
+  **Tillegg: 700 kr**
+
+</div>
+
+</div>
+
+<div class="price-other">
+
+### Andre størrelser
 
 Pris oppgis etter avtale.
+
+</div>
 
 *Hver gravidskulptur er en personlig 3D-skulptur som lages individuelt etter kunden. Små variasjoner i finish og uttrykk er en naturlig del av håndlaget kunst og gjør hvert kunstverk unikt.*
 

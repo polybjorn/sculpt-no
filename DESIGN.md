@@ -75,6 +75,9 @@ missed that its running text is the large size; the scale corrects that.
 - Content files mark their sections with `<div class="...">` lines, turned into
   wrappers by `src/plugins/rehype-sections.mjs`, which also gives each image
   `sizes` and `srcset` widths that fit its section
+- A box, like the price models, takes the buttons' 1px ink border on paper
+  rather than a tinted fill, so it needs no colour outside the palette. A list
+  inside a section, like the price add-ons, is ruled with `--line`
 
 ## Motion
 

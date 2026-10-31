@@ -784,6 +784,76 @@ p {
   object-position: 50% 55%;
 }
 
+/* The prices as a list to scan rather than fifteen bold lines: the two models
+   in boxes like the buttons, what can be added in two columns beside each
+   other. */
+.price-models {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-block: 2rem 1.5rem;
+}
+
+.price-model {
+  border: 1px solid var(--ink);
+  padding: 1.4rem 1.4rem 1.2rem;
+}
+
+.price-model h3 {
+  font-size: var(--fs-h4);
+  margin-bottom: .8rem;
+}
+
+.price-model p {
+  margin: 0;
+  font-size: var(--fs-small);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.price-model strong {
+  display: block;
+  font: 400 var(--fs-h3)/1.1 var(--font-display);
+  letter-spacing: .01em;
+  text-transform: none;
+}
+
+.price-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2.5rem;
+}
+
+.price-group h3,
+.price-other h3 {
+  font-size: var(--fs-h4);
+  margin-bottom: .4rem;
+}
+
+.price-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.price-group li {
+  padding-block: .6rem;
+  border-top: 1px solid var(--line);
+  line-height: 1.5;
+}
+
+.price-other {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 1rem;
+  margin-block: 1.5rem 2rem;
+}
+
+.price-other p {
+  margin: 0;
+}
+
 /* The live site scrolls these words across the screen; standing still they
    read as one line of the page instead of motion to wait out. */
 .marquee ul {
@@ -1027,6 +1097,22 @@ p {
 
   .nav-links > li {
     border-top: 1px solid var(--line);
+  }
+
+  .price-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .price-model {
+    padding: 1rem;
+  }
+
+  .price-model h3 {
+    font-size: var(--fs-h5);
+  }
+
+  .price-model strong {
+    font-size: var(--fs-h4);
   }
 
   .nav-links > li > a,
