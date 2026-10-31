@@ -3,7 +3,7 @@ title: "Gravidskulptur av din egen kropp"
 description: "Bevar gravidmagens unike former med en personlig gravidskulptur. 3D-skannet etter din egen kropp og ferdigstilt for hånd av norsk kunstner. Se galleriet."
 ---
 
-# Graviditetskulpturer
+# Graviditetsskulpturer
 
 Hver gravidskulptur er et personlig kunstverk laget etter din egen kropp. Gjennom 3D-skanning fanges gravidmagens unike former, og skulpturen ferdigstilles for hånd med ønsket overflate og uttrykk.
 

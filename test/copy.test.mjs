@@ -84,6 +84,7 @@ const CHANGED = {
       'Utrolig glad jeg oppdaget dette mens jeg gikk gravid, et fint minne om en koselig tid. Kjempefornøyd med skulpturen!'],
   ],
   priser: [['Premiummodell – 20 cm', 'Premiummodell 20 cm']],
+  gallerigravidskulpturer: [['Graviditetskulpturer', 'Graviditetsskulpturer']],
   // The front page's step 2 ends with this sentence; that text is now here.
   prosessen: [['Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen.', 'Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen. Du skannes naken eller med sømløs truse for best mulig detaljbevaring.']],
 };
