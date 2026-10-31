@@ -1,5 +1,5 @@
 ---
-title: "Pris på gravidskulptur og 3D-skulptur  — Sculpt"
+title: "Pris på gravidskulptur og 3D-skulptur"
 description: "Se priser på personlige gravidskulpturer og 3D-skulpturer fra Sculpt. Hver skulptur lages etter din egen kropp og ferdigstilles for hånd av norsk kunstner."
 ---
 

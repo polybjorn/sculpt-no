@@ -1,5 +1,5 @@
 ---
-title: "Personlige 3D-skulpturer av mennesker — Sculpt"
+title: "Personlige 3D-skulpturer av mennesker"
 description: "Personlige 3D-skulpturer av par, barn, familier og andre mennesker. Unike kunstverk laget etter ekte mennesker, med 3D-skanning og håndlaget finish."
 ---
 
@@ -15,7 +15,7 @@ Hos Sculpt kan du få laget unike skulpturer av deg selv, par, barn og familier,
 
 ![mor&nyfødt - eller far&nyfødt - tips: på denne kan det være fint med hode med tanke på at babyen er med med hele seg.](../../../assets/images/galleriskulpturer-01.webp)
 ![Familie - i ønskede positurer - parskulpturer, eller kjæresteskulptur av en til den andre, bryllupskakefigurer, bestemor og/eller bestefar, konfirmant, eller bare en skulptur av barnet eller ungdommens sin fra en tid man på en måte ønsker å holde fas](../../../assets/images/galleriskulpturer-02.webp)
-![](../../../assets/images/galleriskulpturer-03.webp)
+![Hvit skulptur av et barn som sitter på knærne med hendene i bakken, på en marmorplate.](../../../assets/images/galleriskulpturer-03.webp)
 ![#d-skulptur av et lite barn på 3-4 år](../../../assets/images/galleriskulpturer-04.webp)
 ![Liten jente- alle barn som klarer å stå helt stille i ett minutt kan det lages skulptur av i ønsket positur.](../../../assets/images/galleriskulpturer-05.webp)
 

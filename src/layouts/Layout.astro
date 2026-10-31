@@ -8,12 +8,13 @@ interface Props {
 
 import '../styles/global.css';
 import { localeInfo, defaultLocale } from '../i18n/locales.js';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import { pathFor, resolveRoute, localesWithPage } from '../i18n/routes.js';
-import { menu, contact, sourceUrl } from '../i18n/pages.js';
+import { menu, contact, social, sourceUrl, siteName, titleSuffix, business } from '../i18n/pages.js';
 import { ui } from '../i18n/ui.js';
 import SocialLinks from '../components/SocialLinks.astro';
 import logo from '../assets/images/logo.webp';
+import shareSource from '../assets/images/home-01.webp';
 import noScriptCss from '../styles/no-script.css?url';
 
 const { title, description, lang = defaultLocale, page = 'home' } = Astro.props;
@@ -26,6 +27,33 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 // once `site` is sculpt.no again.
 const isPreview = !site.includes('sculpt.no');
 const canonical = `${site}${currentPath}`;
+
+// sculpt.no shared its logo as the link preview; the sculptures say more about
+// what she makes. 1200x630 is the shape Facebook and Messenger crop a preview to.
+const share = await getImage({ src: shareSource, width: 1200, height: 630, fit: 'cover', format: 'jpg' });
+const shareAlt = 'Fire gravidskulpturer fra Sculpt side om side, i beige, svart, hvit og gullfarget utførelse.';
+
+// Google takes the business card in search results from this. A JSON block is
+// data the browser never runs, so `script-src 'self'` does not refuse it.
+const structured = page === 'home' && JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    // "Sculpt" alone is a common word; the alternates tell Google which site
+    // name to show over its result.
+    { '@type': 'WebSite', name: siteName, alternateName: ['Sculpt Svindland', 'sculpt.no'], url: `${site}${base}/` },
+    {
+      '@type': 'Organization',
+      name: siteName,
+      legalName: business.legalName,
+      address: { '@type': 'PostalAddress', addressLocality: business.locality, addressCountry: 'NO' },
+      url: `${site}${base}/`,
+      logo: `${site}${(await getImage({ src: logo })).src}`,
+      email: contact.email,
+      telephone: contact.phone.href.replace('tel:', ''),
+      sameAs: social.map((s) => s.url),
+    },
+  ],
+});
 
 // Nav links point at the reader's language, or at the nearest translated
 // language while a translation is still missing.
@@ -47,7 +75,7 @@ const pageLocales = localesWithPage(page);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title}</title>
+  <title>{`${title}${titleSuffix}`}</title>
   {description && <meta name="description" content={description}>}
   <link rel="canonical" href={canonical}>
   <link rel="icon" href={`${base}/favicon.ico`} sizes="48x48">
@@ -59,12 +87,18 @@ const pageLocales = localesWithPage(page);
     <link rel="alternate" hreflang={l} href={`${site}${pathFor(page, l)}`} />
   ))}
   <link rel="alternate" hreflang="x-default" href={`${site}${pathFor(page, defaultLocale)}`} />
-  <meta property="og:site_name" content="Sculpt">
+  <meta property="og:site_name" content={siteName}>
   <meta property="og:type" content="website">
-  <meta property="og:title" content={title}>
+  <meta property="og:title" content={`${title}${titleSuffix}`}>
   {description && <meta property="og:description" content={description}>}
   <meta property="og:url" content={canonical}>
   <meta property="og:locale" content={info.og}>
+  <meta property="og:image" content={`${site}${share.src}`}>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content={shareAlt}>
+  <meta name="twitter:card" content="summary_large_image">
+  {structured && <script type="application/ld+json" set:html={structured} />}
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'">
   <meta name="referrer" content="no-referrer">
 </head>

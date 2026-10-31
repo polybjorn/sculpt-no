@@ -1,5 +1,5 @@
 ---
-title: "Prosessen — Sculpt"
+title: "Hvordan lages en personlig 3D-skulptur?"
 description: "Slik foregår det å få laget en personlig skulptur hos Sculpt, fra første samtale og skanning til ferdig skulptur sendt hjem til deg."
 ---
 
@@ -37,7 +37,7 @@ Under finner du en oversikt over hele prosessen, og hva du kan forvente fra før
 
 <div class="feature">
 
-![](../../../assets/images/omskulpturen-01.webp)
+![Tre hvite skulpturer fra Sculpt: en jente som sitter på knærne, en gravid kvinne og en kvinne med et nyfødt barn i armene.](../../../assets/images/omskulpturen-01.webp)
 
 </div>
 

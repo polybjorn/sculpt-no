@@ -25,7 +25,9 @@ for (const page of pages) {
 
   test(`${page}: no inline script`, () => {
     const inline = tags(html)
-      .filter(([, name, attrs]) => name.toLowerCase() === 'script' && !/\ssrc\s*=/i.test(attrs))
+      // A JSON-LD block is data the browser never runs, so the CSP lets it be.
+      .filter(([, name, attrs]) => name.toLowerCase() === 'script' && !/\ssrc\s*=/i.test(attrs)
+        && !/\stype="application\/ld\+json"/i.test(attrs))
       .map(([tag]) => tag);
     assert.deepEqual(inline, []);
   });

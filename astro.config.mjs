@@ -4,6 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import { locales, defaultLocale } from './src/i18n/locales.js';
 import { remarkPageLinks, pagesDigest } from './src/plugins/remark-page-links.mjs';
 import { rehypeSections } from './src/plugins/rehype-sections.mjs';
+import { rehypeHeadingDashes } from './src/plugins/rehype-heading-dashes.mjs';
 import { redirects } from './src/i18n/pages.js';
 
 // Preview deployment on GitHub Pages. At launch: site back to
@@ -34,7 +35,7 @@ export default defineConfig({
     // alone rather than letting smart quotes rewrite it.
     smartypants: false,
     remarkPlugins: [[remarkPageLinks, { digest: pagesDigest() }]],
-    rehypePlugins: [rehypeSections],
+    rehypePlugins: [rehypeSections, rehypeHeadingDashes],
   },
   compressHTML: true,
   vite: {

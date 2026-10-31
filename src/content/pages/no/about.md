@@ -1,5 +1,5 @@
 ---
-title: "Om oss | Få et minne – Bestill skulptur i dag — Sculpt"
+title: "Om oss: Få et minne, bestill skulptur i dag"
 description: "Oppdag unike 3D-skulpturer som bevarer livets spesielle øyeblikk. Kontakt oss for skanning i Flekkefjord, Kristiansand og Oslo."
 ---
 
@@ -41,7 +41,7 @@ Dessuten kan vi også tilby bedrifter, kunstnere og idrett samarbeid innenfor v�
 
 </div>
 
-![](../../../assets/images/under-utvikling-01.webp)
+![En hvit skulptur av en gravid kvinne uten hode, plassert på en hvit overflate.](../../../assets/images/under-utvikling-01.webp)
 
 </div>
 

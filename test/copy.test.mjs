@@ -104,13 +104,20 @@ const ADDED = {
   kontakt: [['Send SMS', '480 05 508']],
 };
 
-// Search titles and descriptions written where sculpt.no had a placeholder
-// or none.
+// Search titles and descriptions that differ from sculpt.no, merged over the
+// snapshot's. The layout ends every title in "| Sculpt" (src/content.config.mjs
+// says why), so the snapshot's endings disagree with most pages.
 const META = {
+  'om-oss': { title: 'Om oss: Få et minne, bestill skulptur i dag | Sculpt' },
   prosessen: {
-    title: 'Prosessen — Sculpt',
+    title: 'Hvordan lages en personlig 3D-skulptur? | Sculpt',
     description: 'Slik foregår det å få laget en personlig skulptur hos Sculpt, fra første samtale og skanning til ferdig skulptur sendt hjem til deg.',
   },
+  'tid-og-sted': { title: '3D-skanning og gravidskulptur i Oslo og Stavanger | Sculpt' },
+  priser: { title: 'Pris på gravidskulptur og 3D-skulptur | Sculpt' },
+  kontakt: { title: 'Kontakt oss for mer informasjon og booking | Sculpt' },
+  gallerigravidskulpturer: { title: 'Gravidskulptur av din egen kropp | Sculpt' },
+  galleriskulpturer: { title: 'Personlige 3D-skulpturer av mennesker | Sculpt' },
 };
 
 const at = (lines, line, name) => {
@@ -157,8 +164,9 @@ const mainText = (html) => {
     .replace(/<[^>]+>/g, ''))
     .split('\n')
     // The browser collapses runs of spaces when it renders, and the capture
-    // took what it rendered.
-    .map((l) => l.replace(/[ \t\r]+/g, ' ').trim())
+    // took what it rendered. A no-break space is layout the build adds
+    // (rehype-heading-dashes.mjs), not a change to the words.
+    .map((l) => l.replace(/[ \t\r\u00a0]+/g, ' ').trim())
     .filter(Boolean);
 };
 
@@ -177,7 +185,7 @@ for (const page of pages) {
   });
 
   test(`${name}: title and description match the snapshot`, () => {
-    const meta = META[name] ?? JSON.parse(readFileSync(join(FIXTURES, 'meta.json'), 'utf8'))[name];
+    const meta = { ...JSON.parse(readFileSync(join(FIXTURES, 'meta.json'), 'utf8'))[name], ...META[name] };
     const html = readFileSync(builtPath(page), 'utf8');
     assert.equal(decode(html.match(/<title>([^<]*)<\/title>/)?.[1] ?? ''), meta.title);
     assert.equal(decode(html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? '') || undefined,

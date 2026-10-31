@@ -1,5 +1,5 @@
 ---
-title: "Kontakt | Kontakt oss for mer informasjon og booking. — Sculpt"
+title: "Kontakt oss for mer informasjon og booking"
 description: "Kontakt side for kunstskulpturer og booking. Send spørsmål eller bestill time via e-post eller telefon. Få svar raskt og enkelt."
 ---
 
@@ -25,6 +25,6 @@ Har du spørsmål om skulpturene, prosessen eller booking? Jeg hjelper deg gjern
 
 </div>
 
-![](../../../assets/images/kontakt-01.webp)
+![Seks gravidskulpturer fra Sculpt på rad, i bronse, gull, sølv, grå og hvit utførelse.](../../../assets/images/kontakt-01.webp)
 
 </div>

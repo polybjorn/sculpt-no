@@ -27,18 +27,28 @@ export const menu = [
 
 // sculpt.no's pages folded into another, so a link, bookmark or search result
 // for the old address still lands on its text. /home-1-1 was a copy of the
-// front page in sculpt.no's sitemap. Each goes once nothing reaches it (#26).
+// front page in sculpt.no's sitemap; /gallerier and /informasjon were its menu
+// folders and sent a visitor where these do. Each goes once nothing reaches it (#26).
 export const redirects = {
   omskulpturen: 'prosessen/#om-skulpturen',
   'under-utvikling': 'om-oss/#sculpt-i-utvikling',
   'home-1-1': '',
+  gallerier: 'gallerigravidskulpturer/',
+  informasjon: 'om-oss/',
 };
+
+export const siteName = 'Sculpt';
+// Every <title> ends in this, so no page carries a suffix of its own.
+export const titleSuffix = ` | ${siteName}`;
 
 // As the contact page writes them (src/content/pages/no/contact.md).
 export const contact = {
   email: 'sculptnorge@outlook.com',
   phone: { label: '480 05 508', href: 'tel:+4748005508' },
 };
+
+// From Brønnøysundregistrene, as the footer (ui `business`) shows them.
+export const business = { legalName: 'Sculpt Svindland ENK', locality: 'Flekkefjord' };
 
 // The public GitHub copy (AGENTS.md, Going public); 404s until it exists.
 export const sourceUrl = 'https://github.com/polybjorn/sculpt-no';

@@ -1,5 +1,5 @@
 ---
-title: "Gravidskulptur av din egen kropp — Sculpt"
+title: "Gravidskulptur av din egen kropp"
 description: "Bevar gravidmagens unike former med en personlig gravidskulptur. 3D-skannet etter din egen kropp og ferdigstilt for hånd av norsk kunstner. Se galleriet."
 ---
 

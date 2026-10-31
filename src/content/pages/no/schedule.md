@@ -1,5 +1,5 @@
 ---
-title: "3D-skanning og gravidskulptur – Oslo, Stavanger m.fl. — Sculpt"
+title: "3D-skanning og gravidskulptur i Oslo og Stavanger"
 description: "Bestill 3D-skanning til din personlige gravidskulptur i Oslo, Stavanger, Kristiansand, Fredrikstad eller Flekkefjord. Se kommende skannedager og finn et sted som passer deg."
 ---
 

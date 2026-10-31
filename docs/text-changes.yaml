@@ -10,7 +10,7 @@ groups:
         text: |-
           Dagens side viser delvis forskjellig tekst på PC og på mobil. Den nye siden har én tekst som brukes på alle skjermer, og den er hentet fra PC-visningen, som er den nyeste. Tekst som bare vises på mobil i dag er ikke tatt med. Det gjelder forsiden, «Om skulpturen» og «Sculpt i utvikling», se under hver side.
       - title: "Kortere navn i menyen"
-        text: Flere menypunkter på dagens side har sidetittelen med seg i navnet, og noen har fått et kortere navn. Overskriftene på sidene og sidetitlene (det som står i nettleserfanen og i søkeresultater) er beholdt som de er.
+        text: Flere menypunkter på dagens side har sidetittelen med seg i navnet, og noen har fått et kortere navn. Overskriftene på sidene er beholdt som de er.
         table:
           head: [Før, Etter]
           rows:
@@ -20,6 +20,19 @@ groups:
             - [Oppsatte tider og steder | Sculpt, Tider og steder]
             - [Gravidskulptur | Sculpt, Gravidskulptur]
             - [Andre skulpturer | Sculpt, Andre skulpturer]
+      - title: "Sidetitlene ender likt"
+        text: |-
+          Sidetittelen er det som står i nettleserfanen og som overskrift i søkeresultater. Squarespace setter en strek og «Sculpt» bak tittelen på alle sider unntatt forsiden, som ender på «| Sculpt», og «Om oss» og «Kontakt» har i tillegg flere skilletegn inne i tittelen. Nå ender alle titlene på «| Sculpt», og skilletegnene inne i titlene er byttet med kolon, komma eller «i». I «Kontakt» er det doble «Kontakt» og punktumet tatt bort. «Tider og steder» har mistet «m.fl.», så hele tittelen får plass før Google kutter den på PC, ved rundt 60 tegn. Søkeordene er de samme. Google kan likevel velge å vise en tittel litt annerledes.
+        table:
+          head: [Før, Etter]
+          rows:
+            - ["Om oss | Få et minne – Bestill skulptur i dag — Sculpt", "Om oss: Få et minne, bestill skulptur i dag | Sculpt"]
+            - ["Kontakt | Kontakt oss for mer informasjon og booking. — Sculpt", "Kontakt oss for mer informasjon og booking | Sculpt"]
+            - ["Gravidskulptur av din egen kropp — Sculpt", "Gravidskulptur av din egen kropp | Sculpt"]
+            - ["Personlige 3D-skulpturer av mennesker — Sculpt", "Personlige 3D-skulpturer av mennesker | Sculpt"]
+            - ["Pris på gravidskulptur og 3D-skulptur — Sculpt", "Pris på gravidskulptur og 3D-skulptur | Sculpt"]
+            - ["3D-skanning og gravidskulptur – Oslo, Stavanger m.fl. — Sculpt", "3D-skanning og gravidskulptur i Oslo og Stavanger | Sculpt"]
+            - ["General 1 — Sculpt", "Hvordan lages en personlig 3D-skulptur? | Sculpt"]
       - title: "Nye hjelpetekster i menyen"
         text: Lenken «Hopp til innhold» (for tastatur og skjermleser) og navnet «Sculpt, til forsiden» på logoen. Ingen av dem er synlige i vanlig bruk, og dagens side har dem ikke.
       - title: "Menyknappen på mobil heter «Meny»"
@@ -34,8 +47,26 @@ groups:
         text: Dagens meny har «Om oss» med fire sider under, så «Kontakt», «Gallerier», «Priser» og «Prosessen». Den nye menyen har sidene i den rekkefølgen en kunde trenger dem, «Gallerier», «Prosessen», «Priser», «Tider og steder», «Om oss» og «Kontakt», og bare «Gallerier» har sider under seg. Skannedagene lå under «Om oss», der den som leter etter en dag å skanne ikke ser etter dem, så de har fått sitt eget punkt. «Om oss» går rett til «Kunstneren bak Sculpt», og teksten fra «Sculpt i utvikling» står nederst på «Om oss».
       - title: "En knapp til bestilling nederst"
         text: «Kunstneren bak Sculpt», «Prosessen», «Gravidskulptur», «Andre skulpturer» og forsiden har fått knappen «Bestill din skulptur» nederst, med samme tekst og lenke som knappen øverst på forsiden. Den som har lest ferdig, kommer da rett til bestilling uten å lete i menyen.
-      - title: "Bilder med filnavn som beskrivelse har fått tom beskrivelse"
-        text: Bildene har en skjult beskrivelse som skjermlesere leser opp. På dagens side er den for mange av bildene bare filnavnet, for eksempel «Bjelland Foto-8638.jpg» og «20250213_093049.jpg» på forsiden, «Image 7.jpeg» på kontaktsiden og «20250814_083919.jpg» under «Andre skulpturer». Et filnavn sier ingenting om bildet, så disse har fått tom beskrivelse, og skjermleseren hopper over dem. De andre beskrivelsene er beholdt ordrett. Vil du skrive egne beskrivelser til disse bildene, legger jeg dem inn.
+      - title: "Bilder uten beskrivelse har fått en"
+        text: Bildene har en skjult beskrivelse som skjermlesere leser opp, og som Google bruker i bildesøket. På dagens side er den for mange av bildene bare filnavnet, for eksempel «Bjelland Foto-8638.jpg» og «20250213_093049.jpg» på forsiden, «Image 7.jpeg» på kontaktsiden og «20250814_083919.jpg» under «Andre skulpturer», og noen bilder har ingen. Disse har fått en kort beskrivelse av hva bildet viser, skrevet av meg og listet under. Den hvite skulpturen på forsiden har beskrivelsen den har på dagens side, og den samme står nå ved bildet på «Om oss». De andre beskrivelsene er beholdt ordrett. Vil du endre noen av dem, legger jeg det inn.
+        table:
+          head: [Bildet står på, Ny beskrivelse]
+          rows:
+            - ["Forsiden, øverst", "Fire gravidskulpturer fra Sculpt side om side, i beige, svart, hvit og gullfarget utførelse."]
+            - ["Forsiden, bildestripen", "Gravidskulptur i bronsefarget utførelse med armene hevet, på en marmorplate."]
+            - ["Forsiden, bildestripen", "Hvit gravidskulptur med hendene rundt magen, i sollys fra et vindu."]
+            - ["Forsiden, bildestripen", "Gravidskulptur i steinutførelse med hendene rundt magen."]
+            - ["Forsiden, bildestripen", "Gravidskulptur i steinutførelse med hendene på magen, foran et vindu med utsikt over snø og fjord."]
+            - ["Forsiden, bildestripen", "Gravidskulptur i steinutførelse med armen rundt magen, på en marmorplate."]
+            - ["Forsiden, bildestripen", "Gravidskulptur i steinutførelse med én hånd på brystet og én under magen, i sanden på en strand."]
+            - ["Forsiden, bildestripen", "Gravidskulptur i perleutførelse med én hånd på brystet og én under magen, på en marmorplate."]
+            - ["Forsiden, bildestripen", "Gravidskulptur i steinutførelse med hånden på hoften, på en marmorplate ved et vindu."]
+            - ["Forsiden, bildestripen", "Gravidskulptur i steinutførelse med armene hevet, på en rund sokkel av mørk stein."]
+            - ["Prosessen, «Om skulpturen»", "Tre hvite skulpturer fra Sculpt: en jente som sitter på knærne, en gravid kvinne og en kvinne med et nyfødt barn i armene."]
+            - ["Kontakt", "Seks gravidskulpturer fra Sculpt på rad, i bronse, gull, sølv, grå og hvit utførelse."]
+            - ["Andre skulpturer", "Hvit skulptur av et barn som sitter på knærne med hendene i bakken, på en marmorplate."]
+      - title: "Et bilde når siden deles"
+        text: Når noen deler en lenke til siden på Facebook, i Messenger eller lignende, vises et bilde sammen med lenken. Dagens side viser logoen der. Den nye viser de fire skulpturene øverst på forsiden.
   - title: Forside
     points:
       - title: "Påmeldingen til nyhetsbrevet er ikke med"
@@ -64,11 +95,11 @@ groups:
   - title: Prosessen
     points:
       - title: "«Om skulpturen» står nederst på siden"
-        text: Dagens side har «Om skulpturen» som egen side, og den forteller mye av det samme som «Prosessen» om skanningen, bearbeidingen og materialet. Teksten og bildet står nå ordrett nederst på «Prosessen», under overskriften «Om skulpturen», så alt om hvordan skulpturen blir til er samlet ett sted, med én knapp til bestilling under. Den gamle adressen, sculpt.no/omskulpturen, sender videre dit. Sidetittelen «Hvordan lages en personlig 3D-skulptur?» og beskrivelsen hørte til den gamle siden og brukes ikke lenger.
+        text: Dagens side har «Om skulpturen» som egen side, og den forteller mye av det samme som «Prosessen» om skanningen, bearbeidingen og materialet. Teksten og bildet står nå ordrett nederst på «Prosessen», under overskriften «Om skulpturen», så alt om hvordan skulpturen blir til er samlet ett sted, med én knapp til bestilling under. Den gamle adressen, sculpt.no/omskulpturen, sender videre dit. Sidetittelen «Hvordan lages en personlig 3D-skulptur?» er nå sidetittelen til «Prosessen», mens beskrivelsen hørte til den gamle siden og brukes ikke lenger.
       - title: "Setning fra forsiden i steg 2"
         text: «Du skannes naken eller med sømløs truse for best mulig detaljbevaring.» sto bare i steg 2 på forsiden, og står nå sist i steg 2 her, se under «Forside».
       - title: "Navn og beskrivelse i søkeresultater"
-        text: Siden heter «General 1» i nettleserfanen og i søkeresultater på dagens side, en plassholder fra Squarespace, og har ingen beskrivelse. Den heter nå «Prosessen» og har fått beskrivelsen «Slik foregår det å få laget en personlig skulptur hos Sculpt, fra første samtale og skanning til ferdig skulptur sendt hjem til deg.»
+        text: Siden heter «General 1» i nettleserfanen og i søkeresultater på dagens side, en plassholder fra Squarespace, og har ingen beskrivelse. Den har nå fått tittelen «Hvordan lages en personlig 3D-skulptur?» fra «Om skulpturen» og beskrivelsen «Slik foregår det å få laget en personlig skulptur hos Sculpt, fra første samtale og skanning til ferdig skulptur sendt hjem til deg.»
   - title: Priser
     points:
       - title: "Prislisten står øverst"
