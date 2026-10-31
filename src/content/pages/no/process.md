@@ -47,6 +47,8 @@ Under finner du en oversikt over hele prosessen, og hva du kan forvente fra før
 
 *Skulpturen er et personlig minne du har lyst til å ha fremme. Underveis snakker vi om positur, farge og utførelse, og finner sammen uttrykket som passer  deg og hjemmet ditt.*
 
+[Se positurer og utførelser]({{pricesPage}}#ulike-positurer)
+
 ### Fra skanning til skulptur
 
 Hver skulptur starter med en personlig skanning av kroppen med en håndholdt 3D-skanner. Skanningen kan sammenlignes med at det tas tusenvis av “bilder” av kroppen din fra alle vinkler, som i løpet av kort tid settes sammen til en nøyaktig 3D-modell. Prosessen er helt ufarlig og ikke-invasiv, og du utsettes ikke for skadelig stråling eller andre belastninger. Det er i håndarbeidet skulpturen virkelig får sitt unike uttrykk utover de personlige kroppslige detaljene i printen. Her kombineres kundens ønsker med en forståelse og kjennskap til personen gjennom skanneavtalen, slik at kunstneren kan bruke dette i den videre kunstneriske utformingen av skulpturen.
@@ -67,7 +69,7 @@ Hos Sculpt arbeider vi grundig med å redusere og kamuflere disse gjennom manuel
 
 For mye sliping kan føre til at nettopp disse detaljene går tapt. Å finne denne balansen er en kunst i seg selv, og noe Sculpt har spesialisert seg på.
 
-### Størrelse og utførelse
+### Størrelse og proporsjoner
 
 Hver skulptur er opptil **25 cm høy**, og produseres som et solid og vektet objekt for å gi en stabil og kunstnerisk tilstedeværelse til utstilling der du ønsker i hjemmet. Det kan lages større skulpturer, men da må skulpturen deles opp og settes sammen.
 
