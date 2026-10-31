@@ -27,7 +27,8 @@ const REMOVED = {
     '— Kunstner og daglig leder',
     'For meg ble skulpturen en måte å bevare et øyeblikk som ellers bare eksisterer i minner og bilder. Den minner meg fortsatt om en helt unik periode.',
     'Denne opplevelsen inspirerte meg til å starte Sculpt. Jeg ønsket å gi flere gravide i Norge muligheten til å bevare denne tiden på en vakker og personlig måte, som et kunstverk de kan ha med seg resten av livet.”',
-    // Each step's text is on prosessen; the front page keeps the step names.
+    // The intro and each step's text are on prosessen; the front page keeps the step names.
+    'Å få laget en personlig skulptur er en helt unik opplevelse, og mange lurer på hvordan det faktisk foregår. Derfor har jeg gjort prosessen så trygg, enkel og forutsigbar som mulig. Hos Sculpt blir du fulgt opp gjennom hvert steg – fra første samtale til ferdig skulptur – slik at du alltid vet hva som skjer, og kan føle deg komfortabel hele veien.',
     'Her er en oversikt over hele prosessen, og hva du kan forvente fra første møte til skulpturen står klar i hendene dine.',
     'Vi starter med en personlig samtale om dine ønsker og hva du ser for deg med skulpturen. Sammen går vi gjennom prosessen og planlegger selve skanningen, samt eventuelle justeringer som kan gjøres digitalt i etterkant.',
     'Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen. Du skannes naken eller med sømløs truse for best mulig detaljbevaring.',

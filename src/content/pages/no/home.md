@@ -189,8 +189,6 @@ En personlig skulptur erstatter ikke fotografiene dine, men gir deg en annen må
 
 ## En enkel og trygg prosess – steg for steg
 
-Å få laget en personlig skulptur er en helt unik opplevelse, og mange lurer på hvordan det faktisk foregår. Derfor har jeg gjort prosessen så trygg, enkel og forutsigbar som mulig. Hos Sculpt blir du fulgt opp gjennom hvert steg – fra første samtale til ferdig skulptur – slik at du alltid vet hva som skjer, og kan føle deg komfortabel hele veien.
-
 1. ### Konsultasjon og samtale
 
 2. ### Skanning
