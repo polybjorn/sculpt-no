@@ -90,6 +90,9 @@
      text, for text at body size; em, so it follows the size it is used at. */
   --text-body: 38em;
   --gutter: clamp(1rem, 4vw, 3rem);
+  /* Clear of the sticky header, for an anchor scrolled to or a photo held in
+     view. */
+  --below-header: 6rem;
   /* Every margin, padding and gap in rem names one of these, and
      test/spacing.test.mjs refuses any other; spacing that follows its own
      text, a paragraph's or a button's, is in em instead. */
@@ -112,7 +115,7 @@
 /* A heading reached by its anchor, as /omskulpturen lands on one, would
    otherwise sit under the sticky header. */
 html {
-  scroll-padding-top: 6rem;
+  scroll-padding-top: var(--below-header);
 }
 
 body {
@@ -549,19 +552,16 @@ p {
   }
 }
 
-/* Text far taller than any photo of a sensible size, at every width: the text
-   runs on under the photo instead of leaving a column of blank page beside it.
-   The float needs the photo first in the source. */
-.split-fill {
-  display: flow-root;
-}
-
+/* Text far taller than any photo of a sensible size: the photo stays in view
+   beside it while the text scrolls past. Floated, the text ran on under the
+   photo at twice a comfortable line. The photo goes after the text, as in the
+   other sections, at every width. */
 .split-fill img {
-  float: right;
-  width: 45%;
+  order: 1;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  margin: 0 0 var(--space-m) var(--space-2xl);
+  position: sticky;
+  top: var(--below-header);
 }
 
 /* Contact details read as labels under the title, not as sections. */
@@ -1259,11 +1259,18 @@ p {
 
   /* Side by side here, the text falls under 40 characters a line and the photo
      to a thumbnail. */
-  .page .split:not(.split-fill) {
+  .page .split {
     grid-template-columns: 1fr;
     gap: var(--space-l);
     max-width: var(--text);
     margin-inline: auto;
+  }
+
+  .split-fill img {
+    position: static;
+    /* Not auto: that drops the ratio taken from the width and height
+       attributes, and a photo not yet loaded collapses to nothing. */
+    aspect-ratio: 1;
   }
 
   /* Five names in a row would wrap word by word, so the path turns downward. */
@@ -1400,23 +1407,6 @@ p {
   .split,
   .split-media-first {
     grid-template-columns: 1fr;
-  }
-
-  /* The photo after the text, as in the other sections. */
-  .split-fill {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-l);
-  }
-
-  .split-fill img {
-    order: 1;
-    float: none;
-    width: 100%;
-    /* Not auto: that drops the ratio taken from the width and height
-       attributes, and a photo not yet loaded collapses to nothing. */
-    aspect-ratio: 1;
-    margin: 0;
   }
 
   .place {

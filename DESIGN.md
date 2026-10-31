@@ -131,7 +131,10 @@ Where things sit follows a few rules rather than per-section values:
   by side the text would fall under 40 characters a line. `split-portrait`
   crops a landscape portrait upright (4:5) beside a long text, so the photo
   is about the text's height rather than a strip above blank page; stacked,
-  it shows whole
+  it shows whole. `split-fill` is for a text far taller than any photo, like
+  the front page's «Et øyeblikk»: the photo stays in view beside it while the
+  text scrolls past. The float it replaced ran the text on under the photo at
+  over 110 characters a line
 - Content files mark their sections with `<div class="...">` lines, turned into
   wrappers by `src/plugins/rehype-sections.mjs`, which also gives each image
   `sizes` and `srcset` widths that fit its section
