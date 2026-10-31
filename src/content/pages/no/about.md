@@ -21,8 +21,6 @@ Denne opplevelsen inspirerte meg til å starte Sculpt. Jeg ønsket å gi flere g
 
 Nå lager jeg også skulpturer av par, barn og familier, og jeg vil fortsette å utvikle Sculpt med nye typer skulpturer.
 
-[Se andre skulpturer]({{galleryOtherPage}})
-
 </div>
 
 </div>
