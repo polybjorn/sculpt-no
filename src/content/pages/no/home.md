@@ -165,28 +165,6 @@ En personlig skulptur erstatter ikke fotografiene dine, men gir deg en annen må
 
 </div>
 
-<div class="artist">
-
-## Møt kunstneren bak Sculpt
-
-<div class="split split-media-first">
-
-![Et portrett av en smilende kvinne med skulderlangt, krøllete, blond hår, iført en hvit, mønstret genser, mot en enkel lys bakgrunn.](../../../assets/images/home-37.webp)
-
-<div class="split-text">
-
-### Ester Svindland
-
-> *“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.”*
-
-[Les mer om meg]({{aboutPage}})
-
-</div>
-
-</div>
-
-</div>
-
 <div class="process">
 
 ## En enkel og trygg prosess – steg for steg

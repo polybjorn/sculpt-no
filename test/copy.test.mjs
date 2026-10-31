@@ -37,8 +37,12 @@ const REMOVED = {
     // The reviews link was a fold of its own in the FAQ; it is a plain link
     // under the reviews now that the FAQ is on prosessen.
     'Andres anmeldelser',
-    // The artist's full story is on om-oss; the front page keeps its opening.
+    // The artist's section: om-oss tells the same story in full, and the menu
+    // always shows it.
+    'Møt kunstneren bak Sculpt',
+    'Ester Svindland',
     '— Kunstner og daglig leder',
+    '“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.',
     'For meg ble skulpturen en måte å bevare et øyeblikk som ellers bare eksisterer i minner og bilder. Den minner meg fortsatt om en helt unik periode.',
     'Denne opplevelsen inspirerte meg til å starte Sculpt. Jeg ønsket å gi flere gravide i Norge muligheten til å bevare denne tiden på en vakker og personlig måte, som et kunstverk de kan ha med seg resten av livet.”',
     // The intro and each step's text are on prosessen; the front page keeps the step names.
@@ -98,7 +102,6 @@ const BOOK = 'Bestill din skulptur';
 const CHANGED = {
   index: [
     ['Item description', 'Les flere anmeldelser på Google'],
-    ['“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.', '“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.”'],
     // Quote marks the other reviews never had.
     ['"Jeg får ikke anbefalt dette nok.', 'Jeg får ikke anbefalt dette nok.'],
     ['Gravidkroppen er midlertidig og magisk!!"', 'Gravidkroppen er midlertidig og magisk!!'],
@@ -115,7 +118,7 @@ const CHANGED = {
 };
 
 // The link from the italic intro to the poses and finishes on Priser.
-const LOOKS = 'Se positurer og utførelser';
+const LOOKS = 'Se design og utførelse';
 
 const MOVED = {
   // The three reviews above the hero photo, now after the other three.
@@ -148,7 +151,16 @@ const FOLDED = { prosessen: ['omskulpturen'] };
 // Runs of lines moved to another page: taken from the first page once its
 // lines are changed and moved, and put after a line of the second once its
 // folded pages are in.
+const POSES = 'Vi blir sammen enige om en positur som du føler deg komfortabel og fornøyd med. Du vil også få veiledning og tips og råd som du kan velge å følge. Vi er erfarne og vet hvilke positurer som vil bidra til vakre skulpturer. Vi kan gi deg råd om det er elementer du ønsker å fremheve eller dempe.';
+
 const CARRIED = [
+  // How a pose is chosen is part of the making, not of the price.
+  {
+    from: 'priser', first: 'Ulike positurer', last: POSES,
+    // After the intro: the scan part's heading and text are added lines, put in
+    // ahead of this run once it is here.
+    to: 'prosessen', after: MOVED.omskulpturen.first,
+  },
   // The FAQ asks mostly about the scan and the making, which prosessen tells.
   {
     from: 'index', first: 'Ofte stilte spørsmål',
@@ -160,7 +172,7 @@ const CARRIED = [
 
 const ADDED = {
   // Both labels of the reviews button, one hidden by CSS, read as one line.
-  index: [[BOOK, null], ['Les mer om prosessen', 'Levering'], ['Vis flere omtalerVis færre omtaler', 'Elise Bekkevold'], ['Les mer om meg', '“Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.”']],
+  index: [[BOOK, null], ['Les mer om prosessen', 'Levering'], ['Vis flere omtalerVis færre omtaler', 'Elise Bekkevold']],
   // Not Ester's words: a draft of where Sculpt is going, for her to approve (#33).
   'om-oss': [['Nå lager jeg også skulpturer av par, barn og familier, og jeg vil fortsette å utvikle Sculpt med nye typer skulpturer.', 'Denne opplevelsen inspirerte meg til å starte Sculpt. Jeg ønsket å gi flere gravide i Norge muligheten til å bevare denne tiden på en vakker og personlig måte, som et kunstverk de kan ha med seg resten av livet.']],
   prosessen: [
@@ -168,7 +180,7 @@ const ADDED = {
     // Headings for the parts of «Om skulpturen», with the scan paragraph short one sentence
     // and «skadelig» added, since the scanner's light is radiation too.
     [LOOKS, MOVED.omskulpturen.first], ['Fra skanning til skulptur', LOOKS], ['Hver skulptur starter med en personlig skanning av kroppen med en håndholdt 3D-skanner. Skanningen kan sammenlignes med at det tas tusenvis av “bilder” av kroppen din fra alle vinkler, som i løpet av kort tid settes sammen til en nøyaktig 3D-modell. Prosessen er helt ufarlig og ikke-invasiv, og du utsettes ikke for skadelig stråling eller andre belastninger. Det er i håndarbeidet skulpturen virkelig får sitt unike uttrykk utover de personlige kroppslige detaljene i printen. Her kombineres kundens ønsker med en forståelse og kjennskap til personen gjennom skanneavtalen, slik at kunstneren kan bruke dette i den videre kunstneriske utformingen av skulpturen.', 'Fra skanning til skulptur'],
-    ['Materialet', 'Hver skulptur starter med en personlig skanning av kroppen med en håndholdt 3D-skanner. Skanningen kan sammenlignes med at det tas tusenvis av “bilder” av kroppen din fra alle vinkler, som i løpet av kort tid settes sammen til en nøyaktig 3D-modell. Prosessen er helt ufarlig og ikke-invasiv, og du utsettes ikke for skadelig stråling eller andre belastninger. Det er i håndarbeidet skulpturen virkelig får sitt unike uttrykk utover de personlige kroppslige detaljene i printen. Her kombineres kundens ønsker med en forståelse og kjennskap til personen gjennom skanneavtalen, slik at kunstneren kan bruke dette i den videre kunstneriske utformingen av skulpturen.'], ['Overflaten', 'Materialet er også valgt med tanke på styrke, holdbarhet og et mer bevisst materialvalg i produksjonen.'],
+    ['Materialet', POSES], ['Overflaten', 'Materialet er også valgt med tanke på styrke, holdbarhet og et mer bevisst materialvalg i produksjonen.'],
     ['Størrelse og proporsjoner', 'For mye sliping kan føre til at nettopp disse detaljene går tapt. Å finne denne balansen er en kunst i seg selv, og noe Sculpt har spesialisert seg på.'], ['Holdbarhet og levering', 'For å ivareta autentisiteten i uttrykket gjøres det ikke justeringer av kroppens grunnleggende proporsjoner. Kroppen gjengis slik den fremkommer i skanningen, uten idealisering eller endring av former. Vi kan likevel gjøre mye med overflater og enten fremheve detaljer eller duse ut detaljer e.l.'],
   ],
   gallerigravidskulpturer: [[BOOK, null]],

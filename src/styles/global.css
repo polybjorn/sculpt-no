@@ -367,7 +367,7 @@ p {
    Outside the :is(), whose specificity is its most specific member's: in it,
    the heading's lifted every section above the stacked split's reading width
    below 961px. */
-.page > :is(.split, .testimonials, .sculptures, .artist, .gallery, .upcoming),
+.page > :is(.split, .testimonials, .sculptures, .gallery, .upcoming),
 .page > h2:has(+ .upcoming) {
   max-width: var(--measure);
 }
@@ -756,22 +756,6 @@ p {
   aspect-ratio: 2 / 3;
   object-fit: cover;
   scroll-snap-align: center;
-}
-
-.artist {
-  padding-block: var(--space-xl);
-}
-
-.artist > h2 {
-  text-align: center;
-}
-
-.artist .split {
-  padding-block: 0;
-}
-
-.artist blockquote {
-  margin: var(--space-m) 0 0;
 }
 
 .process {

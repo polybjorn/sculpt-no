@@ -75,10 +75,6 @@ Pris oppgis etter avtale.
 
 </div>
 
-## Ulike positurer
-
-Vi blir sammen enige om en positur som du føler deg komfortabel og fornøyd med. Du vil også få veiledning og tips og råd som du kan velge å følge. Vi er erfarne og vet hvilke positurer som vil bidra til vakre skulpturer. Vi kan gi deg råd om det er elementer du ønsker å fremheve eller dempe.
-
 ## Design og utførelse
 
 Hver skulptur fra Sculpt er unik og skapes etter dine egne former. Du har stor frihet til å velge design, farger, overflater og finish, slik at kunstverket får akkurat det uttrykket du ønsker.
