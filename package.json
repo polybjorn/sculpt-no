@@ -9,8 +9,6 @@
     "preview:build": "node scripts/build-preview.mjs",
     "astro": "astro",
     "clean": "rm -rf node_modules/.astro dist",
-    "pins:check": "node scripts/node-pins-check.mjs",
-    "text-changes:check": "node scripts/text-changes-check.mjs",
     "pretest": "astro build --force",
     "test": "node --test \"test/*.test.mjs\"",
     "check": "astro check"
