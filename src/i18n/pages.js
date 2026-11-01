@@ -50,7 +50,6 @@ export const contact = {
 // From Brønnøysundregistrene, as the footer (ui `business`) shows them.
 export const business = { legalName: 'Sculpt Svindland ENK', locality: 'Flekkefjord' };
 
-// The public GitHub copy (AGENTS.md, Going public); 404s until it exists.
 export const sourceUrl = 'https://github.com/polybjorn/sculpt-no';
 
 export const social = [
