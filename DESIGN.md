@@ -34,6 +34,10 @@ edge (the FAQ rules, the ghost button, the menu button) uses `--ink`.
 Both are self-hosted from `src/assets/fonts/` (latin subset, Fontsource builds,
 OFL licences beside them), never from a font CDN: the CSP allows only
 `font-src 'self'`, and a CDN would tell a third party about every visit.
+The page title's face and DM Sans 300 are preloaded from the layout, so they
+arrive with the stylesheet: found through it alone, they came after the first
+paint, and the title rewrapping as they swapped in shifted a phone's first
+screen past the 0.1 layout shift limit.
 
 The live site sets its buttons in Almarai. The rebuild uses DM Sans for them
 instead: one face fewer to load, and at button size the two are hard to tell
@@ -69,8 +73,9 @@ word alone where the browser can avoid it; headings balance instead. No line
 starts with a dash or splits a price, a size or a phone number: the build puts
 a no-break space there (`src/plugins/rehype-nbsp.mjs`), a UI string carries
 ` ` itself, and `test/build.test.mjs` reads every built page. Text at
-body size runs at `--text-body` (38em), the same 70-odd characters a line that
-`--text` gives the large running text.
+body size runs at `--text-body` (33em), the same 70-odd characters a line that
+`--text` gives the large running text: at most about 76, under the 80 of WCAG
+1.4.8 that `site-audit` holds to (44rem and 38em came to 80 to 85).
 
 The first port read the live site's 16px intro paragraph as the body size and
 missed that its running text is the large size; the scale corrects that. It
@@ -125,7 +130,7 @@ Where things sit follows a few rules rather than per-section values:
 - Below 760px the front page shows the heading, the introduction and the
   booking button before the reviews. Only CSS `order` moves them, so screen
   readers and desktop keep sculpt.no's order
-- Text runs at `--text` (44rem); review rows, two-column splits, the
+- Text runs at `--text` (40rem); review rows, two-column splits, the
   carousel and the next scan days widen to `--measure` (70rem); the carousel row is full bleed, and
   the hero photo too until it reaches `--measure`. The hero keeps one frame,
   every statue whole and the fade on the table under them, so the width sets

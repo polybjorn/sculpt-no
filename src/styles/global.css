@@ -89,10 +89,11 @@
   --ls-body: .02rem;
   --ls-caps: .06em;
   --measure: 70rem;
-  --text: 44rem;
+  --text: 40rem;
   /* The same 70-odd characters a line as --text gives the large running
-     text, for text at body size; em, so it follows the size it is used at. */
-  --text-body: 38em;
+     text, for text at body size; em, so it follows the size it is used at.
+     Both stay under the 80 of WCAG 1.4.8 (DESIGN.md). */
+  --text-body: 33em;
   --gutter: clamp(1rem, 4vw, 3rem);
   /* Clear of the sticky header, for an anchor scrolled to or a photo held in
      view. */
@@ -414,7 +415,8 @@ p {
 /* Front page */
 
 .reviews blockquote {
-  margin: 0;
+  max-width: var(--text-body);
+  margin: 0 auto;
   text-align: center;
 }
 
