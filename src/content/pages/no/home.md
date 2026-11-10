@@ -1,6 +1,6 @@
 ---
 title: "Gravidskulpturer og personlige 3D-skulpturer"
-description: "Gravidskulpturer og personlige 3D-skulpturer av ekte mennesker. Unike kunstverk ferdigstilt for hånd av norsk kunstner. Bevar minnene i en skulptur."
+description: "Gravidskulpturer og personlige 3D-skulpturer av ekte mennesker. Unike kunstverk ferdigstilt for hånd av norsk kunstner. Bevar minnene i en skulptur. 3D-skanning i Oslo, Kristiansand, Stavanger, Fredrikstad og Flekkefjord."
 ---
 
 <div class="hero-photo">
@@ -61,14 +61,14 @@ En personlig skulptur erstatter ikke fotografiene dine, men gir deg en annen må
 
 <div class="carousel">
 
-![En antikk kvinnelig figur laget av stein som viser en gravid person med bryst og mage, uten hode.](../../../assets/images/home-03.webp)
+![Personlig gravidskulptur i 3D i hvit matt og håndlaget steinfinish fra Sculpt](../../../assets/images/gallerigravid-06.webp)
 ![En hvit skulptur av en gravid kvinne uten hode, plassert på en hvit overflate.](../../../assets/images/under-utvikling-01.webp)
-![En svart skulptur av en kvinnekropp uten hode og armer, plassert på en hvit overflate.](../../../assets/images/home-05.webp)
 ![Gravidskulptur i bronsefarget utførelse med armene hevet, på en marmorplate.](../../../assets/images/home-08.webp)
-![Gravidskulptur i steinutførelse med hendene på magen, foran et vindu med utsikt over snø og fjord.](../../../assets/images/home-13.webp)
-![Detaljbilde av personlig gravidskulptur av Sculpt i gult gull](../../../assets/images/gallerigravid-17.webp)
-![Gravidskulptur i steinutførelse med én hånd på brystet og én under magen, i sanden på en strand.](../../../assets/images/home-23.webp)
-![Gravidskulptur i perleutførelse med én hånd på brystet og én under magen, på en marmorplate.](../../../assets/images/home-26.webp)
+![Håndmalt gravidskulptur i metallisk bronsefinish av Sculpt](../../../assets/images/gallerigravid-15.webp)
+![Gravidskulptur i perleutførelse](../../../assets/images/gallerigravid-36.webp)
+![Gravidskulptur i steinutførelse med hånden på hoften, på en marmorplate ved et vindu.](../../../assets/images/home-29.webp)
+![Personlig gravidskulptur i Sculpts signaturutførselse, stein, i ulike positurer](../../../assets/images/gallerigravid-22.webp)
+![Personlig kunstverk av gravidmage i nude mørkere nyanse](../../../assets/images/gallerigravid-16.webp)
 
 </div>
 

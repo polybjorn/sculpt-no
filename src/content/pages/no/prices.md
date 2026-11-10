@@ -1,6 +1,6 @@
 ---
 title: "Pris på gravidskulptur og 3D-skulptur"
-description: "Se priser på personlige gravidskulpturer og 3D-skulpturer fra Sculpt. Hver skulptur lages etter din egen kropp og ferdigstilles for hånd av norsk kunstner."
+description: "Se priser på personlige gravidskulpturer og 3D-skulpturer fra Sculpt. Bevar gravidmagen eller et spesielt øyeblikk som et unikt kunstverk, ferdigstilt for hånd."
 ---
 
 # Form, utførelse og pris
@@ -69,11 +69,17 @@ Pris oppgis etter avtale.
 
 *Alle priser er inkludert frakt.*
 
+*Faktura sendes før timen, når den digitale avtalen er signert. Endringer i bestillingen under eller etter skanningen faktureres etter skanningen. Jeg begynner på skulpturen når den er betalt.*
+
 <div class="actions">
 
 [Bestill din skulptur]({{contactPage}})
 
 </div>
+
+## Ulike positurer
+
+Vi blir sammen enige om en positur som du føler deg komfortabel og fornøyd med. Du vil også få veiledning og tips og råd som du kan velge å følge. Vi er erfarne og vet hvilke positurer som vil bidra til vakre skulpturer. Vi kan gi deg råd om det er elementer du ønsker å fremheve eller dempe.
 
 ## Design og utførelse
 

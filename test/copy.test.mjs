@@ -21,17 +21,9 @@ const FIXTURES = 'test/fixtures/original-2026-10-29';
 const PRICE_BLURB = 'Dine egne former, foreviget i et personlig kunstverk. Et minne du kan glede deg over resten av livet, og som kan leve videre i generasjoner.';
 
 const REMOVED = {
-  // Repeats of the steps above them or of each other, cut with her review asked
-  // (text-changes.yaml, Prosessen). The scan paragraph returns without one
-  // sentence (ADDED).
-  omskulpturen: [
-    'Skulpturene lages gjennom en kombinasjon av en rask 3D-skanning av kroppen, digital bearbeiding, 3D-printing og håndarbeid i etterbehandlingen.',
-    'Hver skulptur starter med en personlig skanning av kroppen med en håndholdt 3D-skanner. Skanningen kan sammenlignes med at det tas tusenvis av “bilder” av kroppen din fra alle vinkler, som i løpet av kort tid settes sammen til en nøyaktig 3D-modell. Prosessen er helt ufarlig og ikke-invasiv, og du utsettes ikke for stråling eller andre belastninger. Denne modellen bearbeides deretter digitalt for å sikre form, uttrykk og balanse før den printes i 3D og videre ferdigstilles for hånd. Det er i håndarbeidet skulpturen virkelig får sitt unike uttrykk utover de personlige kroppslige detaljene i printen. Her kombineres kundens ønsker med en forståelse og kjennskap til personen gjennom skanneavtalen, slik at kunstneren kan bruke dette i den videre kunstneriske utformingen av skulpturen.',
-    'Gjennom digital bearbeiding, håndarbeid og individuelt tilpasset finish forvandles grunnmaterialet til et personlig kunstverk med sitt eget særpreg.',
-    'Hver skulptur bearbeides derfor individuelt, med stor omtanke for både detaljene og det ferdige kunstneriske uttrykket.',
-    'Skulpturene kan lages i ulike positurer, uttrykk og overflateutførelser, avhengig av kundens valg og ønsket estetikk.',
-    'Alle skulpturer er custom made og unike.',
-  ],
+  // Everything under the heading: Ester wrote the section anew (#21), and her
+  // text is in ADDED.
+  omskulpturen: readFileSync(join(FIXTURES, 'omskulpturen.txt'), 'utf8').split('\n').filter(Boolean).slice(1),
   // Newsletter signup, left out until Ester decides whether to keep it.
   index: [
     // The reviews link was a fold of its own in the FAQ; it is a plain link
@@ -62,7 +54,8 @@ const REMOVED = {
     'Meld deg på for inspirasjon, nyheter og informasjon om skulpturer og kommende tilgjengelige skanninger.',
   ],
   // The places are on tid-og-sted, and named only three of five here.
-  'om-oss': ['Jeg tilbyr skanning i Flekkefjord, Kristiansand og Oslo.'],
+  // The second half of the story repeated the first (#18, Ester asked for it shorter).
+  'om-oss': ['Jeg tilbyr skanning i Flekkefjord, Kristiansand og Oslo.', 'For meg ble skulpturen en måte å bevare et øyeblikk som ellers bare eksisterer i minner og bilder. Den minner meg fortsatt om en helt unik periode.'],
   // Its text is now the first half of the Digital behandling step.
   prosessen: ['3D-modellering'],
   kontakt: [
@@ -116,7 +109,10 @@ const CHANGED = {
   priser: [['Premiummodell – 20 cm', 'Premiummodell 20 cm'], ['Bestill', BOOK]],
   gallerigravidskulpturer: [['Graviditetskulpturer', 'Graviditetsskulpturer']],
   // The front page's step 2 ends with this sentence; that text is now here.
-  prosessen: [['Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen.', 'Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen. Du skannes naken eller med sømløs truse for best mulig detaljbevaring.']],
+  prosessen: [['Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen.', 'Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen, og andre ser bare førsteutkastet. Hodet fjernes under timen hvis du ønsker det. Du skannes naken eller med sømløs truse for best mulig detaljbevaring.'],
+    // Her answers on #19 and #29: what happens at the appointment, what the print is made of.
+    ['Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Justeringene gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.', 'Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Noen justeringer gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli, og resten gjøres i etterkant. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.'],
+    ['Skulpturen 3D-printes i PLA – et biobasert og miljøvennlig materiale. Deretter bearbeides den for hånd før overflate og finish tilpasses nøye etter dine ønsker.', 'Skulpturen 3D-printes i PLA – et plantebasert materiale, valgt for sin høye detaljgrad. Deretter fylles den med gips og bearbeides for hånd før overflate og finish tilpasses nøye etter dine ønsker.']],
 };
 
 // The link from the italic intro to the poses and finishes on Priser.
@@ -135,10 +131,8 @@ const MOVED = {
   prosessen: {
     first: 'Basert på skanningen lages en nøyaktig 3D-modell av kroppen din. Her finjusteres form og detaljer slik at skulpturen gjengir uttrykket på en naturlig og vakker måte.',
     last: 'Basert på skanningen lages en nøyaktig 3D-modell av kroppen din. Her finjusteres form og detaljer slik at skulpturen gjengir uttrykket på en naturlig og vakker måte.',
-    before: 'Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Justeringene gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.',
+    before: 'Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Noen justeringer gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli, og resten gjøres i etterkant. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.',
   },
-  // The bold line between paragraphs, now the italic intro of «Om skulpturen».
-  omskulpturen: { first: 'Skulpturen er et personlig minne du har lyst til å ha fremme. Underveis snakker vi om positur, farge og utførelse, og finner sammen uttrykket som passer deg og hjemmet ditt.', last: 'Skulpturen er et personlig minne du har lyst til å ha fremme. Underveis snakker vi om positur, farge og utførelse, og finner sammen uttrykket som passer deg og hjemmet ditt.', before: 'Skulpturene fra Sculpt lages med en biobasert polymer som grunnmateriale. Materialet er nøye valgt for sine egenskaper og mulighetene det gir for kunstnerisk bearbeiding.' },
   // Her home studio first, then the cities nearest it; moves apply in order.
   'tid-og-sted': [
     { first: 'Flekkefjord', last: 'Ta kontakt så finner vi en tid.', before: 'Oslo' },
@@ -155,41 +149,39 @@ const FOLDED = { prosessen: ['omskulpturen'] };
 // Runs of lines moved to another page: taken from the first page once its
 // lines are changed and moved, and put after a line of the second once its
 // folded pages are in.
-const POSES = 'Vi blir sammen enige om en positur som du føler deg komfortabel og fornøyd med. Du vil også få veiledning og tips og råd som du kan velge å følge. Vi er erfarne og vet hvilke positurer som vil bidra til vakre skulpturer. Vi kan gi deg råd om det er elementer du ønsker å fremheve eller dempe.';
-
 const CARRIED = [
-  // How a pose is chosen is part of the making, not of the price.
-  {
-    from: 'priser', first: 'Ulike positurer', last: POSES,
-    // After the intro: the scan part's heading and text are added lines, put in
-    // ahead of this run once it is here.
-    to: 'prosessen', after: MOVED.omskulpturen.first,
-  },
   // The FAQ asks mostly about the scan and the making, which prosessen tells.
   {
     from: 'index', first: 'Ofte stilte spørsmål',
     last: 'Ja, de kan vises på skulpturen, men vi kan fjerne eller myke ut detaljer som arr, tatoveringer, cellulitter og andre uønskelige hudtilstander under den digitale redigeringen.',
     to: 'prosessen',
-    after: 'Fordi skulpturen skapes gjennom en rekke ulike prosesser tar den tid å lage, og det tar vanligvis rundt ca 1 måned før den er ferdig og sendes.',
+    // Her new text goes in ahead of it (ADDED).
+    after: 'Om skulpturen',
   },
 ];
 
 const ADDED = {
   // Both labels of the reviews button, one hidden by CSS, read as one line.
   index: [[BOOK, null], ['Les mer om prosessen', 'Levering'], ['Vis flere omtalerVis færre omtaler', 'Elise Bekkevold']],
-  // Not Ester's words: a draft of where Sculpt is going, for her to approve (#33).
-  'om-oss': [['Nå lager jeg også skulpturer av par, barn og familier, og jeg vil fortsette å utvikle Sculpt med nye typer skulpturer.', 'Denne opplevelsen inspirerte meg til å starte Sculpt. Jeg ønsket å gi flere gravide i Norge muligheten til å bevare denne tiden på en vakker og personlig måte, som et kunstverk de kan ha med seg resten av livet.']],
+  // My draft of where Sculpt is going, with Ester's addition (#33).
+  'om-oss': [['Nå lager jeg også skulpturer av par, barn, familier, idrettsutøvere o.l. og jeg vil fortsette å utvikle Sculpt med nye typer skulpturer.', 'Denne opplevelsen inspirerte meg til å starte Sculpt. Jeg ønsket å gi flere gravide i Norge muligheten til å bevare denne tiden på en vakker og personlig måte, som et kunstverk de kan ha med seg resten av livet.']],
   prosessen: [
     ['Se tider og steder', CHANGED.prosessen[0][1]], [BOOK, null],
-    // Headings for the parts of «Om skulpturen», with the scan paragraph short one sentence
-    // and «skadelig» added, since the scanner's light is radiation too.
-    [LOOKS, MOVED.omskulpturen.first], ['Fra skanning til skulptur', LOOKS], ['Hver skulptur starter med en personlig skanning av kroppen med en håndholdt 3D-skanner. Skanningen kan sammenlignes med at det tas tusenvis av “bilder” av kroppen din fra alle vinkler, som i løpet av kort tid settes sammen til en nøyaktig 3D-modell. Prosessen er helt ufarlig og ikke-invasiv, og du utsettes ikke for skadelig stråling eller andre belastninger. Det er i håndarbeidet skulpturen virkelig får sitt unike uttrykk utover de personlige kroppslige detaljene i printen. Her kombineres kundens ønsker med en forståelse og kjennskap til personen gjennom skanneavtalen, slik at kunstneren kan bruke dette i den videre kunstneriske utformingen av skulpturen.', 'Fra skanning til skulptur'],
-    ['Materialet', POSES], ['Overflaten', 'Materialet er også valgt med tanke på styrke, holdbarhet og et mer bevisst materialvalg i produksjonen.'],
-    ['Størrelse og proporsjoner', 'For mye sliping kan føre til at nettopp disse detaljene går tapt. Å finne denne balansen er en kunst i seg selv, og noe Sculpt har spesialisert seg på.'], ['Holdbarhet og levering', 'For å ivareta autentisiteten i uttrykket gjøres det ikke justeringer av kroppens grunnleggende proporsjoner. Kroppen gjengis slik den fremkommer i skanningen, uten idealisering eller endring av former. Vi kan likevel gjøre mye med overflater og enten fremheve detaljer eller duse ut detaljer e.l.'],
+    // Ester's «Om skulpturen» of 7 Nov (#21), less its link to this same page.
+    ['Hver skulptur fra Sculpt er et personlig kunstverk, skapt med utgangspunkt i en nøyaktig 3D-skanning av kroppen din. Gjennom digital bearbeiding, 3D-printing og nøye håndarbeid får skulpturen sitt unike uttrykk.', 'Om skulpturen'],
+    ['Skulpturene lages i et plantebasert materiale (PLA), som er valgt for sin styrke, holdbarhet, høy detaljgrad og muligheten til å bearbeides kunstnerisk. Hver skulptur ferdigstilles for hånd, med stor omtanke for både kroppens detaljer og det estetiske uttrykket.', 'Hver skulptur fra Sculpt er et personlig kunstverk, skapt med utgangspunkt i en nøyaktig 3D-skanning av kroppen din. Gjennom digital bearbeiding, 3D-printing og nøye håndarbeid får skulpturen sitt unike uttrykk.'],
+    ['Fordi skulpturen bygges opp lag for lag, kan svake printlinjer være synlige ved nærmere ettersyn. Vi arbeider grundig med å redusere disse, samtidig som vi bevarer de små, personlige detaljene som gjør skulpturen unik.', 'Skulpturene lages i et plantebasert materiale (PLA), som er valgt for sin styrke, holdbarhet, høy detaljgrad og muligheten til å bearbeides kunstnerisk. Hver skulptur ferdigstilles for hånd, med stor omtanke for både kroppens detaljer og det estetiske uttrykket.'],
+    ['Dine former, slik de er.', 'Fordi skulpturen bygges opp lag for lag, kan svake printlinjer være synlige ved nærmere ettersyn. Vi arbeider grundig med å redusere disse, samtidig som vi bevarer de små, personlige detaljene som gjør skulpturen unik.'],
+    ['Hos Sculpt endrer vi ikke kroppens grunnleggende proporsjoner. Vi ønsker å bevare ekte former og kroppens naturlige uttrykk. Overflaten kan derimot tilpasses for å fremheve eller dempe detaljer.', 'Dine former, slik de er.'],
+    ['Du kan velge mellom ulike positurer, farger og overflateutførelser. Sammen finner vi et uttrykk som passer deg og hjemmet ditt.', 'Hos Sculpt endrer vi ikke kroppens grunnleggende proporsjoner. Vi ønsker å bevare ekte former og kroppens naturlige uttrykk. Overflaten kan derimot tilpasses for å fremheve eller dempe detaljer.'],
+    [LOOKS, 'Du kan velge mellom ulike positurer, farger og overflateutførelser. Sammen finner vi et uttrykk som passer deg og hjemmet ditt.'],
+    ['Skulpturene er solide og vektet for å stå stabilt, og lages vanligvis i størrelser opptil 20 cm. Større skulpturer kan også lages på forespørsel. Som andre kunstverk bør de beskyttes mot fall og langvarig direkte sollys.', LOOKS],
+    ['Leveringstiden er normalt rundt én måned.', 'Skulpturene er solide og vektet for å stå stabilt, og lages vanligvis i størrelser opptil 20 cm. Større skulpturer kan også lages på forespørsel. Som andre kunstverk bør de beskyttes mot fall og langvarig direkte sollys.'],
   ],
   gallerigravidskulpturer: [[BOOK, null]],
   galleriskulpturer: [[BOOK, null]],
-  priser: [[PRICE_BLURB, 'Priser']],
+  // When the customer pays, from her answer on #30.
+  priser: [[PRICE_BLURB, 'Priser'], ['Faktura sendes før timen, når den digitale avtalen er signert. Endringer i bestillingen under eller etter skanningen faktureres etter skanningen. Jeg begynner på skulpturen når den er betalt.', 'Alle priser er inkludert frakt.']],
   kontakt: [['Dessuten kan vi også tilby bedrifter, kunstnere og idrett samarbeid innenfor vår kategori.', 'Har du spørsmål om skulpturene, prosessen eller booking? Jeg hjelper deg gjerne. Send meg en melding eller en e-post, så svarer jeg så fort jeg kan.'], ['Send SMS', '480 05 508']],
   'tid-og-sted': [['Steder', 'Ser du ikke en dag som passer for deg, ta gjerne kontakt. Noen steder kan det være mulighet for fleksibilitet.'], [BOOK, null]],
 };
@@ -197,16 +189,27 @@ const ADDED = {
 // Search titles and descriptions that differ from sculpt.no, merged over the
 // snapshot's. The layout ends every title in "| Sculpt" (src/content.config.mjs
 // says why), so the snapshot's endings disagree with most pages.
+// Index, prosessen, priser, kontakt and gallerigravidskulpturer follow the
+// edits Ester made on sculpt.no after the snapshot (#28).
 const META = {
+  index: {
+    description: 'Gravidskulpturer og personlige 3D-skulpturer av ekte mennesker. Unike kunstverk ferdigstilt for hånd av norsk kunstner. Bevar minnene i en skulptur. 3D-skanning i Oslo, Kristiansand, Stavanger, Fredrikstad og Flekkefjord.',
+  },
   'om-oss': { title: 'Om meg: Få et minne, bestill skulptur i dag | Sculpt' },
   prosessen: {
-    title: 'Hvordan lages en personlig 3D-skulptur? | Sculpt',
-    description: 'Slik foregår det å få laget en personlig skulptur hos Sculpt, fra første samtale og skanning til ferdig skulptur sendt hjem til deg.',
+    title: 'Slik lages din personlige 3D-skulptur | Sculpt',
+    description: 'Hvordan din personlige 3D-skulptur blir til. Fra 3D-skanning av kroppen til et unikt kunstverk. Oppdag prosessen bak gravidskulpturer og personlige 3D-skulpturer hos Sculpt.',
   },
   'tid-og-sted': { title: '3D-skanning og gravidskulptur i Oslo og Stavanger | Sculpt' },
-  priser: { title: 'Pris på gravidskulptur og 3D-skulptur | Sculpt' },
-  kontakt: { title: 'Kontakt oss for mer informasjon og booking | Sculpt' },
-  gallerigravidskulpturer: { title: 'Gravidskulptur av din egen kropp | Sculpt' },
+  priser: {
+    title: 'Pris på gravidskulptur og 3D-skulptur | Sculpt',
+    description: 'Se priser på personlige gravidskulpturer og 3D-skulpturer fra Sculpt. Bevar gravidmagen eller et spesielt øyeblikk som et unikt kunstverk, ferdigstilt for hånd.',
+  },
+  kontakt: {
+    title: 'Kontakt: Bestill 3D-skanning og gravidskulptur | Sculpt',
+    description: 'Kontakt Sculpt for å bestille din personlige 3D-skulptur. Vi tilbyr 3D-skanning i Flekkefjord, Kristiansand, Stavanger, Oslo og Fredrikstad.',
+  },
+  gallerigravidskulpturer: { title: 'Gravidskulptur: Se personlige 3D-skulpturer | Sculpt' },
   galleriskulpturer: { title: 'Personlige 3D-skulpturer av mennesker | Sculpt' },
 };
 

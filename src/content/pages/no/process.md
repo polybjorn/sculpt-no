@@ -1,6 +1,6 @@
 ---
-title: "Hvordan lages en personlig 3D-skulptur?"
-description: "Slik foregår det å få laget en personlig skulptur hos Sculpt, fra første samtale og skanning til ferdig skulptur sendt hjem til deg."
+title: "Slik lages din personlige 3D-skulptur"
+description: "Hvordan din personlige 3D-skulptur blir til. Fra 3D-skanning av kroppen til et unikt kunstverk. Oppdag prosessen bak gravidskulpturer og personlige 3D-skulpturer hos Sculpt."
 ---
 
 # En enkel og trygg prosess – steg for steg
@@ -17,7 +17,7 @@ Under finner du en oversikt over hele prosessen, og hva du kan forvente fra før
 
 2. ## Skanning
 
-   Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen. Du skannes naken eller med sømløs truse for best mulig detaljbevaring.
+   Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen, og andre ser bare førsteutkastet. Hodet fjernes under timen hvis du ønsker det. Du skannes naken eller med sømløs truse for best mulig detaljbevaring.
 
    [Se tider og steder]({{schedulePage}})
 
@@ -25,11 +25,11 @@ Under finner du en oversikt over hele prosessen, og hva du kan forvente fra før
 
    Basert på skanningen lages en nøyaktig 3D-modell av kroppen din. Her finjusteres form og detaljer slik at skulpturen gjengir uttrykket på en naturlig og vakker måte.
 
-   Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Justeringene gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.
+   Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Noen justeringer gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli, og resten gjøres i etterkant. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.
 
 4. ## Produksjon av skulpturen
 
-   Skulpturen 3D-printes i PLA – et biobasert og miljøvennlig materiale. Deretter bearbeides den for hånd før overflate og finish tilpasses nøye etter dine ønsker.
+   Skulpturen 3D-printes i PLA – et plantebasert materiale, valgt for sin høye detaljgrad. Deretter fylles den med gips og bearbeides for hånd før overflate og finish tilpasses nøye etter dine ønsker.
 
 5. ## Levering
 
@@ -45,45 +45,23 @@ Under finner du en oversikt over hele prosessen, og hva du kan forvente fra før
 
 ## Om skulpturen
 
-*Skulpturen er et personlig minne du har lyst til å ha fremme. Underveis snakker vi om positur, farge og utførelse, og finner sammen uttrykket som passer  deg og hjemmet ditt.*
+Hver skulptur fra Sculpt er et personlig kunstverk, skapt med utgangspunkt i en nøyaktig 3D-skanning av kroppen din. Gjennom digital bearbeiding, 3D-printing og nøye håndarbeid får skulpturen sitt unike uttrykk.
+
+Skulpturene lages i et plantebasert materiale (PLA), som er valgt for sin styrke, holdbarhet, høy detaljgrad og muligheten til å bearbeides kunstnerisk. Hver skulptur ferdigstilles for hånd, med stor omtanke for både kroppens detaljer og det estetiske uttrykket.
+
+Fordi skulpturen bygges opp lag for lag, kan svake printlinjer være synlige ved nærmere ettersyn. Vi arbeider grundig med å redusere disse, samtidig som vi bevarer de små, personlige detaljene som gjør skulpturen unik.
+
+*Dine former, slik de er.*
+
+Hos Sculpt endrer vi ikke kroppens grunnleggende proporsjoner. Vi ønsker å bevare ekte former og kroppens naturlige uttrykk. Overflaten kan derimot tilpasses for å fremheve eller dempe detaljer.
+
+Du kan velge mellom ulike positurer, farger og overflateutførelser. Sammen finner vi et uttrykk som passer deg og hjemmet ditt.
 
 [Se design og utførelse]({{pricesPage}}#design-og-utførelse)
 
-### Fra skanning til skulptur
+Skulpturene er solide og vektet for å stå stabilt, og lages vanligvis i størrelser opptil 20 cm. Større skulpturer kan også lages på forespørsel. Som andre kunstverk bør de beskyttes mot fall og langvarig direkte sollys.
 
-Hver skulptur starter med en personlig skanning av kroppen med en håndholdt 3D-skanner. Skanningen kan sammenlignes med at det tas tusenvis av “bilder” av kroppen din fra alle vinkler, som i løpet av kort tid settes sammen til en nøyaktig 3D-modell. Prosessen er helt ufarlig og ikke-invasiv, og du utsettes ikke for skadelig stråling eller andre belastninger. Det er i håndarbeidet skulpturen virkelig får sitt unike uttrykk utover de personlige kroppslige detaljene i printen. Her kombineres kundens ønsker med en forståelse og kjennskap til personen gjennom skanneavtalen, slik at kunstneren kan bruke dette i den videre kunstneriske utformingen av skulpturen.
-
-### Ulike positurer
-
-Vi blir sammen enige om en positur som du føler deg komfortabel og fornøyd med. Du vil også få veiledning og tips og råd som du kan velge å følge. Vi er erfarne og vet hvilke positurer som vil bidra til vakre skulpturer. Vi kan gi deg råd om det er elementer du ønsker å fremheve eller dempe.
-
-### Materialet
-
-Skulpturene fra Sculpt lages med en biobasert polymer som grunnmateriale. Materialet er nøye valgt for sine egenskaper og mulighetene det gir for kunstnerisk bearbeiding.
-
-Den høye detaljgraden gjør det mulig å gjenskape og fremheve personlige trekk, former og små detaljer med stor presisjon. Samtidig gir materialet kunstneren frihet til å bearbeide overflaten og skape et vakkert, helhetlig uttrykk, tilpasset hver enkelt skulptur.
-
-Materialet er også valgt med tanke på styrke, holdbarhet og et mer bevisst materialvalg i produksjonen.
-
-### Overflaten
-
-Ettersom skulpturene fremstilles ved hjelp av 3D-printing, bygges de opp lag for lag, som ikke smeltes sammen. Dette kan medføre svake linjer i overflaten som i enkelte tilfeller kan være synlige ved nærmere ettersyn, også på det ferdige kunstverket.
-
-Hos Sculpt arbeider vi grundig med å redusere og kamuflere disse gjennom manuell bearbeiding og ulike teknikker for overflatebehandling. Samtidig krever dette en nøye balansegang mellom å oppnå en vakker, jevn overflate og å bevare de små, personlige detaljene fra kroppsskanningen.
-
-For mye sliping kan føre til at nettopp disse detaljene går tapt. Å finne denne balansen er en kunst i seg selv, og noe Sculpt har spesialisert seg på.
-
-### Størrelse og proporsjoner
-
-Hver skulptur er opptil **25 cm høy**, og produseres som et solid og vektet objekt for å gi en stabil og kunstnerisk tilstedeværelse til utstilling der du ønsker i hjemmet. Det kan lages større skulpturer, men da må skulpturen deles opp og settes sammen.
-
-For å ivareta autentisiteten i uttrykket gjøres det ikke justeringer av kroppens grunnleggende proporsjoner. Kroppen gjengis slik den fremkommer i skanningen, uten idealisering eller endring av former. Vi kan likevel gjøre mye med overflater og enten fremheve detaljer eller duse ut detaljer e.l.
-
-### Holdbarhet og levering
-
-Skulpturen er solid, men den kan skades ved fall eller om den utsettes for sterk sol over tid.
-
-Fordi skulpturen skapes gjennom en rekke ulike prosesser tar den tid å lage, og det tar vanligvis rundt ca 1 måned før den er ferdig og sendes.
+*Leveringstiden er normalt rundt én måned.*
 
 </div>
 

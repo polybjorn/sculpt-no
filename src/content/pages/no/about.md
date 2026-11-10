@@ -15,11 +15,9 @@ Jeg heter Ester, og er grunnleggeren av Sculpt.
 
 Ideen til Sculpt oppstod da jeg selv var gravid og oppdaget 3D skulpturer i Danmark. Jeg fikk laget en skulptur før fødselen, og det ble et helt spesielt minne fra en tid i livet som går så fort.
 
-For meg ble skulpturen en måte å bevare et øyeblikk som ellers bare eksisterer i minner og bilder. Den minner meg fortsatt om en helt unik periode.
-
 Denne opplevelsen inspirerte meg til å starte Sculpt. Jeg ønsket å gi flere gravide i Norge muligheten til å bevare denne tiden på en vakker og personlig måte, som et kunstverk de kan ha med seg resten av livet.
 
-Nå lager jeg også skulpturer av par, barn og familier, og jeg vil fortsette å utvikle Sculpt med nye typer skulpturer.
+Nå lager jeg også skulpturer av par, barn, familier, idrettsutøvere o.l. og jeg vil fortsette å utvikle Sculpt med nye typer skulpturer.
 
 </div>
 

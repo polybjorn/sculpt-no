@@ -1,5 +1,5 @@
 ---
-title: "Gravidskulptur av din egen kropp"
+title: "Gravidskulptur: Se personlige 3D-skulpturer"
 description: "Bevar gravidmagens unike former med en personlig gravidskulptur. 3D-skannet etter din egen kropp og ferdigstilt for hånd av norsk kunstner. Se galleriet."
 ---
 
@@ -58,6 +58,9 @@ Et fysisk minne fra graviditeten, som du kan se, holde og kjenne igjen deg selv 
 ![Gravidskulptur i steinutførelse med armen rundt magen, på en marmorplate.](../../../assets/images/home-14.webp)
 ![Gravidskulptur i steinutførelse med hånden på hoften, på en marmorplate ved et vindu.](../../../assets/images/home-29.webp)
 ![Gravidskulptur i steinutførelse med armene hevet, på en rund sokkel av mørk stein.](../../../assets/images/home-34.webp)
+![En antikk kvinnelig figur laget av stein som viser en gravid person med bryst og mage, uten hode.](../../../assets/images/home-03.webp)
+![En svart skulptur av en kvinnekropp uten hode og armer, plassert på en hvit overflate.](../../../assets/images/home-05.webp)
+![Gravidskulptur i steinutførelse med én hånd på brystet og én under magen, i sanden på en strand.](../../../assets/images/home-23.webp)
 
 </div>
 
