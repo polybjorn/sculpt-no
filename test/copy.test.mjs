@@ -211,7 +211,7 @@ const META = {
   'om-oss': { title: 'Om meg: Få et minne, bestill skulptur i dag | Sculpt' },
   prosessen: {
     title: 'Slik lages din personlige 3D-skulptur | Sculpt',
-    description: 'Hvordan din personlige 3D-skulptur blir til. Fra 3D-skanning av kroppen til et unikt kunstverk. Oppdag prosessen bak gravidskulpturer og personlige 3D-skulpturer hos Sculpt.',
+    description: 'Hvordan din personlige 3D-skulptur blir til. Fra 3D-skanning av kroppen til et unikt kunstverk. Oppdag prosessen bak 3D-gravidskulpturer og personlige 3D-skulpturer hos Sculpt.',
   },
   'tid-og-sted': { title: '3D-skanning og gravidskulptur i Oslo og Stavanger | Sculpt' },
   priser: {
@@ -222,7 +222,11 @@ const META = {
     title: 'Kontakt: Bestill 3D-skanning og gravidskulptur | Sculpt',
     description: 'Kontakt Sculpt for å bestille din personlige 3D-skulptur. Vi tilbyr 3D-skanning i Flekkefjord, Kristiansand, Stavanger, Oslo og Fredrikstad.',
   },
-  gallerigravidskulpturer: { title: 'Gravidskulptur: Se personlige 3D-skulpturer | Sculpt' },
+  // Her search terms (#28).
+  gallerigravidskulpturer: {
+    title: 'Gravidskulptur og gravidstatue: Se galleriet | Sculpt',
+    description: 'Bevar gravidmagens unike former med en personlig gravidskulptur eller gravidfigur. 3D-skannet etter din egen kropp og ferdigstilt for hånd av norsk kunstner. Se galleriet.',
+  },
   galleriskulpturer: { title: 'Personlige 3D-skulpturer av mennesker | Sculpt' },
 };
 

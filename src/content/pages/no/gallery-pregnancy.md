@@ -1,6 +1,6 @@
 ---
-title: "Gravidskulptur: Se personlige 3D-skulpturer"
-description: "Bevar gravidmagens unike former med en personlig gravidskulptur. 3D-skannet etter din egen kropp og ferdigstilt for hånd av norsk kunstner. Se galleriet."
+title: "Gravidskulptur og gravidstatue: Se galleriet"
+description: "Bevar gravidmagens unike former med en personlig gravidskulptur eller gravidfigur. 3D-skannet etter din egen kropp og ferdigstilt for hånd av norsk kunstner. Se galleriet."
 ---
 
 # Graviditetsskulpturer

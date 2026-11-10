@@ -1,6 +1,6 @@
 ---
 title: "Slik lages din personlige 3D-skulptur"
-description: "Hvordan din personlige 3D-skulptur blir til. Fra 3D-skanning av kroppen til et unikt kunstverk. Oppdag prosessen bak gravidskulpturer og personlige 3D-skulpturer hos Sculpt."
+description: "Hvordan din personlige 3D-skulptur blir til. Fra 3D-skanning av kroppen til et unikt kunstverk. Oppdag prosessen bak 3D-gravidskulpturer og personlige 3D-skulpturer hos Sculpt."
 ---
 
 # En enkel og trygg prosess – steg for steg
