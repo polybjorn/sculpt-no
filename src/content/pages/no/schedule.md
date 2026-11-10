@@ -23,7 +23,7 @@ Ser du ikke en dag som passer for deg, [ta gjerne kontakt]({{contactPage}}). Noe
 
 I Flekkefjord har jeg både hjemmestudio og verksted. Det betyr bl.a. at det er veldig fleksibelt og gode muligheter for skanning når du ønsker.
 
-Jeg tilstreber å få til skanning av deg innenfor en uke av ønsket tidspunkt.
+Vi tilstreber å få til skanning av deg innenfor en uke av ønsket tidspunkt.
 
 [Ta kontakt]({{contactPage}}) så finner vi en tid.
 
@@ -81,7 +81,7 @@ Bergen er Sculpts nye satsingområde og vi ønsker å komme jevnlig ( en dag i m
 
 Det er ikke oppsatt en dag enda, men Sculpts ønske er en dag tidlig/ i midten av August.
 
-Er du i Bergensområdet og vurderer en skulptur, ta kontakt! Jeg forsøker å velge en dag der flest mulig kan
+Er du i Bergensområdet og vurderer en skulptur, ta kontakt! Vi forsøker å velge en dag der flest mulig kan
 
 <!-- scan-days Bergen -->
 

@@ -23,7 +23,7 @@ Hos Sculpt skaper jeg personlige 3D-skulpturer av ekte mennesker, med gravidskul
 
 **Mer enn et bilde.** Et fysisk minne du kan holde i hendene, kjenne igjen og ta frem igjen i mange år.
 
-Jeg tilbyr 3D-skanning i Flekkefjord, Kristiansand, Stavanger, Oslo og Fredrikstad.
+Vi tilbyr 3D-skanning i Flekkefjord, Kristiansand, Stavanger, Oslo og Fredrikstad.
 
 <div class="actions">
 

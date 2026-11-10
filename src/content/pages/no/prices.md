@@ -85,7 +85,7 @@ Vi blir sammen enige om en positur som du føler deg komfortabel og fornøyd med
 
 Hver skulptur fra Sculpt er unik og skapes etter dine egne former. Du har stor frihet til å velge design, farger, overflater og finish, slik at kunstverket får akkurat det uttrykket du ønsker.
 
-Fra klassisk og elegant til moderne, minimalistisk eller mer kunstnerisk og særpreget. Vi tilpasser både farger, teksturer og detaljer etter din personlige stil.
+Fra klassisk og elegant til moderne, minimalistisk eller mer kunstnerisk og særpreget. Jeg tilpasser både farger, teksturer og detaljer etter din personlige stil.
 
 **Blant mulighetene finner du:**
 
@@ -97,7 +97,7 @@ Fra klassisk og elegant til moderne, minimalistisk eller mer kunstnerisk og sær
 
 **Sculpts signaturfinish i stein** er utviklet av kunstneren bak Sculpt og har blitt vår mest populære utførelse. Den kan tilpasses i et stort utvalg steinuttrykk, fra rustikk naturstein til elegant marmor, i både lyse og mørke, varme og kalde toner.
 
-Vi kan også fremheve eller dempe detaljer for å skape ønsket uttrykk. Har du egne idéer, utforsker vi gjerne mulighetene sammen med deg.
+Jeg kan også fremheve eller dempe detaljer for å skape ønsket uttrykk. Har du egne idéer, utforsker jeg gjerne mulighetene sammen med deg.
 
 Målet er et personlig kunstverk som ikke bare forestiller deg, men også gjenspeiler din stil.
 

@@ -25,7 +25,7 @@ Under finner du en oversikt over hele prosessen, og hva du kan forvente fra før
 
    Basert på skanningen lages en nøyaktig 3D-modell av kroppen din. Her finjusteres form og detaljer slik at skulpturen gjengir uttrykket på en naturlig og vakker måte.
 
-   Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Noen justeringer gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli, og resten gjøres i etterkant. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.
+   Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Noen justeringer gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli, og resten gjøres i etterkant. Jeg kan også myke opp eller fjerne små detaljer dersom du ønsker det.
 
 4. ## Produksjon av skulpturen
 
@@ -49,11 +49,11 @@ Hver skulptur fra Sculpt er et personlig kunstverk, skapt med utgangspunkt i en 
 
 Skulpturene lages i et plantebasert materiale (PLA), som er valgt for sin styrke, holdbarhet, høy detaljgrad og muligheten til å bearbeides kunstnerisk. Hver skulptur ferdigstilles for hånd, med stor omtanke for både kroppens detaljer og det estetiske uttrykket.
 
-Fordi skulpturen bygges opp lag for lag, kan svake printlinjer være synlige ved nærmere ettersyn. Vi arbeider grundig med å redusere disse, samtidig som vi bevarer de små, personlige detaljene som gjør skulpturen unik.
+Fordi skulpturen bygges opp lag for lag, kan svake printlinjer være synlige ved nærmere ettersyn. Jeg arbeider grundig med å redusere disse, samtidig som jeg bevarer de små, personlige detaljene som gjør skulpturen unik.
 
 *Dine former, slik de er.*
 
-Hos Sculpt endrer vi ikke kroppens grunnleggende proporsjoner. Vi ønsker å bevare ekte former og kroppens naturlige uttrykk. Overflaten kan derimot tilpasses for å fremheve eller dempe detaljer.
+Hos Sculpt endrer jeg ikke kroppens grunnleggende proporsjoner. Jeg ønsker å bevare ekte former og kroppens naturlige uttrykk. Overflaten kan derimot tilpasses for å fremheve eller dempe detaljer.
 
 Du kan velge mellom ulike positurer, farger og overflateutførelser. Sammen finner vi et uttrykk som passer deg og hjemmet ditt.
 
@@ -133,7 +133,7 @@ Vi skanner på Sør-Vestlandet mellom **Kristiansand** og **Stavanger**, med egn
 <details>
 <summary>Vises arr, tatoveringer og cellulitter – og kan dere gjøre noe med det?</summary>
 
-Ja, de kan vises på skulpturen, men vi kan fjerne eller myke ut detaljer som arr, tatoveringer, cellulitter og andre uønskelige hudtilstander under den digitale redigeringen.
+Ja, de kan vises på skulpturen, men jeg kan fjerne eller myke ut detaljer som arr, tatoveringer, cellulitter og andre uønskelige hudtilstander under den digitale redigeringen.
 
 </details>
 

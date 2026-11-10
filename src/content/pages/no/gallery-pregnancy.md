@@ -9,7 +9,7 @@ Hver gravidskulptur er et personlig kunstverk laget etter din egen kropp. Gjenno
 
 Et fysisk minne fra graviditeten, som du kan se, holde og kjenne igjen deg selv i, også mange år senere.
 
-[Klikk her for å se andre typer skulpturer vi lager]({{galleryOtherPage}})
+[Klikk her for å se andre typer skulpturer jeg lager]({{galleryOtherPage}})
 
 <div class="gallery">
 

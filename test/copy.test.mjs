@@ -105,13 +105,23 @@ const CHANGED = {
       'Utrolig glad jeg oppdaget dette mens jeg gikk gravid, et fint minne om en koselig tid. Kjempefornøyd med skulpturen!'],
     // The salon's name in the business register, as «Tider og steder» has it.
     ['Fredrikstad: Nails by Majika', 'Fredrikstad: Nailovers Majka'],
+
+    // «Vi» about the scanning, «jeg» about the making (#23).
+    ['Jeg tilbyr 3D-skanning i Flekkefjord, Kristiansand, Stavanger, Oslo og Fredrikstad.', 'Vi tilbyr 3D-skanning i Flekkefjord, Kristiansand, Stavanger, Oslo og Fredrikstad.'],
+    ['Ja, de kan vises på skulpturen, men vi kan fjerne eller myke ut detaljer som arr, tatoveringer, cellulitter og andre uønskelige hudtilstander under den digitale redigeringen.', 'Ja, de kan vises på skulpturen, men jeg kan fjerne eller myke ut detaljer som arr, tatoveringer, cellulitter og andre uønskelige hudtilstander under den digitale redigeringen.'],
   ],
-  priser: [['Premiummodell – 20 cm', 'Premiummodell 20 cm'], ['Bestill', BOOK]],
-  gallerigravidskulpturer: [['Graviditetskulpturer', 'Graviditetsskulpturer']],
+  priser: [['Premiummodell – 20 cm', 'Premiummodell 20 cm'], ['Bestill', BOOK],
+    ['Fra klassisk og elegant til moderne, minimalistisk eller mer kunstnerisk og særpreget. Vi tilpasser både farger, teksturer og detaljer etter din personlige stil.', 'Fra klassisk og elegant til moderne, minimalistisk eller mer kunstnerisk og særpreget. Jeg tilpasser både farger, teksturer og detaljer etter din personlige stil.'],
+    ['Vi kan også fremheve eller dempe detaljer for å skape ønsket uttrykk. Har du egne idéer, utforsker vi gjerne mulighetene sammen med deg.', 'Jeg kan også fremheve eller dempe detaljer for å skape ønsket uttrykk. Har du egne idéer, utforsker jeg gjerne mulighetene sammen med deg.']],
+  gallerigravidskulpturer: [['Graviditetskulpturer', 'Graviditetsskulpturer'],
+    ['Klikk her for å se andre typer skulpturer vi lager', 'Klikk her for å se andre typer skulpturer jeg lager']],
+  galleriskulpturer: [['Her finner du andre typer skulpturer vi lager', 'Her finner du andre typer skulpturer jeg lager']],
+  'tid-og-sted': [['Jeg tilstreber å få til skanning av deg innenfor en uke av ønsket tidspunkt.', 'Vi tilstreber å få til skanning av deg innenfor en uke av ønsket tidspunkt.'],
+    ['Er du i Bergensområdet og vurderer en skulptur, ta kontakt! Jeg forsøker å velge en dag der flest mulig kan', 'Er du i Bergensområdet og vurderer en skulptur, ta kontakt! Vi forsøker å velge en dag der flest mulig kan']],
   // The front page's step 2 ends with this sentence; that text is now here.
   prosessen: [['Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen.', 'Kroppen skannes i en trygg og rolig setting. Skanningen er helt ufarlig for både deg og barnet og tar vanligvis ikke mer enn to minutter. For ekstra presisjon kan vi bruke et elektrisk snurrebord og stativ (valgfritt). Kun kunstneren har tilgang til skanningen, og andre ser bare førsteutkastet. Hodet fjernes under timen hvis du ønsker det. Du skannes naken eller med sømløs truse for best mulig detaljbevaring.'],
     // Her answers on #19 and #29: what happens at the appointment, what the print is made of.
-    ['Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Justeringene gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.', 'Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Noen justeringer gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli, og resten gjøres i etterkant. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.'],
+    ['Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Justeringene gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.', 'Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Noen justeringer gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli, og resten gjøres i etterkant. Jeg kan også myke opp eller fjerne små detaljer dersom du ønsker det.'],
     ['Skulpturen 3D-printes i PLA – et biobasert og miljøvennlig materiale. Deretter bearbeides den for hånd før overflate og finish tilpasses nøye etter dine ønsker.', 'Skulpturen 3D-printes i PLA – et plantebasert materiale, valgt for sin høye detaljgrad. Deretter fylles den med gips og bearbeides for hånd før overflate og finish tilpasses nøye etter dine ønsker.']],
 };
 
@@ -131,7 +141,7 @@ const MOVED = {
   prosessen: {
     first: 'Basert på skanningen lages en nøyaktig 3D-modell av kroppen din. Her finjusteres form og detaljer slik at skulpturen gjengir uttrykket på en naturlig og vakker måte.',
     last: 'Basert på skanningen lages en nøyaktig 3D-modell av kroppen din. Her finjusteres form og detaljer slik at skulpturen gjengir uttrykket på en naturlig og vakker måte.',
-    before: 'Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Noen justeringer gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli, og resten gjøres i etterkant. Vi kan også myke opp eller fjerne små detaljer dersom du ønsker det.',
+    before: 'Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Noen justeringer gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli, og resten gjøres i etterkant. Jeg kan også myke opp eller fjerne små detaljer dersom du ønsker det.',
   },
   // Her home studio first, then the cities nearest it; moves apply in order.
   'tid-og-sted': [
@@ -153,7 +163,7 @@ const CARRIED = [
   // The FAQ asks mostly about the scan and the making, which prosessen tells.
   {
     from: 'index', first: 'Ofte stilte spørsmål',
-    last: 'Ja, de kan vises på skulpturen, men vi kan fjerne eller myke ut detaljer som arr, tatoveringer, cellulitter og andre uønskelige hudtilstander under den digitale redigeringen.',
+    last: 'Ja, de kan vises på skulpturen, men jeg kan fjerne eller myke ut detaljer som arr, tatoveringer, cellulitter og andre uønskelige hudtilstander under den digitale redigeringen.',
     to: 'prosessen',
     // Her new text goes in ahead of it (ADDED).
     after: 'Om skulpturen',
@@ -170,10 +180,10 @@ const ADDED = {
     // Ester's «Om skulpturen» of 7 Nov (#21), less its link to this same page.
     ['Hver skulptur fra Sculpt er et personlig kunstverk, skapt med utgangspunkt i en nøyaktig 3D-skanning av kroppen din. Gjennom digital bearbeiding, 3D-printing og nøye håndarbeid får skulpturen sitt unike uttrykk.', 'Om skulpturen'],
     ['Skulpturene lages i et plantebasert materiale (PLA), som er valgt for sin styrke, holdbarhet, høy detaljgrad og muligheten til å bearbeides kunstnerisk. Hver skulptur ferdigstilles for hånd, med stor omtanke for både kroppens detaljer og det estetiske uttrykket.', 'Hver skulptur fra Sculpt er et personlig kunstverk, skapt med utgangspunkt i en nøyaktig 3D-skanning av kroppen din. Gjennom digital bearbeiding, 3D-printing og nøye håndarbeid får skulpturen sitt unike uttrykk.'],
-    ['Fordi skulpturen bygges opp lag for lag, kan svake printlinjer være synlige ved nærmere ettersyn. Vi arbeider grundig med å redusere disse, samtidig som vi bevarer de små, personlige detaljene som gjør skulpturen unik.', 'Skulpturene lages i et plantebasert materiale (PLA), som er valgt for sin styrke, holdbarhet, høy detaljgrad og muligheten til å bearbeides kunstnerisk. Hver skulptur ferdigstilles for hånd, med stor omtanke for både kroppens detaljer og det estetiske uttrykket.'],
-    ['Dine former, slik de er.', 'Fordi skulpturen bygges opp lag for lag, kan svake printlinjer være synlige ved nærmere ettersyn. Vi arbeider grundig med å redusere disse, samtidig som vi bevarer de små, personlige detaljene som gjør skulpturen unik.'],
-    ['Hos Sculpt endrer vi ikke kroppens grunnleggende proporsjoner. Vi ønsker å bevare ekte former og kroppens naturlige uttrykk. Overflaten kan derimot tilpasses for å fremheve eller dempe detaljer.', 'Dine former, slik de er.'],
-    ['Du kan velge mellom ulike positurer, farger og overflateutførelser. Sammen finner vi et uttrykk som passer deg og hjemmet ditt.', 'Hos Sculpt endrer vi ikke kroppens grunnleggende proporsjoner. Vi ønsker å bevare ekte former og kroppens naturlige uttrykk. Overflaten kan derimot tilpasses for å fremheve eller dempe detaljer.'],
+    ['Fordi skulpturen bygges opp lag for lag, kan svake printlinjer være synlige ved nærmere ettersyn. Jeg arbeider grundig med å redusere disse, samtidig som jeg bevarer de små, personlige detaljene som gjør skulpturen unik.', 'Skulpturene lages i et plantebasert materiale (PLA), som er valgt for sin styrke, holdbarhet, høy detaljgrad og muligheten til å bearbeides kunstnerisk. Hver skulptur ferdigstilles for hånd, med stor omtanke for både kroppens detaljer og det estetiske uttrykket.'],
+    ['Dine former, slik de er.', 'Fordi skulpturen bygges opp lag for lag, kan svake printlinjer være synlige ved nærmere ettersyn. Jeg arbeider grundig med å redusere disse, samtidig som jeg bevarer de små, personlige detaljene som gjør skulpturen unik.'],
+    ['Hos Sculpt endrer jeg ikke kroppens grunnleggende proporsjoner. Jeg ønsker å bevare ekte former og kroppens naturlige uttrykk. Overflaten kan derimot tilpasses for å fremheve eller dempe detaljer.', 'Dine former, slik de er.'],
+    ['Du kan velge mellom ulike positurer, farger og overflateutførelser. Sammen finner vi et uttrykk som passer deg og hjemmet ditt.', 'Hos Sculpt endrer jeg ikke kroppens grunnleggende proporsjoner. Jeg ønsker å bevare ekte former og kroppens naturlige uttrykk. Overflaten kan derimot tilpasses for å fremheve eller dempe detaljer.'],
     [LOOKS, 'Du kan velge mellom ulike positurer, farger og overflateutførelser. Sammen finner vi et uttrykk som passer deg og hjemmet ditt.'],
     ['Skulpturene er solide og vektet for å stå stabilt, og lages vanligvis i størrelser opptil 20 cm. Større skulpturer kan også lages på forespørsel. Som andre kunstverk bør de beskyttes mot fall og langvarig direkte sollys.', LOOKS],
     ['Leveringstiden er normalt rundt én måned.', 'Skulpturene er solide og vektet for å stå stabilt, og lages vanligvis i størrelser opptil 20 cm. Større skulpturer kan også lages på forespørsel. Som andre kunstverk bør de beskyttes mot fall og langvarig direkte sollys.'],

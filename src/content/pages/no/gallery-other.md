@@ -3,7 +3,7 @@ title: "Personlige 3D-skulpturer av mennesker"
 description: "Personlige 3D-skulpturer av par, barn, familier og andre mennesker. Unike kunstverk laget etter ekte mennesker, med 3D-skanning og håndlaget finish."
 ---
 
-# Her finner du andre typer skulpturer vi lager
+# Her finner du andre typer skulpturer jeg lager
 
 Personlige 3D-skulpturer av ekte mennesker, skapt for å bevare øyeblikk, relasjoner og minner som betyr noe.
 
