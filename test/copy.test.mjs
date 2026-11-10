@@ -193,7 +193,10 @@ const ADDED = {
   // When the customer pays, from her answer on #30.
   priser: [[PRICE_BLURB, 'Priser'], ['Faktura sendes før timen, når den digitale avtalen er signert. Endringer i bestillingen under eller etter skanningen faktureres etter skanningen. Jeg begynner på skulpturen når den er betalt.', 'Alle priser er inkludert frakt.']],
   kontakt: [['Dessuten kan vi også tilby bedrifter, kunstnere og idrett samarbeid innenfor vår kategori.', 'Har du spørsmål om skulpturene, prosessen eller booking? Jeg hjelper deg gjerne. Send meg en melding eller en e-post, så svarer jeg så fort jeg kan.'], ['Send SMS', '480 05 508']],
-  'tid-og-sted': [['Steder', 'Ser du ikke en dag som passer for deg, ta gjerne kontakt. Noen steder kan det være mulighet for fleksibilitet.'], [BOOK, null]],
+  'tid-og-sted': [['Steder', 'Ser du ikke en dag som passer for deg, ta gjerne kontakt. Noen steder kan det være mulighet for fleksibilitet.'], [BOOK, null],
+    // Where the door is, from her answer on #32.
+    ['Ta trappen ned til underetasjen. Vi skanner innerst i gangen.', 'Skanning foregår på Huset i Markens. Markensgate 4A, 4610 Kristiansand'],
+    ['Ta trappen ned rett innenfor inngangen. Vi skanner bak den midterste døren i underetasjen.', 'Skanning i “Stavanger tinfabrik”: Ryfylkegata 45, 4014 Stavanger']],
 };
 
 // Search titles and descriptions that differ from sculpt.no, merged over the

@@ -37,6 +37,8 @@ Vi tilstreber å få til skanning av deg innenfor en uke av ønsket tidspunkt.
 
 Skanning foregår på [Huset i Markens](https://husetimarkens.no/sculpt/). [Markensgate 4A, 4610 Kristiansand](https://www.google.com/maps/search/?api=1&query=Huset+i+Markens%2C+Markensgate+4A%2C+4610+Kristiansand)
 
+Ta trappen ned til underetasjen. Vi skanner innerst i gangen.
+
 <!-- scan-days Kristiansand -->
 
 </div>
@@ -46,6 +48,8 @@ Skanning foregår på [Huset i Markens](https://husetimarkens.no/sculpt/). [Mark
 ### Stavanger
 
 Skanning i “Stavanger tinfabrik”: [Ryfylkegata 45, 4014 Stavanger](https://www.google.com/maps/search/?api=1&query=Stavanger+Tinfabrik%2C+Ryfylkegata+45%2C+4014+Stavanger)
+
+Ta trappen ned rett innenfor inngangen. Vi skanner bak den midterste døren i underetasjen.
 
 <!-- scan-days Stavanger -->
 
