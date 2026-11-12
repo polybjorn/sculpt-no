@@ -34,5 +34,10 @@
   },
   "schedule": {
     "upcoming": "Neste skannedager"
+  },
+  "notFound": {
+    "title": "Siden finnes ikke",
+    "text": "Adressen kan være skrevet feil, eller siden er flyttet.",
+    "home": "Gå til forsiden"
   }
 }

@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { defaultLocale } from '../i18n/locales.js';
+import { resolveRoute } from '../i18n/routes.js';
+import { ui } from '../i18n/ui.js';
+
+// GitHub Pages answers any missing address with this file and a 404 status,
+// at whatever depth the address was, so every link in it is absolute.
+const t = ui(defaultLocale).notFound;
+---
+
+<Layout title={t.title} page="404">
+  <div class="page">
+    <h1>{t.title}</h1>
+    <p>{t.text}</p>
+    <p><a href={resolveRoute('home', defaultLocale).href}>{t.home}</a></p>
+  </div>
+</Layout>

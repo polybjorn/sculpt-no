@@ -10,7 +10,7 @@ import '../styles/global.css';
 import { localeInfo, defaultLocale } from '../i18n/locales.js';
 import { Image, getImage } from 'astro:assets';
 import { pathFor, resolveRoute, localesWithPage } from '../i18n/routes.js';
-import { menu, contact, social, sourceUrl, siteName, titleSuffix, business } from '../i18n/pages.js';
+import { pages, menu, contact, social, sourceUrl, siteName, titleSuffix, business } from '../i18n/pages.js';
 import { ui } from '../i18n/ui.js';
 import SocialLinks from '../components/SocialLinks.astro';
 import logo from '../assets/images/logo.webp';
@@ -30,6 +30,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 // once `site` is sculpt.no again.
 const isPreview = !site.includes('sculpt.no');
 const canonical = `${site}${currentPath}`;
+// The 404 page answers at any missing address, so it has no address of its
+// own to name as canonical or offer in another language.
+const listed = pages.some((p) => p.key === page);
 
 // The faces the first screen is set in, fetched beside the stylesheet rather
 // than after it: found only through it, they arrived after the first paint,
@@ -85,22 +88,22 @@ const pageLocales = localesWithPage(page);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{`${title}${titleSuffix}`}</title>
   {description && <meta name="description" content={description}>}
-  <link rel="canonical" href={canonical}>
+  {listed && <link rel="canonical" href={canonical}>}
   {preloadFonts.map((href) => <link rel="preload" href={href} as="font" type="font/woff2" crossorigin>)}
   <link rel="icon" href={`${base}/favicon.ico`} sizes="48x48">
   <link rel="apple-touch-icon" href={`${base}/apple-touch-icon.png`}>
   <noscript><link rel="stylesheet" href={noScriptCss}></noscript>
   {!isPreview && <link rel="sitemap" href={`${base}/sitemap-index.xml`}>}
   {isPreview && <meta name="robots" content="noindex">}
-  {pageLocales.map((l) => (
+  {listed && pageLocales.map((l) => (
     <link rel="alternate" hreflang={l} href={`${site}${pathFor(page, l)}`} />
   ))}
-  <link rel="alternate" hreflang="x-default" href={`${site}${pathFor(page, defaultLocale)}`} />
+  {listed && <link rel="alternate" hreflang="x-default" href={`${site}${pathFor(page, defaultLocale)}`} />}
   <meta property="og:site_name" content={siteName}>
   <meta property="og:type" content="website">
   <meta property="og:title" content={`${title}${titleSuffix}`}>
   {description && <meta property="og:description" content={description}>}
-  <meta property="og:url" content={canonical}>
+  {listed && <meta property="og:url" content={canonical}>}
   <meta property="og:locale" content={info.og}>
   <meta property="og:image" content={`${site}${share.src}`}>
   <meta property="og:image:width" content="1200">
@@ -108,7 +111,10 @@ const pageLocales = localesWithPage(page);
   <meta property="og:image:alt" content={shareAlt}>
   <meta name="twitter:card" content="summary_large_image">
   {structured && <script type="application/ld+json" set:html={structured} />}
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'">
+  {/* connect-src: Lighthouse and PageSpeed Insights read robots.txt from
+      inside the page, and with no connect-src the request is refused and the
+      file is scored invalid. */}
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
   <meta name="referrer" content="no-referrer">
 </head>
 <body
