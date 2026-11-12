@@ -13,7 +13,7 @@ import { redirects } from './src/i18n/pages.js';
 // 'https://sculpt.no' and drop `base`. Preview builds also skip the sitemap
 // and carry a noindex meta (Layout.astro), both keyed on this check, so the
 // preview never competes with the live Squarespace site.
-// LAUNCH_SITE builds the launch state ahead of time, so tools/site-audit can
+// LAUNCH_SITE builds the launch state ahead of time, so tools/site-compare can
 // check the sitemap and indexing the preview leaves out.
 const site = process.env.LAUNCH_SITE ?? 'https://polybjorn.github.io';
 const isPreview = !site.includes('sculpt.no');

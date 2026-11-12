@@ -1,0 +1,8 @@
+{
+  "name": "sculpt-no-site-compare",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "compare": "node compare.mjs"
+  }
+}
