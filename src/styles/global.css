@@ -1564,24 +1564,47 @@ html:has(.lightbox[open]) {
     justify-self: end;
   }
 
-  .nav-links {
-    grid-column: 1 / -1;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
+  .nav {
+    position: relative;
   }
 
-  /* Folded before the script runs; src/styles/no-script.css unfolds it when
-     there is no script to open it. */
-  .nav-links:not(.open) {
-    display: none;
+  /* A panel over the page under the toggle, as the desktop «Gallerier» list
+     is, rather than a band that pushes the page down: the header is sticky,
+     so a push would move the text a reader had scrolled to. Capped below the
+     header and scrolling inside, or a phone held sideways could not reach
+     its last entries. Hidden when shut, so its links leave the tab order, and
+     only once it has faded, since visibility holds visible through a
+     transition. Shut before the script runs; src/styles/no-script.css lists
+     it in the page when there is no script to open it. */
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: var(--gutter);
+    z-index: 6;
+    width: min(13rem, 100% - 2 * var(--gutter));
+    max-height: calc(100dvh - 6rem);
+    overflow-y: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 0;
+    padding: var(--space-3xs) var(--space-s) var(--space-2xs);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: 0 6px 20px rgb(54 48 42 / .12);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-.3rem);
+    transition: opacity .2s ease-out, transform .2s ease-out, visibility .2s;
   }
 
   .nav-links.open {
-    animation: unfold .2s ease-out;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
   }
 
-  .nav-links > li {
+  .nav-links > li + li {
     border-top: 1px solid var(--line);
   }
 
