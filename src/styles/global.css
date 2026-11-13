@@ -1626,11 +1626,12 @@ html:has(.lightbox[open]) {
     padding: var(--space-2xs) 0;
   }
 
-  /* The open menu ends on a filled button, as each page does. */
+  /* The open menu ends on a filled button, as each page does, as wide as its
+     word and on the items' left edge rather than a bar across the screen. */
   .nav-links .nav-book {
+    display: inline-block;
     margin-block: var(--space-xs);
     padding-inline: 1em;
-    text-align: center;
     background: var(--ink);
     color: var(--paper);
     box-shadow: none;
