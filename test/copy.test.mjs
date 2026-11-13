@@ -143,6 +143,8 @@ const MOVED = {
     last: 'Basert på skanningen lages en nøyaktig 3D-modell av kroppen din. Her finjusteres form og detaljer slik at skulpturen gjengir uttrykket på en naturlig og vakker måte.',
     before: 'Etter skanningen bearbeides modellen digitalt for å sikre høy presisjon og kvalitet. Noen justeringer gjøres mens du er til stede, slik at du selv kan være med og bestemme hvordan resultatet skal bli, og resten gjøres i etterkant. Jeg kan også myke opp eller fjerne små detaljer dersom du ønsker det.',
   },
+  // The ways to reach her, straight under the line that says what to send.
+  kontakt: { first: 'E-post', last: '480 05 508', before: 'Har du spørsmål om skulpturene, prosessen eller booking? Jeg hjelper deg gjerne. Send meg en melding eller en e-post, så svarer jeg så fort jeg kan.' },
   // Her home studio first, then the cities nearest it; moves apply in order.
   'tid-og-sted': [
     { first: 'Flekkefjord', last: 'Ta kontakt så finner vi en tid.', before: 'Oslo' },
@@ -174,7 +176,7 @@ const ADDED = {
   // Both labels of the reviews button, one hidden by CSS, read as one line.
   index: [[BOOK, null], ['Les mer om prosessen', 'Levering'], ['Vis flere omtalerVis færre omtaler', 'Elise Bekkevold']],
   // My draft of where Sculpt is going, with Ester's addition (#33).
-  'om-oss': [['Nå lager jeg også skulpturer av par, barn, familier, idrettsutøvere o.l. og jeg vil fortsette å utvikle Sculpt med nye typer skulpturer.', 'Denne opplevelsen inspirerte meg til å starte Sculpt. Jeg ønsket å gi flere gravide i Norge muligheten til å bevare denne tiden på en vakker og personlig måte, som et kunstverk de kan ha med seg resten av livet.']],
+  'om-oss': [['Nå lager jeg også skulpturer av par, barn, familier, idrettsutøvere o.l. og jeg vil fortsette å utvikle Sculpt med nye typer skulpturer.', 'Denne opplevelsen inspirerte meg til å starte Sculpt. Jeg ønsket å gi flere gravide i Norge muligheten til å bevare denne tiden på en vakker og personlig måte, som et kunstverk de kan ha med seg resten av livet.'], [BOOK, null]],
   prosessen: [
     ['Se tider og steder', CHANGED.prosessen[0][1]], [BOOK, null],
     // Ester's «Om skulpturen» of 7 Nov (#21), less its link to this same page.
@@ -192,7 +194,8 @@ const ADDED = {
   galleriskulpturer: [[BOOK, null]],
   // When the customer pays, from her answer on #30.
   priser: [[PRICE_BLURB, 'Priser'], ['Faktura sendes før timen, når den digitale avtalen er signert. Endringer i bestillingen under eller etter skanningen faktureres etter skanningen. Jeg begynner på skulpturen når den er betalt.', 'Alle priser er inkludert frakt.']],
-  kontakt: [['Dessuten kan vi også tilby bedrifter, kunstnere og idrett samarbeid innenfor vår kategori.', 'Har du spørsmål om skulpturene, prosessen eller booking? Jeg hjelper deg gjerne. Send meg en melding eller en e-post, så svarer jeg så fort jeg kan.'], ['Send SMS', '480 05 508']],
+  kontakt: [['Send SMS', '480 05 508'],
+    ['Dessuten kan vi også tilby bedrifter, kunstnere og idrett samarbeid innenfor vår kategori.', 'Har du spørsmål om skulpturene, prosessen eller booking? Jeg hjelper deg gjerne. Send meg en melding eller en e-post, så svarer jeg så fort jeg kan.']],
   'tid-og-sted': [['Steder', 'Ser du ikke en dag som passer for deg, ta gjerne kontakt. Noen steder kan det være mulighet for fleksibilitet.'], [BOOK, null],
     // Where the door is, from her answer on #32.
     ['Ta trappen ned til underetasjen. Vi skanner innerst i gangen.', 'Skanning foregår på Huset i Markens. Markensgate 4A, 4610 Kristiansand'],

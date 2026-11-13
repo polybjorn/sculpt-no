@@ -22,3 +22,9 @@ Nå lager jeg også skulpturer av par, barn, familier, idrettsutøvere o.l. og j
 </div>
 
 </div>
+
+<div class="actions">
+
+[Bestill din skulptur]({{contactPage}})
+
+</div>

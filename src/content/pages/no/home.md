@@ -21,7 +21,7 @@ description: "Gravidskulpturer og personlige 3D-skulpturer av ekte mennesker. Un
 
 Hos Sculpt skaper jeg personlige 3D-skulpturer av ekte mennesker, med gravidskulpturer som spesialitet. Hver skulptur ferdigstilles for hånd til et unikt kunstverk.
 
-**Mer enn et bilde.** Et fysisk minne du kan holde i hendene, kjenne igjen og ta frem igjen i mange år.
+Mer enn et bilde. Et fysisk minne du kan holde i hendene, kjenne igjen og ta frem igjen i mange år.
 
 Vi tilbyr 3D-skanning i Flekkefjord, Kristiansand, Stavanger, Oslo og Fredrikstad.
 

@@ -25,6 +25,11 @@ export const menu = [
   'contact',
 ];
 
+// Every «Bestill» button leads to the contact page, and its text asks for the
+// booking details, so its menu item is drawn as a button. It keeps the name
+// «Kontakt», since the page takes questions as well as bookings.
+export const bookingPage = 'contact';
+
 // sculpt.no's pages folded into another or dropped, so a link, bookmark or search result
 // for the old address still lands on its text. /home-1-1 was a copy of the
 // front page in sculpt.no's sitemap; /gallerier and /informasjon were its menu

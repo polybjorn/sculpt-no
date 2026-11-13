@@ -17,7 +17,7 @@ const { key, locale } = Astro.props;
 
 const entry = await getEntry('pages', `${locale}/${key}`);
 if (!entry) throw new Error(`no content entry for ${locale}/${key}`);
-const { title, description } = entry.data;
+const { title, description, scanDays } = entry.data;
 const { Content } = await render(entry);
 
 // A content file places the calendar's scan days with a comment line:
@@ -36,5 +36,6 @@ if (parts && entry.rendered?.metadata?.imagePaths?.length) throw new Error(`${lo
     {parts
       ? parts.map((part, i) => (i % 2 ? <ScanDays locale={locale} city={part} /> : <Fragment set:html={part} />))
       : <Content />}
+    {scanDays && <ScanDays locale={locale} />}
   </div>
 </Layout>

@@ -10,7 +10,7 @@ import '../styles/global.css';
 import { localeInfo, defaultLocale } from '../i18n/locales.js';
 import { Image, getImage } from 'astro:assets';
 import { pathFor, resolveRoute, localesWithPage } from '../i18n/routes.js';
-import { pages, menu, contact, social, sourceUrl, siteName, titleSuffix, business } from '../i18n/pages.js';
+import { pages, menu, bookingPage, contact, social, sourceUrl, siteName, titleSuffix, business } from '../i18n/pages.js';
 import { ui } from '../i18n/ui.js';
 import SocialLinks from '../components/SocialLinks.astro';
 import logo from '../assets/images/logo.webp';
@@ -70,7 +70,7 @@ const structured = page === 'home' && JSON.stringify({
 // language while a translation is still missing.
 const link = (key: string, label: string) => {
   const route = resolveRoute(key, lang);
-  return { ...route, label, current: currentPath === route.href };
+  return { ...route, key, label, current: currentPath === route.href };
 };
 const nav = menu.map((item) => typeof item === 'string'
   ? link(item, t.nav[item])
@@ -143,7 +143,7 @@ const pageLocales = localesWithPage(page);
                 </ul>
               </details>
             ) : (
-              <a href={item.href} hreflang={item.lang === lang ? undefined : item.lang} aria-current={item.current ? 'page' : undefined}>{item.label}</a>
+              <a href={item.href} class:list={{ 'nav-book': item.key === bookingPage }} hreflang={item.lang === lang ? undefined : item.lang} aria-current={item.current ? 'page' : undefined}>{item.label}</a>
             )}
           </li>
         ))}

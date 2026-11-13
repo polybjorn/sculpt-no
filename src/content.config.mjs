@@ -20,6 +20,9 @@ const pages = defineCollection({
     // An unreviewed translation. Remove the line once a human has read the
     // page through.
     machineTranslated: z.boolean().default(false),
+    // The next scan days after the page's own text. A page with photos cannot
+    // place them with a marker (src/pages/[...slug].astro), so this appends them.
+    scanDays: z.boolean().default(false),
   }),
 });
 
