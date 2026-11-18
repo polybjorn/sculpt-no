@@ -1,0 +1,7 @@
+# picomatch through 4.0.7 (the latest release) has no fixed version yet. It
+# runs only at build time, through astro, vite and tinyglobby, on glob
+# patterns from this repo; the published site is static and ships none of it.
+[[IgnoredVulns]]
+id = "GHSA-fc5q-39xc-vjpf"
+ignoreUntil = 2027-02-16
+reason = "build-time only, through astro and vite, which glob this repo's own files; no fixed picomatch release yet"
